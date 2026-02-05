@@ -151,3 +151,51 @@
 2026-02-03 17:11:06,559 - INFO - Splitting training and test input data
 2026-02-03 17:11:06,559 - INFO - Training Random Forest model
 2026-02-03 17:11:08,029 - INFO - Random Forest accuracy: 0.8905
+2026-02-03 17:43:00,242 - INFO - This is an INFO message
+2026-02-03 17:43:00,263 - ERROR - This is an ERROR message
+2026-02-03 17:43:00,263 - WARNING - This is a WARNING message
+2026-02-03 17:43:01,938 - INFO - Entered the data ingestion method
+2026-02-03 17:43:02,002 - INFO - Read the dataset as dataframe
+2026-02-03 17:43:02,097 - INFO - Train test split initiated
+2026-02-03 17:43:02,209 - INFO - Ingestion of the data is completed
+2026-02-03 17:43:02,336 - INFO - Read train and test data completed
+2026-02-03 17:43:02,336 - INFO - Obtaining preprocessor object
+2026-02-03 17:43:02,336 - INFO - Numerical columns standard scaling completed
+2026-02-03 17:43:02,336 - INFO - Categorical columns encoding completed
+2026-02-03 17:43:02,336 - INFO - Applying preprocessing object on training and testing datasets.
+2026-02-03 17:43:02,397 - INFO - Saved preprocessing object.
+2026-02-03 17:43:02,412 - INFO - Splitting training and test input data
+2026-02-03 17:43:02,412 - INFO - Setting up Random Forest with hyperparameter tuning
+2026-02-03 17:43:02,412 - INFO - Starting GridSearchCV for Random Forest
+2026-02-03 17:47:04,338 - INFO - This is an INFO message
+2026-02-03 17:47:04,338 - ERROR - This is an ERROR message
+2026-02-03 17:47:04,338 - WARNING - This is a WARNING message
+2026-02-03 17:47:05,393 - INFO - Entered the data ingestion method
+2026-02-03 17:47:05,440 - INFO - Read the dataset as dataframe
+2026-02-03 17:47:05,548 - INFO - Train test split initiated
+2026-02-03 17:47:05,643 - INFO - Ingestion of the data is completed
+2026-02-03 17:47:05,732 - INFO - Read train and test data completed
+2026-02-03 17:47:05,732 - INFO - Obtaining preprocessor object
+2026-02-03 17:47:05,732 - INFO - Numerical columns standard scaling completed
+2026-02-03 17:47:05,732 - INFO - Categorical columns encoding completed
+2026-02-03 17:47:05,732 - INFO - Applying preprocessing object on training and testing datasets.
+2026-02-03 17:47:05,780 - INFO - Saved preprocessing object.
+2026-02-03 17:47:05,796 - INFO - Splitting training and test input data
+2026-02-03 17:47:05,796 - INFO - Setting up Random Forest with hyperparameter tuning
+2026-02-03 17:47:05,796 - INFO - Starting GridSearchCV for Random Forest
+2026-02-03 17:50:37,878 - INFO - This is an INFO message
+2026-02-03 17:50:37,878 - ERROR - This is an ERROR message
+2026-02-03 17:50:37,878 - WARNING - This is a WARNING message
+2026-02-03 17:50:38,822 - INFO - Entered the data ingestion method
+2026-02-03 17:50:38,870 - INFO - Read the dataset as dataframe
+2026-02-03 17:50:38,957 - INFO - Train test split initiated
+2026-02-03 17:50:39,051 - INFO - Ingestion of the data is completed
+2026-02-03 17:50:39,145 - INFO - Read train and test data completed
+2026-02-03 17:50:39,145 - INFO - Obtaining preprocessor object
+2026-02-03 17:50:39,145 - INFO - Numerical columns standard scaling completed
+2026-02-03 17:50:39,145 - INFO - Categorical columns encoding completed
+2026-02-03 17:50:39,147 - INFO - Applying preprocessing object on training and testing datasets.
+2026-02-03 17:50:39,212 - INFO - Saved preprocessing object.
+2026-02-03 17:50:39,219 - INFO - Splitting training and test input data
+2026-02-03 17:50:39,219 - INFO - Training Random Forest model
+2026-02-03 17:50:40,534 - INFO - Random Forest accuracy: 0.8905

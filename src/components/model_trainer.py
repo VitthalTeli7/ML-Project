@@ -29,8 +29,17 @@ class ModelTrainer:
                 n_estimators=200,
                 max_depth=None,
                 random_state=42,
-                n_jobs=-1
+                n_jobs=1
             )
+
+            params={
+                  "Random Forest":{
+                    # 'criterion':['squared_error', 'friedman_mse', 'absolute_error', 'poisson'],
+                 
+                    # 'max_features':['sqrt','log2',None],
+                    'n_estimators': [8,16,32,64,128,256]
+                }
+             }
 
             model.fit(X_train, y_train)
 

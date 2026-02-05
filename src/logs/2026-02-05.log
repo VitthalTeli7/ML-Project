@@ -1,0 +1,48 @@
+2026-02-05 13:43:07,361 - INFO - This is an INFO message
+2026-02-05 13:43:07,361 - ERROR - This is an ERROR message
+2026-02-05 13:43:07,361 - WARNING - This is a WARNING message
+2026-02-05 13:47:10,285 - INFO - This is an INFO message
+2026-02-05 13:47:10,285 - ERROR - This is an ERROR message
+2026-02-05 13:47:10,286 - WARNING - This is a WARNING message
+2026-02-05 13:49:50,986 - INFO - This is an INFO message
+2026-02-05 13:49:50,986 - ERROR - This is an ERROR message
+2026-02-05 13:49:50,986 - WARNING - This is a WARNING message
+2026-02-05 13:49:52,911 - INFO - Entered the data ingestion method
+2026-02-05 13:49:52,955 - INFO - Read the dataset as dataframe
+2026-02-05 13:49:53,080 - INFO - Train test split initiated
+2026-02-05 13:49:53,174 - INFO - Ingestion of the data is completed
+2026-02-05 13:49:53,244 - INFO - Read train and test data completed
+2026-02-05 13:49:53,244 - INFO - Obtaining preprocessor object
+2026-02-05 13:49:53,244 - INFO - Numerical columns standard scaling completed
+2026-02-05 13:49:53,244 - INFO - Categorical columns encoding completed
+2026-02-05 13:54:22,977 - INFO - This is an INFO message
+2026-02-05 13:54:22,977 - ERROR - This is an ERROR message
+2026-02-05 13:54:22,977 - WARNING - This is a WARNING message
+2026-02-05 13:54:24,334 - INFO - Entered the data ingestion method
+2026-02-05 13:54:24,361 - INFO - Read the dataset as dataframe
+2026-02-05 13:54:24,450 - INFO - Train test split initiated
+2026-02-05 13:54:24,554 - INFO - Ingestion of the data is completed
+2026-02-05 13:54:24,636 - INFO - Read train and test data completed
+2026-02-05 13:54:24,636 - INFO - Obtaining preprocessor object
+2026-02-05 13:54:24,636 - INFO - Numerical columns standard scaling completed
+2026-02-05 13:54:24,636 - INFO - Categorical columns encoding completed
+2026-02-05 13:54:24,638 - INFO - Applying preprocessing object on training and testing datasets.
+2026-02-05 13:54:24,689 - INFO - Saved preprocessing object.
+2026-02-05 13:54:24,689 - INFO - Splitting training and test input data
+2026-02-05 13:54:24,689 - INFO - Training Random Forest model
+2026-02-05 14:01:05,266 - INFO - This is an INFO message
+2026-02-05 14:01:05,266 - ERROR - This is an ERROR message
+2026-02-05 14:01:05,266 - WARNING - This is a WARNING message
+2026-02-05 14:01:06,573 - INFO - Entered the data ingestion method
+2026-02-05 14:01:06,610 - INFO - Read the dataset as dataframe
+2026-02-05 14:01:06,690 - INFO - Train test split initiated
+2026-02-05 14:01:06,799 - INFO - Ingestion of the data is completed
+2026-02-05 14:01:06,895 - INFO - Read train and test data completed
+2026-02-05 14:01:06,895 - INFO - Obtaining preprocessor object
+2026-02-05 14:01:06,895 - INFO - Numerical columns standard scaling completed
+2026-02-05 14:01:06,895 - INFO - Categorical columns encoding completed
+2026-02-05 14:01:06,896 - INFO - Applying preprocessing object on training and testing datasets.
+2026-02-05 14:01:06,938 - INFO - Saved preprocessing object.
+2026-02-05 14:01:06,938 - INFO - Splitting training and test input data
+2026-02-05 14:01:06,938 - INFO - Training Random Forest model
+2026-02-05 14:01:09,226 - INFO - Random Forest accuracy: 0.8905
