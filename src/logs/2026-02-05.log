@@ -46,3 +46,42 @@
 2026-02-05 14:01:06,938 - INFO - Splitting training and test input data
 2026-02-05 14:01:06,938 - INFO - Training Random Forest model
 2026-02-05 14:01:09,226 - INFO - Random Forest accuracy: 0.8905
+2026-02-05 16:41:19,938 - INFO - This is an INFO message
+2026-02-05 16:41:19,938 - ERROR - This is an ERROR message
+2026-02-05 16:41:19,938 - WARNING - This is a WARNING message
+2026-02-05 16:43:18,778 - INFO - This is an INFO message
+2026-02-05 16:43:18,778 - ERROR - This is an ERROR message
+2026-02-05 16:43:18,778 - WARNING - This is a WARNING message
+2026-02-05 16:54:15,404 - INFO - This is an INFO message
+2026-02-05 16:54:15,404 - ERROR - This is an ERROR message
+2026-02-05 16:54:15,404 - WARNING - This is a WARNING message
+2026-02-05 16:56:41,670 - INFO - This is an INFO message
+2026-02-05 16:56:41,670 - ERROR - This is an ERROR message
+2026-02-05 16:56:41,670 - WARNING - This is a WARNING message
+2026-02-05 16:58:32,602 - INFO - This is an INFO message
+2026-02-05 16:58:32,602 - ERROR - This is an ERROR message
+2026-02-05 16:58:32,602 - WARNING - This is a WARNING message
+2026-02-05 16:58:32,756 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://10.24.239.137:5000
+2026-02-05 16:58:32,757 - INFO - [33mPress CTRL+C to quit[0m
+2026-02-05 16:58:32,760 - INFO -  * Restarting with stat
+2026-02-05 16:58:34,771 - INFO - This is an INFO message
+2026-02-05 16:58:34,771 - ERROR - This is an ERROR message
+2026-02-05 16:58:34,771 - WARNING - This is a WARNING message
+2026-02-05 16:58:34,846 - WARNING -  * Debugger is active!
+2026-02-05 16:58:34,851 - INFO -  * Debugger PIN: 720-349-404
+2026-02-05 16:58:56,357 - INFO - 127.0.0.1 - - [05/Feb/2026 16:58:56] "GET / HTTP/1.1" 200 -
+2026-02-05 16:58:56,517 - INFO - 127.0.0.1 - - [05/Feb/2026 16:58:56] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2026-02-05 16:59:37,220 - INFO - 127.0.0.1 - - [05/Feb/2026 16:59:37] "GET /predictdata HTTP/1.1" 200 -
+2026-02-05 17:01:22,023 - INFO - 127.0.0.1 - - [05/Feb/2026 17:01:22] "[35m[1mPOST /predictdata HTTP/1.1[0m" 500 -
+2026-02-05 17:01:22,292 - INFO - 127.0.0.1 - - [05/Feb/2026 17:01:22] "GET /predictdata?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1" 200 -
+2026-02-05 17:01:22,354 - INFO - 127.0.0.1 - - [05/Feb/2026 17:01:22] "GET /predictdata?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1" 200 -
+2026-02-05 17:01:22,413 - INFO - 127.0.0.1 - - [05/Feb/2026 17:01:22] "GET /predictdata?__debugger__=yes&cmd=resource&f=console.png&s=qyRyWfI91HKPjtZ0aNsW HTTP/1.1" 200 -
+2026-02-05 17:01:22,429 - INFO - 127.0.0.1 - - [05/Feb/2026 17:01:22] "GET /predictdata?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1" 200 -
+2026-02-05 17:13:07,414 - INFO - 127.0.0.1 - - [05/Feb/2026 17:13:07] "[35m[1mPOST /predictdata HTTP/1.1[0m" 500 -
+2026-02-05 17:13:07,437 - INFO - 127.0.0.1 - - [05/Feb/2026 17:13:07] "[36mGET /predictdata?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1[0m" 304 -
+2026-02-05 17:13:07,443 - INFO - 127.0.0.1 - - [05/Feb/2026 17:13:07] "[36mGET /predictdata?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1[0m" 304 -
+2026-02-05 17:13:07,468 - INFO - 127.0.0.1 - - [05/Feb/2026 17:13:07] "[36mGET /predictdata?__debugger__=yes&cmd=resource&f=console.png&s=qyRyWfI91HKPjtZ0aNsW HTTP/1.1[0m" 304 -
+2026-02-05 17:13:07,504 - INFO - 127.0.0.1 - - [05/Feb/2026 17:13:07] "[36mGET /predictdata?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1[0m" 304 -

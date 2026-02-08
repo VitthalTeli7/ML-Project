@@ -1,0 +1,273 @@
+2026-02-08 20:46:48,176 - INFO - This is an INFO message
+2026-02-08 20:46:48,176 - ERROR - This is an ERROR message
+2026-02-08 20:46:48,176 - WARNING - This is a WARNING message
+2026-02-08 20:46:48,763 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://10.98.68.137:5000
+2026-02-08 20:46:48,763 - INFO - [33mPress CTRL+C to quit[0m
+2026-02-08 20:46:48,763 - INFO -  * Restarting with stat
+2026-02-08 20:46:50,810 - INFO - This is an INFO message
+2026-02-08 20:46:50,810 - ERROR - This is an ERROR message
+2026-02-08 20:46:50,810 - WARNING - This is a WARNING message
+2026-02-08 20:46:50,876 - WARNING -  * Debugger is active!
+2026-02-08 20:46:50,881 - INFO -  * Debugger PIN: 720-349-404
+2026-02-08 20:47:19,744 - INFO - 127.0.0.1 - - [08/Feb/2026 20:47:19] "GET / HTTP/1.1" 200 -
+2026-02-08 20:47:19,897 - INFO - 127.0.0.1 - - [08/Feb/2026 20:47:19] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2026-02-08 20:47:44,898 - INFO - 127.0.0.1 - - [08/Feb/2026 20:47:44] "GET / HTTP/1.1" 200 -
+2026-02-08 20:48:04,629 - INFO - 10.98.68.137 - - [08/Feb/2026 20:48:04] "GET / HTTP/1.1" 200 -
+2026-02-08 20:48:04,780 - INFO - 10.98.68.137 - - [08/Feb/2026 20:48:04] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2026-02-08 20:48:51,590 - INFO - 10.98.68.137 - - [08/Feb/2026 20:48:51] "GET /predictdata HTTP/1.1" 200 -
+2026-02-08 20:51:22,430 - INFO - 10.98.68.137 - - [08/Feb/2026 20:51:22] "[35m[1mPOST /predictdata HTTP/1.1[0m" 500 -
+2026-02-08 20:51:22,583 - INFO - 10.98.68.137 - - [08/Feb/2026 20:51:22] "GET /predictdata?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1" 200 -
+2026-02-08 20:51:22,619 - INFO - 10.98.68.137 - - [08/Feb/2026 20:51:22] "GET /predictdata?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1" 200 -
+2026-02-08 20:51:22,667 - INFO - 10.98.68.137 - - [08/Feb/2026 20:51:22] "GET /predictdata?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1" 200 -
+2026-02-08 20:57:33,018 - INFO -  * Detected change in 'F:\\DATA-SCIENCE\\ML-Project\\app.py', reloading
+2026-02-08 20:57:33,333 - INFO -  * Restarting with stat
+2026-02-08 20:57:35,985 - INFO - This is an INFO message
+2026-02-08 20:57:35,985 - ERROR - This is an ERROR message
+2026-02-08 20:57:35,985 - WARNING - This is a WARNING message
+2026-02-08 20:57:36,078 - WARNING -  * Debugger is active!
+2026-02-08 20:57:36,082 - INFO -  * Debugger PIN: 720-349-404
+2026-02-08 20:58:38,456 - INFO - This is an INFO message
+2026-02-08 20:58:38,456 - ERROR - This is an ERROR message
+2026-02-08 20:58:38,456 - WARNING - This is a WARNING message
+2026-02-08 20:58:38,545 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://10.98.68.137:5000
+2026-02-08 20:58:38,545 - INFO - [33mPress CTRL+C to quit[0m
+2026-02-08 20:58:38,546 - INFO -  * Restarting with stat
+2026-02-08 20:58:40,488 - INFO - This is an INFO message
+2026-02-08 20:58:40,488 - ERROR - This is an ERROR message
+2026-02-08 20:58:40,488 - WARNING - This is a WARNING message
+2026-02-08 20:58:40,553 - WARNING -  * Debugger is active!
+2026-02-08 20:58:40,557 - INFO -  * Debugger PIN: 720-349-404
+2026-02-08 20:59:00,971 - INFO - 10.98.68.137 - - [08/Feb/2026 20:59:00] "GET / HTTP/1.1" 200 -
+2026-02-08 20:59:51,191 - INFO - 10.98.68.137 - - [08/Feb/2026 20:59:51] "[35m[1mPOST /predictdata HTTP/1.1[0m" 500 -
+2026-02-08 20:59:51,275 - INFO - 10.98.68.137 - - [08/Feb/2026 20:59:51] "[36mGET /predictdata?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1[0m" 304 -
+2026-02-08 20:59:51,275 - INFO - 10.98.68.137 - - [08/Feb/2026 20:59:51] "[36mGET /predictdata?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1[0m" 304 -
+2026-02-08 21:00:23,569 - INFO - 127.0.0.1 - - [08/Feb/2026 21:00:23] "GET / HTTP/1.1" 200 -
+2026-02-08 21:00:52,484 - INFO - 127.0.0.1 - - [08/Feb/2026 21:00:52] "GET /predictdata HTTP/1.1" 200 -
+2026-02-08 21:02:36,016 - INFO - 127.0.0.1 - - [08/Feb/2026 21:02:36] "[35m[1mPOST /predictdata HTTP/1.1[0m" 500 -
+2026-02-08 21:02:36,043 - INFO - 127.0.0.1 - - [08/Feb/2026 21:02:36] "[36mGET /predictdata?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1[0m" 304 -
+2026-02-08 21:02:36,052 - INFO - 127.0.0.1 - - [08/Feb/2026 21:02:36] "[36mGET /predictdata?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1[0m" 304 -
+2026-02-08 21:02:36,092 - INFO - 127.0.0.1 - - [08/Feb/2026 21:02:36] "GET /predictdata?__debugger__=yes&cmd=resource&f=console.png&s=y2GcPIN9MWp8497trQU6 HTTP/1.1" 200 -
+2026-02-08 21:02:36,128 - INFO - 127.0.0.1 - - [08/Feb/2026 21:02:36] "[36mGET /predictdata?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1[0m" 304 -
+2026-02-08 21:26:07,947 - INFO - This is an INFO message
+2026-02-08 21:26:07,947 - ERROR - This is an ERROR message
+2026-02-08 21:26:07,947 - WARNING - This is a WARNING message
+2026-02-08 21:26:08,069 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://10.126.196.137:5000
+2026-02-08 21:26:08,069 - INFO - [33mPress CTRL+C to quit[0m
+2026-02-08 21:26:08,071 - INFO -  * Restarting with stat
+2026-02-08 21:26:09,967 - INFO - This is an INFO message
+2026-02-08 21:26:09,967 - ERROR - This is an ERROR message
+2026-02-08 21:26:09,967 - WARNING - This is a WARNING message
+2026-02-08 21:26:10,045 - WARNING -  * Debugger is active!
+2026-02-08 21:26:10,052 - INFO -  * Debugger PIN: 720-349-404
+2026-02-08 21:26:22,597 - INFO - 127.0.0.1 - - [08/Feb/2026 21:26:22] "GET / HTTP/1.1" 200 -
+2026-02-08 21:27:26,123 - INFO - 10.126.196.137 - - [08/Feb/2026 21:27:26] "GET / HTTP/1.1" 200 -
+2026-02-08 21:27:26,341 - INFO - 10.126.196.137 - - [08/Feb/2026 21:27:26] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2026-02-08 21:27:46,433 - INFO - 10.126.196.137 - - [08/Feb/2026 21:27:46] "GET /predictdata HTTP/1.1" 200 -
+2026-02-08 21:34:57,614 - INFO - 10.126.196.137 - - [08/Feb/2026 21:34:57] "[35m[1mPOST /predictdata HTTP/1.1[0m" 500 -
+2026-02-08 21:34:57,743 - INFO - 10.126.196.137 - - [08/Feb/2026 21:34:57] "GET /predictdata?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1" 200 -
+2026-02-08 21:34:57,744 - INFO - 10.126.196.137 - - [08/Feb/2026 21:34:57] "GET /predictdata?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1" 200 -
+2026-02-08 21:34:57,790 - INFO - 10.126.196.137 - - [08/Feb/2026 21:34:57] "GET /predictdata?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1" 200 -
+2026-02-08 22:08:14,261 - INFO -  * Detected change in 'F:\\DATA-SCIENCE\\ML-Project\\src\\pipeline\\predict_pipeline.py', reloading
+2026-02-08 22:08:15,724 - INFO -  * Restarting with stat
+2026-02-08 22:08:37,594 - INFO - This is an INFO message
+2026-02-08 22:08:37,594 - ERROR - This is an ERROR message
+2026-02-08 22:08:37,594 - WARNING - This is a WARNING message
+2026-02-08 22:08:38,655 - WARNING -  * Debugger is active!
+2026-02-08 22:08:38,663 - INFO -  * Debugger PIN: 720-349-404
+2026-02-08 22:08:40,789 - INFO -  * Detected change in 'F:\\DATA-SCIENCE\\ML-Project\\src\\pipeline\\predict_pipeline.py', reloading
+2026-02-08 22:08:41,095 - INFO -  * Restarting with stat
+2026-02-08 22:08:43,952 - INFO - This is an INFO message
+2026-02-08 22:08:43,952 - ERROR - This is an ERROR message
+2026-02-08 22:08:43,952 - WARNING - This is a WARNING message
+2026-02-08 22:08:44,081 - WARNING -  * Debugger is active!
+2026-02-08 22:08:44,088 - INFO -  * Debugger PIN: 720-349-404
+2026-02-08 22:10:58,052 - INFO -  * Detected change in 'F:\\DATA-SCIENCE\\ML-Project\\src\\pipeline\\predict_pipeline.py', reloading
+2026-02-08 22:10:58,255 - INFO -  * Restarting with stat
+2026-02-08 22:11:00,525 - INFO - This is an INFO message
+2026-02-08 22:11:00,525 - ERROR - This is an ERROR message
+2026-02-08 22:11:00,525 - WARNING - This is a WARNING message
+2026-02-08 22:11:00,602 - WARNING -  * Debugger is active!
+2026-02-08 22:11:00,615 - INFO -  * Debugger PIN: 720-349-404
+2026-02-08 22:11:50,162 - INFO -  * Detected change in 'F:\\DATA-SCIENCE\\ML-Project\\src\\pipeline\\predict_pipeline.py', reloading
+2026-02-08 22:11:50,375 - INFO -  * Restarting with stat
+2026-02-08 22:11:53,001 - INFO - This is an INFO message
+2026-02-08 22:11:53,001 - ERROR - This is an ERROR message
+2026-02-08 22:11:53,001 - WARNING - This is a WARNING message
+2026-02-08 22:11:53,083 - WARNING -  * Debugger is active!
+2026-02-08 22:11:53,100 - INFO -  * Debugger PIN: 720-349-404
+2026-02-08 22:19:19,322 - INFO -  * Detected change in 'F:\\DATA-SCIENCE\\ML-Project\\src\\pipeline\\predict_pipeline.py', reloading
+2026-02-08 22:19:19,550 - INFO -  * Restarting with stat
+2026-02-08 22:19:21,770 - INFO - This is an INFO message
+2026-02-08 22:19:21,770 - ERROR - This is an ERROR message
+2026-02-08 22:19:21,770 - WARNING - This is a WARNING message
+2026-02-08 22:19:21,855 - WARNING -  * Debugger is active!
+2026-02-08 22:19:21,855 - INFO -  * Debugger PIN: 720-349-404
+2026-02-08 23:06:47,084 - INFO -  * Detected change in 'F:\\DATA-SCIENCE\\ML-Project\\src\\pipeline\\predict_pipeline.py', reloading
+2026-02-08 23:06:47,448 - INFO -  * Restarting with stat
+2026-02-08 23:06:50,273 - INFO - This is an INFO message
+2026-02-08 23:06:50,273 - ERROR - This is an ERROR message
+2026-02-08 23:06:50,273 - WARNING - This is a WARNING message
+2026-02-08 23:06:50,416 - WARNING -  * Debugger is active!
+2026-02-08 23:06:50,420 - INFO -  * Debugger PIN: 720-349-404
+2026-02-08 23:07:09,054 - INFO -  * Detected change in 'F:\\DATA-SCIENCE\\ML-Project\\src\\pipeline\\predict_pipeline.py', reloading
+2026-02-08 23:07:09,286 - INFO -  * Restarting with stat
+2026-02-08 23:07:11,433 - INFO - This is an INFO message
+2026-02-08 23:07:11,433 - ERROR - This is an ERROR message
+2026-02-08 23:07:11,433 - WARNING - This is a WARNING message
+2026-02-08 23:07:11,507 - WARNING -  * Debugger is active!
+2026-02-08 23:07:11,513 - INFO -  * Debugger PIN: 720-349-404
+2026-02-08 23:10:33,835 - INFO -  * Detected change in 'F:\\DATA-SCIENCE\\ML-Project\\src\\pipeline\\predict_pipeline.py', reloading
+2026-02-08 23:10:34,105 - INFO -  * Restarting with stat
+2026-02-08 23:10:36,570 - INFO - This is an INFO message
+2026-02-08 23:10:36,570 - ERROR - This is an ERROR message
+2026-02-08 23:10:36,570 - WARNING - This is a WARNING message
+2026-02-08 23:10:36,654 - WARNING -  * Debugger is active!
+2026-02-08 23:10:36,654 - INFO -  * Debugger PIN: 720-349-404
+2026-02-08 23:19:20,953 - INFO - This is an INFO message
+2026-02-08 23:19:20,953 - ERROR - This is an ERROR message
+2026-02-08 23:19:20,953 - WARNING - This is a WARNING message
+2026-02-08 23:19:23,695 - INFO - Entered the data ingestion method
+2026-02-08 23:19:23,755 - INFO - Read the dataset as dataframe
+2026-02-08 23:19:23,874 - INFO - Train test split initiated
+2026-02-08 23:19:23,995 - INFO - Ingestion of the data is completed
+2026-02-08 23:19:24,098 - INFO - Read train and test data completed
+2026-02-08 23:19:24,098 - INFO - Obtaining preprocessor object
+2026-02-08 23:19:24,098 - INFO - Numerical columns standard scaling completed
+2026-02-08 23:19:24,098 - INFO - Categorical columns encoding completed
+2026-02-08 23:19:24,114 - INFO - Applying preprocessing object on training and testing datasets.
+2026-02-08 23:19:24,177 - INFO - Saved preprocessing object.
+2026-02-08 23:19:24,177 - INFO - Splitting training and test input data
+2026-02-08 23:19:24,177 - INFO - Training Random Forest model
+2026-02-08 23:19:27,405 - INFO - Random Forest accuracy: 0.8905
+2026-02-08 23:19:38,927 - INFO - This is an INFO message
+2026-02-08 23:19:38,927 - ERROR - This is an ERROR message
+2026-02-08 23:19:38,927 - WARNING - This is a WARNING message
+2026-02-08 23:19:53,713 - INFO - This is an INFO message
+2026-02-08 23:19:53,713 - ERROR - This is an ERROR message
+2026-02-08 23:19:53,713 - WARNING - This is a WARNING message
+2026-02-08 23:20:48,099 - INFO - This is an INFO message
+2026-02-08 23:20:48,099 - ERROR - This is an ERROR message
+2026-02-08 23:20:48,099 - WARNING - This is a WARNING message
+2026-02-08 23:20:48,225 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://10.98.68.137:5000
+2026-02-08 23:20:48,225 - INFO - [33mPress CTRL+C to quit[0m
+2026-02-08 23:20:48,225 - INFO -  * Restarting with stat
+2026-02-08 23:20:50,812 - INFO - This is an INFO message
+2026-02-08 23:20:50,812 - ERROR - This is an ERROR message
+2026-02-08 23:20:50,812 - WARNING - This is a WARNING message
+2026-02-08 23:20:50,898 - WARNING -  * Debugger is active!
+2026-02-08 23:20:50,898 - INFO -  * Debugger PIN: 720-349-404
+2026-02-08 23:21:07,057 - INFO - 127.0.0.1 - - [08/Feb/2026 23:21:07] "GET / HTTP/1.1" 200 -
+2026-02-08 23:21:07,125 - INFO - 127.0.0.1 - - [08/Feb/2026 23:21:07] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2026-02-08 23:21:17,557 - INFO - 127.0.0.1 - - [08/Feb/2026 23:21:17] "GET /predictdata HTTP/1.1" 200 -
+2026-02-08 23:23:11,430 - INFO - 127.0.0.1 - - [08/Feb/2026 23:23:11] "[35m[1mPOST /predictdata HTTP/1.1[0m" 500 -
+2026-02-08 23:23:11,586 - INFO - 127.0.0.1 - - [08/Feb/2026 23:23:11] "GET /predictdata?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1" 200 -
+2026-02-08 23:23:11,651 - INFO - 127.0.0.1 - - [08/Feb/2026 23:23:11] "GET /predictdata?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1" 200 -
+2026-02-08 23:23:11,701 - INFO - 127.0.0.1 - - [08/Feb/2026 23:23:11] "GET /predictdata?__debugger__=yes&cmd=resource&f=console.png&s=RjSC7fCbDDSdllFHcGKd HTTP/1.1" 200 -
+2026-02-08 23:23:11,718 - INFO - 127.0.0.1 - - [08/Feb/2026 23:23:11] "GET /predictdata?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1" 200 -
+2026-02-08 23:28:55,712 - INFO -  * Detected change in 'F:\\DATA-SCIENCE\\ML-Project\\src\\pipeline\\predict_pipeline.py', reloading
+2026-02-08 23:28:55,951 - INFO -  * Restarting with stat
+2026-02-08 23:28:58,510 - INFO - This is an INFO message
+2026-02-08 23:28:58,510 - ERROR - This is an ERROR message
+2026-02-08 23:28:58,510 - WARNING - This is a WARNING message
+2026-02-08 23:28:58,602 - WARNING -  * Debugger is active!
+2026-02-08 23:28:58,602 - INFO -  * Debugger PIN: 720-349-404
+2026-02-08 23:32:21,118 - INFO -  * Detected change in 'F:\\DATA-SCIENCE\\ML-Project\\app.py', reloading
+2026-02-08 23:32:21,394 - INFO -  * Restarting with stat
+2026-02-08 23:32:24,284 - INFO - This is an INFO message
+2026-02-08 23:32:24,284 - ERROR - This is an ERROR message
+2026-02-08 23:32:24,284 - WARNING - This is a WARNING message
+2026-02-08 23:32:24,393 - WARNING -  * Debugger is active!
+2026-02-08 23:32:24,405 - INFO -  * Debugger PIN: 720-349-404
+2026-02-08 23:37:09,674 - INFO -  * Detected change in 'F:\\DATA-SCIENCE\\ML-Project\\src\\pipeline\\predict_pipeline.py', reloading
+2026-02-08 23:37:09,910 - INFO -  * Restarting with stat
+2026-02-08 23:37:12,668 - INFO - This is an INFO message
+2026-02-08 23:37:12,668 - ERROR - This is an ERROR message
+2026-02-08 23:37:12,668 - WARNING - This is a WARNING message
+2026-02-08 23:37:12,765 - WARNING -  * Debugger is active!
+2026-02-08 23:37:12,776 - INFO -  * Debugger PIN: 720-349-404
+2026-02-08 23:38:55,135 - INFO - This is an INFO message
+2026-02-08 23:38:55,135 - ERROR - This is an ERROR message
+2026-02-08 23:38:55,135 - WARNING - This is a WARNING message
+2026-02-08 23:38:55,236 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://10.98.68.137:5000
+2026-02-08 23:38:55,236 - INFO - [33mPress CTRL+C to quit[0m
+2026-02-08 23:38:55,238 - INFO -  * Restarting with stat
+2026-02-08 23:38:57,194 - INFO - This is an INFO message
+2026-02-08 23:38:57,194 - ERROR - This is an ERROR message
+2026-02-08 23:38:57,194 - WARNING - This is a WARNING message
+2026-02-08 23:38:57,260 - WARNING -  * Debugger is active!
+2026-02-08 23:38:57,260 - INFO -  * Debugger PIN: 720-349-404
+2026-02-08 23:39:15,639 - INFO - 127.0.0.1 - - [08/Feb/2026 23:39:15] "GET / HTTP/1.1" 200 -
+2026-02-08 23:39:29,263 - INFO - 127.0.0.1 - - [08/Feb/2026 23:39:29] "GET /predictdata HTTP/1.1" 200 -
+2026-02-08 23:40:42,234 - INFO - 127.0.0.1 - - [08/Feb/2026 23:40:42] "[35m[1mPOST /predictdata HTTP/1.1[0m" 500 -
+2026-02-08 23:40:42,410 - INFO - 127.0.0.1 - - [08/Feb/2026 23:40:42] "[36mGET /predictdata?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1[0m" 304 -
+2026-02-08 23:40:42,410 - INFO - 127.0.0.1 - - [08/Feb/2026 23:40:42] "[36mGET /predictdata?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1[0m" 304 -
+2026-02-08 23:40:42,453 - INFO - 127.0.0.1 - - [08/Feb/2026 23:40:42] "GET /predictdata?__debugger__=yes&cmd=resource&f=console.png&s=U8xXRTAPCPVb9HjjOlTX HTTP/1.1" 200 -
+2026-02-08 23:45:38,921 - INFO -  * Detected change in 'F:\\DATA-SCIENCE\\ML-Project\\app.py', reloading
+2026-02-08 23:45:39,168 - INFO -  * Restarting with stat
+2026-02-08 23:45:42,012 - INFO - This is an INFO message
+2026-02-08 23:45:42,012 - ERROR - This is an ERROR message
+2026-02-08 23:45:42,012 - WARNING - This is a WARNING message
+2026-02-08 23:45:42,080 - WARNING -  * Debugger is active!
+2026-02-08 23:45:42,090 - INFO -  * Debugger PIN: 720-349-404
+2026-02-08 23:45:59,895 - INFO -  * Detected change in 'F:\\DATA-SCIENCE\\ML-Project\\app.py', reloading
+2026-02-08 23:46:00,210 - INFO -  * Restarting with stat
+2026-02-08 23:46:02,776 - INFO - This is an INFO message
+2026-02-08 23:46:02,776 - ERROR - This is an ERROR message
+2026-02-08 23:46:02,776 - WARNING - This is a WARNING message
+2026-02-08 23:46:02,871 - WARNING -  * Debugger is active!
+2026-02-08 23:46:02,872 - INFO -  * Debugger PIN: 720-349-404
+2026-02-08 23:58:56,434 - INFO - This is an INFO message
+2026-02-08 23:58:56,434 - ERROR - This is an ERROR message
+2026-02-08 23:58:56,434 - WARNING - This is a WARNING message
+2026-02-08 23:58:57,884 - INFO - Entered the data ingestion method
+2026-02-08 23:58:57,945 - INFO - Read the dataset as dataframe
+2026-02-08 23:58:58,054 - INFO - Train test split initiated
+2026-02-08 23:58:58,188 - INFO - Ingestion of the data is completed
+2026-02-08 23:58:58,321 - INFO - Read train and test data completed
+2026-02-08 23:58:58,321 - INFO - Obtaining preprocessor object
+2026-02-08 23:58:58,321 - INFO - Numerical columns standard scaling completed
+2026-02-08 23:58:58,321 - INFO - Categorical columns encoding completed
+2026-02-08 23:58:58,323 - INFO - Applying preprocessing object on training and testing datasets.
+2026-02-08 23:58:58,383 - INFO - Saved preprocessing object.
+2026-02-08 23:58:58,383 - INFO - Splitting training and test input data
+2026-02-08 23:58:58,383 - INFO - Training Random Forest model
+2026-02-08 23:59:01,033 - INFO - Random Forest accuracy: 0.8905
+2026-02-08 23:59:11,647 - INFO - This is an INFO message
+2026-02-08 23:59:11,647 - ERROR - This is an ERROR message
+2026-02-08 23:59:11,647 - WARNING - This is a WARNING message
+2026-02-08 23:59:21,597 - INFO - This is an INFO message
+2026-02-08 23:59:21,597 - ERROR - This is an ERROR message
+2026-02-08 23:59:21,597 - WARNING - This is a WARNING message
+2026-02-08 23:59:37,943 - INFO - This is an INFO message
+2026-02-08 23:59:37,943 - ERROR - This is an ERROR message
+2026-02-08 23:59:37,943 - WARNING - This is a WARNING message
+2026-02-08 23:59:38,054 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://10.98.68.137:5000
+2026-02-08 23:59:38,054 - INFO - [33mPress CTRL+C to quit[0m
+2026-02-08 23:59:38,056 - INFO -  * Restarting with stat
+2026-02-08 23:59:40,334 - INFO - This is an INFO message
+2026-02-08 23:59:40,334 - ERROR - This is an ERROR message
+2026-02-08 23:59:40,334 - WARNING - This is a WARNING message
+2026-02-08 23:59:40,417 - WARNING -  * Debugger is active!
+2026-02-08 23:59:40,417 - INFO -  * Debugger PIN: 720-349-404
+2026-02-09 00:00:21,681 - INFO - 127.0.0.1 - - [09/Feb/2026 00:00:21] "GET / HTTP/1.1" 200 -
+2026-02-09 00:00:59,154 - INFO - 127.0.0.1 - - [09/Feb/2026 00:00:59] "[33mGET /predictdat HTTP/1.1[0m" 404 -
+2026-02-09 00:02:32,160 - INFO - 127.0.0.1 - - [09/Feb/2026 00:02:32] "GET /predictdata HTTP/1.1" 200 -
+2026-02-09 00:03:33,106 - INFO - 127.0.0.1 - - [09/Feb/2026 00:03:33] "POST /predictdata HTTP/1.1" 200 -
