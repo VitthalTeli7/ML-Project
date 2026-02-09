@@ -1,0 +1,20 @@
+2026-02-09 13:12:08,695 - INFO - This is an INFO message
+2026-02-09 13:12:08,695 - ERROR - This is an ERROR message
+2026-02-09 13:12:08,695 - WARNING - This is a WARNING message
+2026-02-09 13:12:09,306 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.1.8:5000
+2026-02-09 13:12:09,306 - INFO - [33mPress CTRL+C to quit[0m
+2026-02-09 13:12:09,306 - INFO -  * Restarting with stat
+2026-02-09 13:12:11,234 - INFO - This is an INFO message
+2026-02-09 13:12:11,234 - ERROR - This is an ERROR message
+2026-02-09 13:12:11,234 - WARNING - This is a WARNING message
+2026-02-09 13:12:11,305 - WARNING -  * Debugger is active!
+2026-02-09 13:12:11,312 - INFO -  * Debugger PIN: 720-349-404
+2026-02-09 13:12:32,439 - INFO - 127.0.0.1 - - [09/Feb/2026 13:12:32] "GET / HTTP/1.1" 200 -
+2026-02-09 13:12:35,850 - INFO - 127.0.0.1 - - [09/Feb/2026 13:12:35] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2026-02-09 13:13:00,786 - INFO - 127.0.0.1 - - [09/Feb/2026 13:13:00] "GET / HTTP/1.1" 200 -
+2026-02-09 13:13:00,849 - INFO - 127.0.0.1 - - [09/Feb/2026 13:13:00] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2026-02-09 13:13:07,804 - INFO - 127.0.0.1 - - [09/Feb/2026 13:13:07] "GET /predictdata HTTP/1.1" 200 -
+2026-02-09 13:16:04,186 - INFO - 127.0.0.1 - - [09/Feb/2026 13:16:04] "POST /predictdata HTTP/1.1" 200 -
