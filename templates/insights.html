@@ -1,0 +1,34 @@
+{% extends "base.html" %}
+{% block title %}Model Insights{% endblock %}
+
+{% block content %}
+<div class="dashboard-container">
+
+    <h1 class="dashboard-title">🤖 Model Insights</h1>
+    <p class="dashboard-subtitle">
+        Model performance & explainability
+    </p>
+
+    <div class="chart-grid">
+
+        <div class="chart-card">
+            <h3>Model Accuracy</h3>
+            <canvas id="accuracyChart"></canvas>
+        </div>
+
+        <div class="chart-card">
+            <h3>Confusion Matrix</h3>
+            <canvas id="confusionChart"></canvas>
+        </div>
+
+        <div class="chart-card">
+            <h3>Feature Importance</h3>
+            <canvas id="featureChart"></canvas>
+        </div>
+
+    </div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<script src="{{ url_for('static', filename='js/model_insights.js') }}"></script>
+{% endblock %}

@@ -1,0 +1,253 @@
+/* ===== Global ===== */
+* {
+    box-sizing: border-box;
+    font-family: "Segoe UI", Tahoma, sans-serif;
+}
+
+body {
+    margin: 0;
+    background: linear-gradient(135deg, #667eea, #764ba2);
+    min-height: 100vh;
+    color: #333;
+}
+
+/* ===== Navbar ===== */
+.navbar {
+    background: #fff;
+    padding: 15px 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+.logo {
+    font-weight: 700;
+    font-size: 20px;
+}
+
+.nav-links a {
+    margin-left: 20px;
+    text-decoration: none;
+    color: #555;
+    font-weight: 500;
+}
+
+.nav-links a:hover {
+    color: #667eea;
+}
+
+/* ===== Page Container ===== */
+.page-container {
+    padding: 40px;
+    display: flex;
+    justify-content: center;
+}
+
+
+/* ===== Card ===== */
+.card {
+    background: #fff;
+    width: 100%;
+    max-width: 900px;
+    padding: 30px;
+    border-radius: 16px;
+    box-shadow: 0 20px 40px rgba(0,0,0,0.15);
+    animation: fadeInUp 0.6s ease;
+}
+
+/* ===== Titles ===== */
+.title {
+    text-align: center;
+    margin-bottom: 5px;
+}
+
+.subtitle {
+    text-align: center;
+    color: #777;
+    margin-bottom: 30px;
+}
+
+/* ===== Sections ===== */
+.section {
+    margin: 30px 0 15px;
+    color: #667eea;
+    font-size: 18px;
+}
+
+/* ===== Form Grid ===== */
+.form-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 15px;
+}
+
+/* ===== Inputs ===== */
+input, select {
+    padding: 12px 14px;
+    border-radius: 10px;
+    border: 1px solid #ddd;
+    font-size: 14px;
+    transition: all 0.2s ease;
+}
+
+input:focus, select:focus {
+    outline: none;
+    border-color: #667eea;
+    box-shadow: 0 0 0 2px rgba(102,126,234,0.2);
+}
+
+/* ===== Button ===== */
+.btn {
+    margin-top: 30px;
+    width: 100%;
+    padding: 14px;
+    border: none;
+    border-radius: 12px;
+    background: linear-gradient(135deg, #667eea, #764ba2);
+    color: #fff;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+}
+
+/* ===== Result ===== */
+.result {
+    margin-top: 25px;
+    padding: 15px;
+    text-align: center;
+    border-radius: 12px;
+    font-weight: 600;
+}
+
+.result.safe {
+    background: #e6fffa;
+    color: #065f46;
+}
+
+.result.churn {
+    background: #ffe4e6;
+    color: #9f1239;
+}
+
+/* ===== Animations ===== */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+/* ===== Dashboard Layout ===== */
+.dashboard-container {
+    max-width: 1200px;
+    margin: auto;
+    padding: 30px;
+}
+
+.dashboard-title {
+    text-align: center;
+    margin-bottom: 5px;
+}
+
+.dashboard-subtitle {
+    text-align: center;
+    color: #666;
+    margin-bottom: 40px;
+}
+
+/* ===== Chart Grid ===== */
+.chart-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 25px;
+    align-items: stretch;
+}
+
+/* ===== Chart Card ===== */
+.chart-card {
+    background: #fff;
+    padding: 20px;
+    border-radius: 14px;
+    box-shadow: 0 12px 25px rgba(0,0,0,0.12);
+    text-align: center;
+    animation: fadeInUp 0.5s ease;
+
+    height: 360px;
+    display: flex;
+    flex-direction: column;
+}
+
+.hero-wrapper {
+    min-height: calc(100vh - 80px); /* minus navbar height */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 40px;
+}
+
+/* ===== Home Center Layout ===== */
+.hero-wrapper {
+    min-height: calc(100vh - 80px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.hero-card {
+    max-width: 800px;
+    text-align: center;
+}
+
+/* Feature row */
+.features {
+    margin-top: 40px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+}
+
+.features p {
+    color: #666;
+    font-size: 14px;
+}
+
+@keyframes heroFade {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.hero-card {
+    background: rgba(255, 255, 255, 0.85);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border-radius: 18px;
+    box-shadow: 0 25px 50px rgba(0,0,0,0.18);
+}
+
+.stats {
+    margin: 30px 0;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+.stats h2 {
+    font-size: 32px;
+    color: #667eea;
+}

@@ -1,0 +1,363 @@
+2026-02-10 21:14:42,385 - INFO - This is an INFO message
+2026-02-10 21:14:42,385 - ERROR - This is an ERROR message
+2026-02-10 21:14:42,385 - WARNING - This is a WARNING message
+2026-02-10 21:14:43,280 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2026-02-10 21:14:43,280 - INFO - [33mPress CTRL+C to quit[0m
+2026-02-10 21:14:43,280 - INFO -  * Restarting with stat
+2026-02-10 21:14:45,384 - INFO - This is an INFO message
+2026-02-10 21:14:45,384 - ERROR - This is an ERROR message
+2026-02-10 21:14:45,384 - WARNING - This is a WARNING message
+2026-02-10 21:14:45,465 - WARNING -  * Debugger is active!
+2026-02-10 21:14:45,474 - INFO -  * Debugger PIN: 720-349-404
+2026-02-10 21:15:42,028 - INFO - 127.0.0.1 - - [10/Feb/2026 21:15:42] "GET / HTTP/1.1" 200 -
+2026-02-10 21:15:42,234 - INFO - 127.0.0.1 - - [10/Feb/2026 21:15:42] "GET /static/css/style.css HTTP/1.1" 200 -
+2026-02-10 21:15:42,692 - INFO - 127.0.0.1 - - [10/Feb/2026 21:15:42] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2026-02-10 21:18:35,109 - INFO - 127.0.0.1 - - [10/Feb/2026 21:18:35] "GET /predict HTTP/1.1" 200 -
+2026-02-10 21:18:35,128 - INFO - 127.0.0.1 - - [10/Feb/2026 21:18:35] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2026-02-10 21:19:18,207 - INFO - 127.0.0.1 - - [10/Feb/2026 21:19:18] "GET /dashboard HTTP/1.1" 200 -
+2026-02-10 21:19:18,221 - INFO - 127.0.0.1 - - [10/Feb/2026 21:19:18] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2026-02-10 21:19:18,268 - INFO - 127.0.0.1 - - [10/Feb/2026 21:19:18] "GET /static/js/charts.js HTTP/1.1" 200 -
+2026-02-10 21:19:59,551 - INFO - 127.0.0.1 - - [10/Feb/2026 21:19:59] "[33mGET /insights HTTP/1.1[0m" 404 -
+2026-02-10 21:20:10,587 - INFO - 127.0.0.1 - - [10/Feb/2026 21:20:10] "GET / HTTP/1.1" 200 -
+2026-02-10 21:20:10,605 - INFO - 127.0.0.1 - - [10/Feb/2026 21:20:10] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2026-02-10 21:20:16,121 - INFO - 127.0.0.1 - - [10/Feb/2026 21:20:16] "GET /dashboard HTTP/1.1" 200 -
+2026-02-10 21:20:16,142 - INFO - 127.0.0.1 - - [10/Feb/2026 21:20:16] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2026-02-10 21:20:16,142 - INFO - 127.0.0.1 - - [10/Feb/2026 21:20:16] "[36mGET /static/js/charts.js HTTP/1.1[0m" 304 -
+2026-02-10 21:20:17,777 - INFO - 127.0.0.1 - - [10/Feb/2026 21:20:17] "GET /predict HTTP/1.1" 200 -
+2026-02-10 21:20:17,794 - INFO - 127.0.0.1 - - [10/Feb/2026 21:20:17] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2026-02-10 21:21:26,406 - INFO - 127.0.0.1 - - [10/Feb/2026 21:21:26] "POST /predict HTTP/1.1" 200 -
+2026-02-10 21:21:26,426 - INFO - 127.0.0.1 - - [10/Feb/2026 21:21:26] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2026-02-10 21:28:13,602 - INFO -  * Detected change in 'F:\\DATA-SCIENCE\\ML-Project\\app.py', reloading
+2026-02-10 21:28:13,901 - INFO -  * Restarting with stat
+2026-02-10 21:28:17,039 - INFO - This is an INFO message
+2026-02-10 21:28:17,039 - ERROR - This is an ERROR message
+2026-02-10 21:28:17,039 - WARNING - This is a WARNING message
+2026-02-10 21:28:17,254 - WARNING -  * Debugger is active!
+2026-02-10 21:28:17,254 - INFO -  * Debugger PIN: 720-349-404
+2026-02-10 21:28:44,496 - INFO -  * Detected change in 'F:\\DATA-SCIENCE\\ML-Project\\app.py', reloading
+2026-02-10 21:28:44,942 - INFO -  * Restarting with stat
+2026-02-10 21:28:47,396 - INFO - This is an INFO message
+2026-02-10 21:28:47,396 - ERROR - This is an ERROR message
+2026-02-10 21:28:47,396 - WARNING - This is a WARNING message
+2026-02-10 22:06:16,862 - INFO - This is an INFO message
+2026-02-10 22:06:16,862 - ERROR - This is an ERROR message
+2026-02-10 22:06:16,862 - WARNING - This is a WARNING message
+2026-02-10 22:06:17,041 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2026-02-10 22:06:17,041 - INFO - [33mPress CTRL+C to quit[0m
+2026-02-10 22:06:17,041 - INFO -  * Restarting with stat
+2026-02-10 22:06:18,937 - INFO - This is an INFO message
+2026-02-10 22:06:18,937 - ERROR - This is an ERROR message
+2026-02-10 22:06:18,937 - WARNING - This is a WARNING message
+2026-02-10 22:06:19,030 - WARNING -  * Debugger is active!
+2026-02-10 22:06:19,036 - INFO -  * Debugger PIN: 720-349-404
+2026-02-10 22:06:57,985 - INFO - 127.0.0.1 - - [10/Feb/2026 22:06:57] "[35m[1mGET / HTTP/1.1[0m" 500 -
+2026-02-10 22:06:58,164 - INFO - 127.0.0.1 - - [10/Feb/2026 22:06:58] "GET /?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1" 200 -
+2026-02-10 22:06:58,213 - INFO - 127.0.0.1 - - [10/Feb/2026 22:06:58] "GET /?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1" 200 -
+2026-02-10 22:06:58,288 - INFO - 127.0.0.1 - - [10/Feb/2026 22:06:58] "GET /?__debugger__=yes&cmd=resource&f=console.png&s=8n9muIFHLVw6Sg2kjstU HTTP/1.1" 200 -
+2026-02-10 22:06:58,303 - INFO - 127.0.0.1 - - [10/Feb/2026 22:06:58] "GET /?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1" 200 -
+2026-02-10 22:17:19,275 - INFO - This is an INFO message
+2026-02-10 22:17:19,275 - ERROR - This is an ERROR message
+2026-02-10 22:17:19,275 - WARNING - This is a WARNING message
+2026-02-10 22:17:19,385 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2026-02-10 22:17:19,386 - INFO - [33mPress CTRL+C to quit[0m
+2026-02-10 22:17:19,387 - INFO -  * Restarting with stat
+2026-02-10 22:17:21,688 - INFO - This is an INFO message
+2026-02-10 22:17:21,688 - ERROR - This is an ERROR message
+2026-02-10 22:17:21,688 - WARNING - This is a WARNING message
+2026-02-10 22:17:21,782 - WARNING -  * Debugger is active!
+2026-02-10 22:17:21,789 - INFO -  * Debugger PIN: 720-349-404
+2026-02-10 22:18:40,859 - INFO - 127.0.0.1 - - [10/Feb/2026 22:18:40] "GET / HTTP/1.1" 200 -
+2026-02-10 22:18:40,996 - INFO - 127.0.0.1 - - [10/Feb/2026 22:18:40] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2026-02-10 22:18:55,831 - INFO - 127.0.0.1 - - [10/Feb/2026 22:18:55] "GET / HTTP/1.1" 200 -
+2026-02-10 22:18:55,848 - INFO - 127.0.0.1 - - [10/Feb/2026 22:18:55] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2026-02-10 22:18:57,705 - INFO - 127.0.0.1 - - [10/Feb/2026 22:18:57] "GET / HTTP/1.1" 200 -
+2026-02-10 22:18:57,720 - INFO - 127.0.0.1 - - [10/Feb/2026 22:18:57] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2026-02-10 22:18:59,138 - INFO - 127.0.0.1 - - [10/Feb/2026 22:18:59] "GET /dashboard HTTP/1.1" 200 -
+2026-02-10 22:18:59,156 - INFO - 127.0.0.1 - - [10/Feb/2026 22:18:59] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2026-02-10 22:18:59,158 - INFO - 127.0.0.1 - - [10/Feb/2026 22:18:59] "[36mGET /static/js/charts.js HTTP/1.1[0m" 304 -
+2026-02-10 22:19:13,858 - INFO - 127.0.0.1 - - [10/Feb/2026 22:19:13] "[35m[1mGET /predict HTTP/1.1[0m" 500 -
+2026-02-10 22:19:13,879 - INFO - 127.0.0.1 - - [10/Feb/2026 22:19:13] "GET /predict?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1" 200 -
+2026-02-10 22:19:13,881 - INFO - 127.0.0.1 - - [10/Feb/2026 22:19:13] "GET /predict?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1" 200 -
+2026-02-10 22:19:13,901 - INFO - 127.0.0.1 - - [10/Feb/2026 22:19:13] "GET /predict?__debugger__=yes&cmd=resource&f=console.png&s=7dGmfp32LNA7LcU0Rcus HTTP/1.1" 200 -
+2026-02-10 22:19:13,939 - INFO - 127.0.0.1 - - [10/Feb/2026 22:19:13] "GET /predict?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1" 200 -
+2026-02-10 22:25:58,952 - INFO -  * Detected change in 'F:\\DATA-SCIENCE\\ML-Project\\app.py', reloading
+2026-02-10 22:25:59,171 - INFO -  * Restarting with stat
+2026-02-10 22:26:01,681 - INFO - This is an INFO message
+2026-02-10 22:26:01,681 - ERROR - This is an ERROR message
+2026-02-10 22:26:01,681 - WARNING - This is a WARNING message
+2026-02-10 22:26:01,770 - WARNING -  * Debugger is active!
+2026-02-10 22:26:01,774 - INFO -  * Debugger PIN: 720-349-404
+2026-02-10 22:26:43,205 - INFO -  * Detected change in 'F:\\DATA-SCIENCE\\ML-Project\\app.py', reloading
+2026-02-10 22:26:43,442 - INFO -  * Restarting with stat
+2026-02-10 22:26:45,752 - INFO - This is an INFO message
+2026-02-10 22:26:45,752 - ERROR - This is an ERROR message
+2026-02-10 22:26:45,752 - WARNING - This is a WARNING message
+2026-02-10 22:26:45,828 - WARNING -  * Debugger is active!
+2026-02-10 22:26:45,832 - INFO -  * Debugger PIN: 720-349-404
+2026-02-10 22:27:37,764 - INFO - This is an INFO message
+2026-02-10 22:27:37,764 - ERROR - This is an ERROR message
+2026-02-10 22:27:37,764 - WARNING - This is a WARNING message
+2026-02-10 22:27:37,852 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2026-02-10 22:27:37,852 - INFO - [33mPress CTRL+C to quit[0m
+2026-02-10 22:27:37,858 - INFO -  * Restarting with stat
+2026-02-10 22:27:40,336 - INFO - This is an INFO message
+2026-02-10 22:27:40,336 - ERROR - This is an ERROR message
+2026-02-10 22:27:40,336 - WARNING - This is a WARNING message
+2026-02-10 22:27:40,432 - WARNING -  * Debugger is active!
+2026-02-10 22:27:40,443 - INFO -  * Debugger PIN: 720-349-404
+2026-02-10 22:27:44,983 - INFO - 127.0.0.1 - - [10/Feb/2026 22:27:44] "GET / HTTP/1.1" 200 -
+2026-02-10 22:27:45,274 - INFO - 127.0.0.1 - - [10/Feb/2026 22:27:45] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2026-02-10 22:27:45,443 - INFO - 127.0.0.1 - - [10/Feb/2026 22:27:45] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2026-02-10 22:27:48,616 - INFO - 127.0.0.1 - - [10/Feb/2026 22:27:48] "GET /dashboard HTTP/1.1" 200 -
+2026-02-10 22:27:48,634 - INFO - 127.0.0.1 - - [10/Feb/2026 22:27:48] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2026-02-10 22:27:48,634 - INFO - 127.0.0.1 - - [10/Feb/2026 22:27:48] "[36mGET /static/js/charts.js HTTP/1.1[0m" 304 -
+2026-02-10 22:27:50,203 - INFO - 127.0.0.1 - - [10/Feb/2026 22:27:50] "GET /predict HTTP/1.1" 200 -
+2026-02-10 22:27:50,215 - INFO - 127.0.0.1 - - [10/Feb/2026 22:27:50] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2026-02-10 22:27:55,282 - INFO - 127.0.0.1 - - [10/Feb/2026 22:27:55] "GET /insights HTTP/1.1" 200 -
+2026-02-10 22:27:55,297 - INFO - 127.0.0.1 - - [10/Feb/2026 22:27:55] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2026-02-10 22:28:04,721 - INFO - 127.0.0.1 - - [10/Feb/2026 22:28:04] "GET / HTTP/1.1" 200 -
+2026-02-10 22:28:04,739 - INFO - 127.0.0.1 - - [10/Feb/2026 22:28:04] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2026-02-10 22:28:07,381 - INFO - 127.0.0.1 - - [10/Feb/2026 22:28:07] "GET /dashboard HTTP/1.1" 200 -
+2026-02-10 22:28:07,402 - INFO - 127.0.0.1 - - [10/Feb/2026 22:28:07] "[36mGET /static/js/charts.js HTTP/1.1[0m" 304 -
+2026-02-10 22:28:07,403 - INFO - 127.0.0.1 - - [10/Feb/2026 22:28:07] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2026-02-10 22:28:17,225 - INFO - 127.0.0.1 - - [10/Feb/2026 22:28:17] "GET /insights HTTP/1.1" 200 -
+2026-02-10 22:28:17,239 - INFO - 127.0.0.1 - - [10/Feb/2026 22:28:17] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2026-02-10 22:29:50,315 - INFO - 127.0.0.1 - - [10/Feb/2026 22:29:50] "GET /predict HTTP/1.1" 200 -
+2026-02-10 22:29:50,333 - INFO - 127.0.0.1 - - [10/Feb/2026 22:29:50] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2026-02-10 22:30:40,835 - INFO - 127.0.0.1 - - [10/Feb/2026 22:30:40] "POST /predictdata HTTP/1.1" 200 -
+2026-02-10 22:30:40,850 - INFO - 127.0.0.1 - - [10/Feb/2026 22:30:40] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2026-02-10 22:36:02,786 - INFO - This is an INFO message
+2026-02-10 22:36:02,786 - ERROR - This is an ERROR message
+2026-02-10 22:36:02,786 - WARNING - This is a WARNING message
+2026-02-10 22:36:02,868 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2026-02-10 22:36:02,868 - INFO - [33mPress CTRL+C to quit[0m
+2026-02-10 22:36:02,868 - INFO -  * Restarting with stat
+2026-02-10 22:36:04,781 - INFO - This is an INFO message
+2026-02-10 22:36:04,781 - ERROR - This is an ERROR message
+2026-02-10 22:36:04,781 - WARNING - This is a WARNING message
+2026-02-10 22:36:04,862 - WARNING -  * Debugger is active!
+2026-02-10 22:36:04,862 - INFO -  * Debugger PIN: 720-349-404
+2026-02-10 22:36:17,836 - INFO - 127.0.0.1 - - [10/Feb/2026 22:36:17] "GET / HTTP/1.1" 200 -
+2026-02-10 22:36:17,977 - INFO - 127.0.0.1 - - [10/Feb/2026 22:36:17] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2026-02-10 22:36:18,067 - INFO - 127.0.0.1 - - [10/Feb/2026 22:36:18] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2026-02-10 22:36:21,514 - INFO - 127.0.0.1 - - [10/Feb/2026 22:36:21] "GET / HTTP/1.1" 200 -
+2026-02-10 22:36:21,529 - INFO - 127.0.0.1 - - [10/Feb/2026 22:36:21] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2026-02-10 22:36:24,724 - INFO - 127.0.0.1 - - [10/Feb/2026 22:36:24] "GET /dashboard HTTP/1.1" 200 -
+2026-02-10 22:36:24,746 - INFO - 127.0.0.1 - - [10/Feb/2026 22:36:24] "[36mGET /static/js/charts.js HTTP/1.1[0m" 304 -
+2026-02-10 22:36:24,748 - INFO - 127.0.0.1 - - [10/Feb/2026 22:36:24] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2026-02-10 22:36:27,315 - INFO - 127.0.0.1 - - [10/Feb/2026 22:36:27] "GET /insights HTTP/1.1" 200 -
+2026-02-10 22:36:27,333 - INFO - 127.0.0.1 - - [10/Feb/2026 22:36:27] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2026-02-10 22:36:31,040 - INFO - 127.0.0.1 - - [10/Feb/2026 22:36:31] "GET /predict HTTP/1.1" 200 -
+2026-02-10 22:36:31,049 - INFO - 127.0.0.1 - - [10/Feb/2026 22:36:31] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2026-02-10 22:38:20,629 - INFO - 127.0.0.1 - - [10/Feb/2026 22:38:20] "POST /predictdata HTTP/1.1" 200 -
+2026-02-10 22:38:20,644 - INFO - 127.0.0.1 - - [10/Feb/2026 22:38:20] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2026-02-10 22:39:24,964 - INFO - 127.0.0.1 - - [10/Feb/2026 22:39:24] "GET /insights HTTP/1.1" 200 -
+2026-02-10 22:39:24,982 - INFO - 127.0.0.1 - - [10/Feb/2026 22:39:24] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2026-02-10 22:39:42,664 - INFO - 127.0.0.1 - - [10/Feb/2026 22:39:42] "GET / HTTP/1.1" 200 -
+2026-02-10 22:39:42,687 - INFO - 127.0.0.1 - - [10/Feb/2026 22:39:42] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2026-02-10 22:40:09,381 - INFO - 127.0.0.1 - - [10/Feb/2026 22:40:09] "GET /predict HTTP/1.1" 200 -
+2026-02-10 22:40:09,395 - INFO - 127.0.0.1 - - [10/Feb/2026 22:40:09] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2026-02-10 22:41:09,069 - INFO - 127.0.0.1 - - [10/Feb/2026 22:41:09] "GET / HTTP/1.1" 200 -
+2026-02-10 22:41:09,091 - INFO - 127.0.0.1 - - [10/Feb/2026 22:41:09] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2026-02-10 22:41:21,576 - INFO - 127.0.0.1 - - [10/Feb/2026 22:41:21] "GET /dashboard HTTP/1.1" 200 -
+2026-02-10 22:41:21,603 - INFO - 127.0.0.1 - - [10/Feb/2026 22:41:21] "[36mGET /static/js/charts.js HTTP/1.1[0m" 304 -
+2026-02-10 22:41:21,603 - INFO - 127.0.0.1 - - [10/Feb/2026 22:41:21] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2026-02-10 22:41:53,138 - INFO - 127.0.0.1 - - [10/Feb/2026 22:41:53] "GET /insights HTTP/1.1" 200 -
+2026-02-10 22:41:53,156 - INFO - 127.0.0.1 - - [10/Feb/2026 22:41:53] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2026-02-10 22:42:45,383 - INFO - 127.0.0.1 - - [10/Feb/2026 22:42:45] "GET /predict HTTP/1.1" 200 -
+2026-02-10 22:42:45,402 - INFO - 127.0.0.1 - - [10/Feb/2026 22:42:45] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2026-02-10 22:43:24,741 - INFO - 127.0.0.1 - - [10/Feb/2026 22:43:24] "GET /insights HTTP/1.1" 200 -
+2026-02-10 22:43:24,761 - INFO - 127.0.0.1 - - [10/Feb/2026 22:43:24] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2026-02-10 22:44:07,461 - INFO - 127.0.0.1 - - [10/Feb/2026 22:44:07] "GET / HTTP/1.1" 200 -
+2026-02-10 22:44:07,481 - INFO - 127.0.0.1 - - [10/Feb/2026 22:44:07] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2026-02-10 22:50:37,768 - INFO - 127.0.0.1 - - [10/Feb/2026 22:50:37] "GET /predict HTTP/1.1" 200 -
+2026-02-10 22:50:37,805 - INFO - 127.0.0.1 - - [10/Feb/2026 22:50:37] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2026-02-10 23:00:56,840 - INFO - This is an INFO message
+2026-02-10 23:00:56,840 - ERROR - This is an ERROR message
+2026-02-10 23:00:56,840 - WARNING - This is a WARNING message
+2026-02-10 23:00:57,863 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2026-02-10 23:00:57,863 - INFO - [33mPress CTRL+C to quit[0m
+2026-02-10 23:00:57,863 - INFO -  * Restarting with stat
+2026-02-10 23:01:00,266 - INFO - This is an INFO message
+2026-02-10 23:01:00,266 - ERROR - This is an ERROR message
+2026-02-10 23:01:00,266 - WARNING - This is a WARNING message
+2026-02-10 23:01:00,354 - WARNING -  * Debugger is active!
+2026-02-10 23:01:00,362 - INFO -  * Debugger PIN: 720-349-404
+2026-02-10 23:01:12,623 - INFO - 127.0.0.1 - - [10/Feb/2026 23:01:12] "GET / HTTP/1.1" 200 -
+2026-02-10 23:01:12,816 - INFO - 127.0.0.1 - - [10/Feb/2026 23:01:12] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2026-02-10 23:01:12,963 - INFO - 127.0.0.1 - - [10/Feb/2026 23:01:12] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2026-02-10 23:01:15,775 - INFO - 127.0.0.1 - - [10/Feb/2026 23:01:15] "GET /predict HTTP/1.1" 200 -
+2026-02-10 23:01:15,791 - INFO - 127.0.0.1 - - [10/Feb/2026 23:01:15] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2026-02-10 23:03:13,162 - INFO - 127.0.0.1 - - [10/Feb/2026 23:03:13] "POST /predictdata HTTP/1.1" 200 -
+2026-02-10 23:03:13,184 - INFO - 127.0.0.1 - - [10/Feb/2026 23:03:13] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2026-02-10 23:03:35,181 - INFO - 127.0.0.1 - - [10/Feb/2026 23:03:35] "GET /insights HTTP/1.1" 200 -
+2026-02-10 23:03:35,193 - INFO - 127.0.0.1 - - [10/Feb/2026 23:03:35] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2026-02-10 23:03:40,083 - INFO - 127.0.0.1 - - [10/Feb/2026 23:03:40] "GET / HTTP/1.1" 200 -
+2026-02-10 23:03:40,104 - INFO - 127.0.0.1 - - [10/Feb/2026 23:03:40] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2026-02-10 23:08:17,937 - INFO - This is an INFO message
+2026-02-10 23:08:17,937 - ERROR - This is an ERROR message
+2026-02-10 23:08:17,937 - WARNING - This is a WARNING message
+2026-02-10 23:08:18,041 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2026-02-10 23:08:18,041 - INFO - [33mPress CTRL+C to quit[0m
+2026-02-10 23:08:18,041 - INFO -  * Restarting with stat
+2026-02-10 23:08:20,604 - INFO - This is an INFO message
+2026-02-10 23:08:20,604 - ERROR - This is an ERROR message
+2026-02-10 23:08:20,604 - WARNING - This is a WARNING message
+2026-02-10 23:08:20,749 - WARNING -  * Debugger is active!
+2026-02-10 23:08:20,756 - INFO -  * Debugger PIN: 720-349-404
+2026-02-10 23:08:34,472 - INFO - 127.0.0.1 - - [10/Feb/2026 23:08:34] "GET / HTTP/1.1" 200 -
+2026-02-10 23:08:34,771 - INFO - 127.0.0.1 - - [10/Feb/2026 23:08:34] "GET /static/css/style.css HTTP/1.1" 200 -
+2026-02-10 23:08:34,931 - INFO - 127.0.0.1 - - [10/Feb/2026 23:08:34] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2026-02-10 23:08:40,947 - INFO - 127.0.0.1 - - [10/Feb/2026 23:08:40] "GET /dashboard HTTP/1.1" 200 -
+2026-02-10 23:08:40,969 - INFO - 127.0.0.1 - - [10/Feb/2026 23:08:40] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2026-02-10 23:08:41,053 - INFO - 127.0.0.1 - - [10/Feb/2026 23:08:41] "GET /static/js/charts.js HTTP/1.1" 200 -
+2026-02-10 23:09:07,191 - INFO - 127.0.0.1 - - [10/Feb/2026 23:09:07] "GET /predict HTTP/1.1" 200 -
+2026-02-10 23:09:07,219 - INFO - 127.0.0.1 - - [10/Feb/2026 23:09:07] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2026-02-10 23:09:19,816 - INFO - 127.0.0.1 - - [10/Feb/2026 23:09:19] "GET /insights HTTP/1.1" 200 -
+2026-02-10 23:09:19,832 - INFO - 127.0.0.1 - - [10/Feb/2026 23:09:19] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2026-02-10 23:09:19,835 - INFO - 127.0.0.1 - - [10/Feb/2026 23:09:19] "[36mGET /static/js/charts.js HTTP/1.1[0m" 304 -
+2026-02-10 23:09:57,991 - INFO - 127.0.0.1 - - [10/Feb/2026 23:09:57] "GET / HTTP/1.1" 200 -
+2026-02-10 23:09:58,016 - INFO - 127.0.0.1 - - [10/Feb/2026 23:09:58] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2026-02-10 23:10:39,349 - INFO - 127.0.0.1 - - [10/Feb/2026 23:10:39] "GET /predict HTTP/1.1" 200 -
+2026-02-10 23:10:39,368 - INFO - 127.0.0.1 - - [10/Feb/2026 23:10:39] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2026-02-10 23:10:44,243 - INFO - 127.0.0.1 - - [10/Feb/2026 23:10:44] "GET /insights HTTP/1.1" 200 -
+2026-02-10 23:10:44,277 - INFO - 127.0.0.1 - - [10/Feb/2026 23:10:44] "[36mGET /static/js/charts.js HTTP/1.1[0m" 304 -
+2026-02-10 23:10:44,277 - INFO - 127.0.0.1 - - [10/Feb/2026 23:10:44] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2026-02-10 23:10:50,271 - INFO - 127.0.0.1 - - [10/Feb/2026 23:10:50] "GET /dashboard HTTP/1.1" 200 -
+2026-02-10 23:10:50,299 - INFO - 127.0.0.1 - - [10/Feb/2026 23:10:50] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2026-02-10 23:10:50,299 - INFO - 127.0.0.1 - - [10/Feb/2026 23:10:50] "[36mGET /static/js/charts.js HTTP/1.1[0m" 304 -
+2026-02-10 23:10:57,735 - INFO - 127.0.0.1 - - [10/Feb/2026 23:10:57] "GET / HTTP/1.1" 200 -
+2026-02-10 23:10:57,769 - INFO - 127.0.0.1 - - [10/Feb/2026 23:10:57] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2026-02-10 23:11:30,418 - INFO - 127.0.0.1 - - [10/Feb/2026 23:11:30] "GET /dashboard HTTP/1.1" 200 -
+2026-02-10 23:11:30,443 - INFO - 127.0.0.1 - - [10/Feb/2026 23:11:30] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2026-02-10 23:11:30,446 - INFO - 127.0.0.1 - - [10/Feb/2026 23:11:30] "[36mGET /static/js/charts.js HTTP/1.1[0m" 304 -
+2026-02-10 23:15:28,570 - INFO - This is an INFO message
+2026-02-10 23:15:28,580 - ERROR - This is an ERROR message
+2026-02-10 23:15:28,580 - WARNING - This is a WARNING message
+2026-02-10 23:15:28,865 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2026-02-10 23:15:28,865 - INFO - [33mPress CTRL+C to quit[0m
+2026-02-10 23:15:28,869 - INFO -  * Restarting with stat
+2026-02-10 23:15:31,649 - INFO - This is an INFO message
+2026-02-10 23:15:31,649 - ERROR - This is an ERROR message
+2026-02-10 23:15:31,649 - WARNING - This is a WARNING message
+2026-02-10 23:15:31,735 - WARNING -  * Debugger is active!
+2026-02-10 23:15:31,735 - INFO -  * Debugger PIN: 720-349-404
+2026-02-10 23:15:42,638 - INFO - 127.0.0.1 - - [10/Feb/2026 23:15:42] "GET / HTTP/1.1" 200 -
+2026-02-10 23:15:42,838 - INFO - 127.0.0.1 - - [10/Feb/2026 23:15:42] "GET /static/css/style.css HTTP/1.1" 200 -
+2026-02-10 23:15:43,010 - INFO - 127.0.0.1 - - [10/Feb/2026 23:15:43] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2026-02-10 23:15:46,216 - INFO - 127.0.0.1 - - [10/Feb/2026 23:15:46] "GET /dashboard HTTP/1.1" 200 -
+2026-02-10 23:15:46,234 - INFO - 127.0.0.1 - - [10/Feb/2026 23:15:46] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2026-02-10 23:15:46,236 - INFO - 127.0.0.1 - - [10/Feb/2026 23:15:46] "[36mGET /static/js/charts.js HTTP/1.1[0m" 304 -
+2026-02-10 23:25:11,424 - INFO - This is an INFO message
+2026-02-10 23:25:11,424 - ERROR - This is an ERROR message
+2026-02-10 23:25:11,424 - WARNING - This is a WARNING message
+2026-02-10 23:25:12,175 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2026-02-10 23:25:12,175 - INFO - [33mPress CTRL+C to quit[0m
+2026-02-10 23:25:12,177 - INFO -  * Restarting with stat
+2026-02-10 23:25:14,425 - INFO - This is an INFO message
+2026-02-10 23:25:14,426 - ERROR - This is an ERROR message
+2026-02-10 23:25:14,426 - WARNING - This is a WARNING message
+2026-02-10 23:25:14,519 - WARNING -  * Debugger is active!
+2026-02-10 23:25:14,527 - INFO -  * Debugger PIN: 720-349-404
+2026-02-10 23:25:22,153 - INFO - 127.0.0.1 - - [10/Feb/2026 23:25:22] "GET / HTTP/1.1" 200 -
+2026-02-10 23:25:22,258 - INFO - 127.0.0.1 - - [10/Feb/2026 23:25:22] "GET /static/css/style.css HTTP/1.1" 200 -
+2026-02-10 23:25:22,367 - INFO - 127.0.0.1 - - [10/Feb/2026 23:25:22] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2026-02-10 23:25:25,693 - INFO - 127.0.0.1 - - [10/Feb/2026 23:25:25] "GET /dashboard HTTP/1.1" 200 -
+2026-02-10 23:25:25,709 - INFO - 127.0.0.1 - - [10/Feb/2026 23:25:25] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2026-02-10 23:25:25,740 - INFO - 127.0.0.1 - - [10/Feb/2026 23:25:25] "GET /static/js/charts.js HTTP/1.1" 200 -
+2026-02-10 23:25:31,594 - INFO - 127.0.0.1 - - [10/Feb/2026 23:25:31] "GET /insights HTTP/1.1" 200 -
+2026-02-10 23:25:31,615 - INFO - 127.0.0.1 - - [10/Feb/2026 23:25:31] "[36mGET /static/js/charts.js HTTP/1.1[0m" 304 -
+2026-02-10 23:25:31,639 - INFO - 127.0.0.1 - - [10/Feb/2026 23:25:31] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2026-02-10 23:25:37,078 - INFO - 127.0.0.1 - - [10/Feb/2026 23:25:37] "GET /insights HTTP/1.1" 200 -
+2026-02-10 23:25:37,098 - INFO - 127.0.0.1 - - [10/Feb/2026 23:25:37] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2026-02-10 23:25:37,099 - INFO - 127.0.0.1 - - [10/Feb/2026 23:25:37] "[36mGET /static/js/charts.js HTTP/1.1[0m" 304 -
+2026-02-10 23:25:56,534 - INFO - 127.0.0.1 - - [10/Feb/2026 23:25:56] "GET /predict HTTP/1.1" 200 -
+2026-02-10 23:25:56,554 - INFO - 127.0.0.1 - - [10/Feb/2026 23:25:56] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2026-02-10 23:26:02,182 - INFO - 127.0.0.1 - - [10/Feb/2026 23:26:02] "GET /dashboard HTTP/1.1" 200 -
+2026-02-10 23:26:02,200 - INFO - 127.0.0.1 - - [10/Feb/2026 23:26:02] "[36mGET /static/js/charts.js HTTP/1.1[0m" 304 -
+2026-02-10 23:26:02,200 - INFO - 127.0.0.1 - - [10/Feb/2026 23:26:02] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2026-02-10 23:26:10,470 - INFO - 127.0.0.1 - - [10/Feb/2026 23:26:10] "GET / HTTP/1.1" 200 -
+2026-02-10 23:26:10,506 - INFO - 127.0.0.1 - - [10/Feb/2026 23:26:10] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2026-02-10 23:26:28,147 - INFO - 127.0.0.1 - - [10/Feb/2026 23:26:28] "GET /dashboard HTTP/1.1" 200 -
+2026-02-10 23:26:28,159 - INFO - 127.0.0.1 - - [10/Feb/2026 23:26:28] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2026-02-10 23:26:28,159 - INFO - 127.0.0.1 - - [10/Feb/2026 23:26:28] "[36mGET /static/js/charts.js HTTP/1.1[0m" 304 -
+2026-02-10 23:27:06,662 - INFO - 127.0.0.1 - - [10/Feb/2026 23:27:06] "GET /insights HTTP/1.1" 200 -
+2026-02-10 23:27:06,783 - INFO - 127.0.0.1 - - [10/Feb/2026 23:27:06] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2026-02-10 23:27:06,787 - INFO - 127.0.0.1 - - [10/Feb/2026 23:27:06] "[36mGET /static/js/charts.js HTTP/1.1[0m" 304 -
+2026-02-10 23:31:58,749 - INFO - This is an INFO message
+2026-02-10 23:31:58,749 - ERROR - This is an ERROR message
+2026-02-10 23:31:58,749 - WARNING - This is a WARNING message
+2026-02-10 23:31:58,870 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2026-02-10 23:31:58,870 - INFO - [33mPress CTRL+C to quit[0m
+2026-02-10 23:31:58,870 - INFO -  * Restarting with stat
+2026-02-10 23:32:01,136 - INFO - This is an INFO message
+2026-02-10 23:32:01,136 - ERROR - This is an ERROR message
+2026-02-10 23:32:01,136 - WARNING - This is a WARNING message
+2026-02-10 23:32:01,238 - WARNING -  * Debugger is active!
+2026-02-10 23:32:01,253 - INFO -  * Debugger PIN: 720-349-404
+2026-02-10 23:32:11,469 - INFO - 127.0.0.1 - - [10/Feb/2026 23:32:11] "GET / HTTP/1.1" 200 -
+2026-02-10 23:32:11,590 - INFO - 127.0.0.1 - - [10/Feb/2026 23:32:11] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2026-02-10 23:32:14,485 - INFO - 127.0.0.1 - - [10/Feb/2026 23:32:14] "GET /dashboard HTTP/1.1" 200 -
+2026-02-10 23:32:14,501 - INFO - 127.0.0.1 - - [10/Feb/2026 23:32:14] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2026-02-10 23:32:14,504 - INFO - 127.0.0.1 - - [10/Feb/2026 23:32:14] "[36mGET /static/js/charts.js HTTP/1.1[0m" 304 -
+2026-02-10 23:34:02,080 - INFO - 127.0.0.1 - - [10/Feb/2026 23:34:02] "GET /insights HTTP/1.1" 200 -
+2026-02-10 23:34:02,096 - INFO - 127.0.0.1 - - [10/Feb/2026 23:34:02] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2026-02-10 23:34:02,098 - INFO - 127.0.0.1 - - [10/Feb/2026 23:34:02] "[36mGET /static/js/charts.js HTTP/1.1[0m" 304 -
+2026-02-10 23:37:47,416 - INFO - This is an INFO message
+2026-02-10 23:37:47,417 - ERROR - This is an ERROR message
+2026-02-10 23:37:47,417 - WARNING - This is a WARNING message
+2026-02-10 23:37:47,522 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2026-02-10 23:37:47,523 - INFO - [33mPress CTRL+C to quit[0m
+2026-02-10 23:37:47,524 - INFO -  * Restarting with stat
+2026-02-10 23:37:49,814 - INFO - This is an INFO message
+2026-02-10 23:37:49,814 - ERROR - This is an ERROR message
+2026-02-10 23:37:49,814 - WARNING - This is a WARNING message
+2026-02-10 23:37:49,911 - WARNING -  * Debugger is active!
+2026-02-10 23:37:49,914 - INFO -  * Debugger PIN: 720-349-404
+2026-02-10 23:37:59,328 - INFO - 127.0.0.1 - - [10/Feb/2026 23:37:59] "GET / HTTP/1.1" 200 -
+2026-02-10 23:37:59,416 - INFO - 127.0.0.1 - - [10/Feb/2026 23:37:59] "GET /static/css/style.css HTTP/1.1" 200 -
+2026-02-10 23:37:59,507 - INFO - 127.0.0.1 - - [10/Feb/2026 23:37:59] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2026-02-10 23:38:02,338 - INFO - 127.0.0.1 - - [10/Feb/2026 23:38:02] "GET /dashboard HTTP/1.1" 200 -
+2026-02-10 23:38:02,352 - INFO - 127.0.0.1 - - [10/Feb/2026 23:38:02] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2026-02-10 23:38:02,354 - INFO - 127.0.0.1 - - [10/Feb/2026 23:38:02] "[36mGET /static/js/charts.js HTTP/1.1[0m" 304 -
+2026-02-10 23:38:13,619 - INFO - 127.0.0.1 - - [10/Feb/2026 23:38:13] "GET /insights HTTP/1.1" 200 -
+2026-02-10 23:38:13,635 - INFO - 127.0.0.1 - - [10/Feb/2026 23:38:13] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2026-02-10 23:38:13,639 - INFO - 127.0.0.1 - - [10/Feb/2026 23:38:13] "[36mGET /static/js/charts.js HTTP/1.1[0m" 304 -
+2026-02-10 23:58:04,349 - INFO - This is an INFO message
+2026-02-10 23:58:04,349 - ERROR - This is an ERROR message
+2026-02-10 23:58:04,349 - WARNING - This is a WARNING message
+2026-02-10 23:58:04,469 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2026-02-10 23:58:04,469 - INFO - [33mPress CTRL+C to quit[0m
+2026-02-10 23:58:04,470 - INFO -  * Restarting with stat
+2026-02-10 23:58:06,730 - INFO - This is an INFO message
+2026-02-10 23:58:06,730 - ERROR - This is an ERROR message
+2026-02-10 23:58:06,730 - WARNING - This is a WARNING message
+2026-02-10 23:58:06,800 - WARNING -  * Debugger is active!
+2026-02-10 23:58:06,800 - INFO -  * Debugger PIN: 720-349-404
+2026-02-10 23:58:16,396 - INFO - 127.0.0.1 - - [10/Feb/2026 23:58:16] "GET / HTTP/1.1" 200 -
+2026-02-10 23:58:16,529 - INFO - 127.0.0.1 - - [10/Feb/2026 23:58:16] "GET /static/css/style.css HTTP/1.1" 200 -
+2026-02-10 23:58:16,637 - INFO - 127.0.0.1 - - [10/Feb/2026 23:58:16] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2026-02-10 23:58:22,345 - INFO - 127.0.0.1 - - [10/Feb/2026 23:58:22] "GET /dashboard HTTP/1.1" 200 -
+2026-02-10 23:58:22,359 - INFO - 127.0.0.1 - - [10/Feb/2026 23:58:22] "[36mGET /static/js/charts.js HTTP/1.1[0m" 304 -
+2026-02-10 23:58:22,359 - INFO - 127.0.0.1 - - [10/Feb/2026 23:58:22] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2026-02-11 00:00:10,407 - INFO - 127.0.0.1 - - [11/Feb/2026 00:00:10] "GET /insights HTTP/1.1" 200 -
+2026-02-11 00:00:10,421 - INFO - 127.0.0.1 - - [11/Feb/2026 00:00:10] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2026-02-11 00:00:10,421 - INFO - 127.0.0.1 - - [11/Feb/2026 00:00:10] "[36mGET /static/js/charts.js HTTP/1.1[0m" 304 -
+2026-02-11 00:00:13,833 - INFO - 127.0.0.1 - - [11/Feb/2026 00:00:13] "GET /insights HTTP/1.1" 200 -
+2026-02-11 00:00:13,849 - INFO - 127.0.0.1 - - [11/Feb/2026 00:00:13] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2026-02-11 00:00:13,849 - INFO - 127.0.0.1 - - [11/Feb/2026 00:00:13] "[36mGET /static/js/charts.js HTTP/1.1[0m" 304 -
+2026-02-11 00:00:15,350 - INFO - 127.0.0.1 - - [11/Feb/2026 00:00:15] "GET /dashboard HTTP/1.1" 200 -
+2026-02-11 00:00:15,365 - INFO - 127.0.0.1 - - [11/Feb/2026 00:00:15] "[36mGET /static/js/charts.js HTTP/1.1[0m" 304 -
+2026-02-11 00:00:15,365 - INFO - 127.0.0.1 - - [11/Feb/2026 00:00:15] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -

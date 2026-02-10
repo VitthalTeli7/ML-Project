@@ -1,0 +1,87 @@
+{% extends "base.html" %}
+{% block title %}Predict Churn{% endblock %}
+
+{% block content %}
+<div class="card">
+
+    <h1 class="title">Customer Churn Prediction</h1>
+    <p class="subtitle">ML-powered churn risk analysis</p>
+
+    <form method="post" action="{{ url_for('predict_datapoint') }}">
+
+        <!-- ================= Customer Profile ================= -->
+        <h3 class="section">👤 Customer Profile</h3>
+
+        <div class="form-grid">
+            <input type="number" name="age" placeholder="Age (e.g. 30)" required>
+
+            <select name="gender" required>
+                <option value="" disabled selected>Select Gender</option>
+                <option value="Male">Male</option>
+                <option value="Female">Female</option>
+            </select>
+
+            <input type="number" name="weekly_active_days" placeholder="Weekly Active Days (0–7)" required>
+
+            <input type="number" step="0.1" name="avg_session_time" placeholder="Avg Session Time (minutes)" required>
+
+            <input type="number" step="0.01" name="total_revenue" placeholder="Total Revenue (₹)" required>
+
+            <input type="number" name="payment_failures" placeholder="Payment Failures" required>
+
+            <select name="contract_type" required>
+                <option value="" disabled selected>Select Contract Type</option>
+                <option value="Monthly">Monthly</option>
+                <option value="Yearly">Yearly</option>
+            </select>
+
+            <select name="payment_method" required>
+                <option value="" disabled selected>Select Payment Method</option>
+                <option value="Card">Card</option>
+                <option value="PayPal">PayPal</option>
+                <option value="Bank Transfer">Bank Transfer</option>
+            </select>
+
+            <select name="complaint_type">
+                <option value="No Complaint" selected>No Complaint</option>
+                <option value="Billing">Billing Issue</option>
+                <option value="Service">Service Issue</option>
+                <option value="Technical">Technical Issue</option>
+            </select>
+        </div>
+
+        <!-- ================= Usage Behavior ================= -->
+        <h3 class="section">📊 Usage Behavior</h3>
+
+        <div class="form-grid">
+            <input type="number" name="tenure_months" placeholder="Tenure (months)">
+            <input type="number" name="monthly_logins" placeholder="Monthly Logins">
+        </div>
+
+        <!-- ================= Billing & Support ================= -->
+        <h3 class="section">💳 Billing & Support</h3>
+
+        <div class="form-grid">
+            <input type="number" step="0.01" name="monthly_fee" placeholder="Monthly Fee (₹)">
+            <input type="number" name="support_tickets" placeholder="Support Tickets Raised">
+        </div>
+
+        <!-- ================= Feedback ================= -->
+        <h3 class="section">⭐ Customer Feedback</h3>
+
+        <div class="form-grid">
+            <input type="number" min="1" max="5" name="csat_score" placeholder="CSAT Score (1–5)">
+            <input type="number" name="nps_score" placeholder="NPS Score">
+        </div>
+
+        <button class="btn">🔍 Predict Churn</button>
+    </form>
+
+    {% if results %}
+        <div class="result {{ 'churn' if results=='Churn' else 'safe' }}">
+            {{ results }}
+        </div>
+    {% endif %}
+
+</div>
+{% endblock %}
