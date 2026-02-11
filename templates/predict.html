@@ -1,22 +1,200 @@
 {% extends "base.html" %}
-{% block title %}Predict Churn{% endblock %}
+{% block title %}Predict Churn | ChurnAI{% endblock %}
+
+{% block extra_css %}
+<style>
+    /* ===== PREMIUM FORM STYLES ===== */
+    .predict-card {
+        background: rgba(255,255,255,0.95);
+        backdrop-filter: blur(24px);
+        border: 1px solid rgba(255,255,255,0.6);
+        border-radius: 40px;
+        padding: 50px;
+        max-width: 1200px;
+        margin: 0 auto;
+        box-shadow: 0 40px 70px -20px rgba(0,0,0,0.2);
+    }
+
+    .predict-header {
+        text-align: center;
+        margin-bottom: 40px;
+    }
+
+    .predict-header h1 {
+        font-size: 2.8rem;
+        font-weight: 800;
+        background: linear-gradient(145deg, #1a202c, #4a5568);
+        -webkit-background-clip: text;
+        background-clip: text;
+        color: transparent;
+        margin-bottom: 10px;
+    }
+
+    .predict-header p {
+        font-size: 1.2rem;
+        color: #4a5568;
+    }
+
+    .section {
+        display: flex;
+        align-items: center;
+        gap: 12px;
+        font-size: 1.3rem;
+        font-weight: 700;
+        color: #2d3748;
+        margin: 40px 0 25px 0;
+        padding-bottom: 10px;
+        border-bottom: 2px solid rgba(102,126,234,0.3);
+    }
+
+    .section i {
+        color: #667eea;
+        font-size: 1.5rem;
+        background: rgba(102,126,234,0.1);
+        padding: 10px;
+        border-radius: 16px;
+    }
+
+    .form-group {
+        margin-bottom: 20px;
+    }
+
+    .form-control, .form-select {
+        background: rgba(247,250,252,0.9);
+        border: 2px solid #e2e8f0;
+        border-radius: 20px;
+        padding: 14px 20px;
+        font-size: 0.95rem;
+        transition: all 0.3s ease;
+        color: #1a202c;
+    }
+
+    .form-control:focus, .form-select:focus {
+        border-color: #667eea;
+        box-shadow: 0 0 0 4px rgba(102,126,234,0.15);
+        background: white;
+    }
+
+    .form-control:hover, .form-select:hover {
+        border-color: #9f7aea;
+        background: white;
+    }
+
+    .form-label {
+        font-weight: 600;
+        color: #2d3748;
+        margin-bottom: 8px;
+        margin-left: 5px;
+    }
+
+    .btn-predict-submit {
+        background: linear-gradient(145deg, #667eea, #764ba2);
+        border: none;
+        border-radius: 50px;
+        padding: 18px 30px;
+        font-size: 1.2rem;
+        font-weight: 700;
+        color: white;
+        letter-spacing: 1px;
+        box-shadow: 0 15px 30px -8px rgba(102,126,234,0.4);
+        transition: all 0.3s ease;
+        margin-top: 40px;
+    }
+
+    .btn-predict-submit:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 25px 45px -8px rgba(102,126,234,0.6);
+        background: linear-gradient(145deg, #5a67d8, #6b46c1);
+    }
+
+    /* ===== LOADER ===== */
+    .loader {
+        display: none;
+        margin-top: 30px;
+        text-align: center;
+    }
+
+    .spinner {
+        width: 60px;
+        height: 60px;
+        margin: 0 auto 15px;
+        border: 5px solid rgba(102,126,234,0.2);
+        border-top: 5px solid #667eea;
+        border-radius: 50%;
+        animation: spin 1s linear infinite;
+    }
+
+    @keyframes spin {
+        0% { transform: rotate(0deg); }
+        100% { transform: rotate(360deg); }
+    }
+
+    /* ===== RESULT ALERTS ===== */
+    .alert {
+        border-radius: 30px;
+        padding: 25px;
+        font-size: 1.2rem;
+        font-weight: 600;
+        border: none;
+        margin-top: 40px;
+        animation: slideIn 0.5s ease;
+    }
+
+    .alert-success {
+        background: linear-gradient(145deg, #c6f6d5, #9ae6b4);
+        color: #22543d;
+        border-left: 8px solid #48bb78;
+    }
+
+    .alert-danger {
+        background: linear-gradient(145deg, #fed7d7, #feb2b2);
+        color: #742a2a;
+        border-left: 8px solid #f56565;
+    }
+
+    @keyframes slideIn {
+        from { opacity: 0; transform: translateY(20px); }
+        to { opacity: 1; transform: translateY(0); }
+    }
+
+    /* ===== FORM GRID ===== */
+    .form-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+        gap: 20px;
+    }
+
+    @media (max-width: 768px) {
+        .predict-card { padding: 30px 20px; }
+        .predict-header h1 { font-size: 2rem; }
+    }
+</style>
+{% endblock %}
 
 {% block content %}
-<div class="card p-4 shadow">
+<div class="predict-card">
+    
+    <!-- Header -->
+    <div class="predict-header">
+        <h1><i class="fas fa-robot me-3" style="color: #667eea;"></i> Churn Prediction</h1>
+        <p class="subtitle">Enter customer details to analyze churn risk</p>
+    </div>
 
-    <h1 class="title text-center mb-3">Customer Churn Prediction</h1>
-    <p class="subtitle text-center mb-4">ML-powered churn risk analysis</p>
-
+    <!-- Form - Preserved Logic -->
     <form method="post" action="{{ url_for('predict_datapoint') }}" onsubmit="showLoader()">
 
         <!-- ================= Customer Profile ================= -->
-        <h3 class="section">👤 Customer Profile</h3>
-        <div class="form-grid row g-3">
-            <div class="col-md-6">
-                <input type="number" name="age" class="form-control" placeholder="Age (e.g. 30)" required>
+        <div class="section">
+            <i class="fas fa-user-circle"></i> Customer Profile
+        </div>
+        <div class="form-grid">
+            <div>
+                <label class="form-label">👤 Age</label>
+                <input type="number" name="age" class="form-control" placeholder="e.g. 30" required>
             </div>
 
-            <div class="col-md-6">
+            <div>
+                <label class="form-label">⚥ Gender</label>
                 <select name="gender" class="form-select" required>
                     <option value="" disabled selected>Select Gender</option>
                     <option value="Male">Male</option>
@@ -24,42 +202,49 @@
                 </select>
             </div>
 
-            <div class="col-md-6">
-                <input type="number" name="weekly_active_days" class="form-control" placeholder="Weekly Active Days (0–7)" required>
+            <div>
+                <label class="form-label">📅 Weekly Active Days</label>
+                <input type="number" name="weekly_active_days" class="form-control" placeholder="0–7" required>
             </div>
 
-            <div class="col-md-6">
-                <input type="number" step="0.1" name="avg_session_time" class="form-control" placeholder="Avg Session Time (minutes)" required>
+            <div>
+                <label class="form-label">⏱️ Avg Session Time</label>
+                <input type="number" step="0.1" name="avg_session_time" class="form-control" placeholder="minutes" required>
             </div>
 
-            <div class="col-md-6">
-                <input type="number" step="0.01" name="total_revenue" class="form-control" placeholder="Total Revenue (₹)" required>
+            <div>
+                <label class="form-label">💰 Total Revenue (₹)</label>
+                <input type="number" step="0.01" name="total_revenue" class="form-control" placeholder="Amount" required>
             </div>
 
-            <div class="col-md-6">
-                <input type="number" name="payment_failures" class="form-control" placeholder="Payment Failures" required>
+            <div>
+                <label class="form-label">❌ Payment Failures</label>
+                <input type="number" name="payment_failures" class="form-control" placeholder="Count" required>
             </div>
 
-            <div class="col-md-6">
+            <div>
+                <label class="form-label">📄 Contract Type</label>
                 <select name="contract_type" class="form-select" required>
-                    <option value="" disabled selected>Select Contract Type</option>
+                    <option value="" disabled selected>Select Contract</option>
                     <option value="Monthly">Monthly</option>
                     <option value="Yearly">Yearly</option>
                 </select>
             </div>
 
-            <div class="col-md-6">
+            <div>
+                <label class="form-label">💳 Payment Method</label>
                 <select name="payment_method" class="form-select" required>
-                    <option value="" disabled selected>Select Payment Method</option>
+                    <option value="" disabled selected>Select Method</option>
                     <option value="Card">Card</option>
                     <option value="PayPal">PayPal</option>
                     <option value="Bank Transfer">Bank Transfer</option>
                 </select>
             </div>
 
-            <div class="col-md-6">
+            <div>
+                <label class="form-label">📞 Complaint Type</label>
                 <select name="complaint_type" class="form-select">
-                    <option value="No Complaint" selected>No Complaint</option>
+                    <option value="No Complaint">No Complaint</option>
                     <option value="Billing">Billing Issue</option>
                     <option value="Service">Service Issue</option>
                     <option value="Technical">Technical Issue</option>
@@ -68,58 +253,78 @@
         </div>
 
         <!-- ================= Usage Behavior ================= -->
-        <h3 class="section mt-4">📊 Usage Behavior</h3>
-        <div class="form-grid row g-3">
-            <div class="col-md-6">
-                <input type="number" name="tenure_months" class="form-control" placeholder="Tenure (months)">
+        <div class="section mt-5">
+            <i class="fas fa-chart-bar"></i> Usage Behavior
+        </div>
+        <div class="form-grid">
+            <div>
+                <label class="form-label">⏳ Tenure (months)</label>
+                <input type="number" name="tenure_months" class="form-control" placeholder="Months" required>
             </div>
-            <div class="col-md-6">
-                <input type="number" name="monthly_logins" class="form-control" placeholder="Monthly Logins">
+            <div>
+                <label class="form-label">📊 Monthly Logins</label>
+                <input type="number" name="monthly_logins" class="form-control" placeholder="Count" required>
             </div>
         </div>
 
         <!-- ================= Billing & Support ================= -->
-        <h3 class="section mt-4">💳 Billing & Support</h3>
-        <div class="form-grid row g-3">
-            <div class="col-md-6">
-                <input type="number" step="0.01" name="monthly_fee" class="form-control" placeholder="Monthly Fee (₹)">
+        <div class="section mt-5">
+            <i class="fas fa-credit-card"></i> Billing & Support
+        </div>
+        <div class="form-grid">
+            <div>
+                <label class="form-label">💵 Monthly Fee (₹)</label>
+                <input type="number" step="0.01" name="monthly_fee" class="form-control" placeholder="Amount" required>
             </div>
-            <div class="col-md-6">
-                <input type="number" name="support_tickets" class="form-control" placeholder="Support Tickets Raised">
+            <div>
+                <label class="form-label">🎫 Support Tickets</label>
+                <input type="number" name="support_tickets" class="form-control" placeholder="Count" required>
             </div>
         </div>
 
-        <!-- ================= Feedback ================= -->
-        <h3 class="section mt-4">⭐ Customer Feedback</h3>
-        <div class="form-grid row g-3">
-            <div class="col-md-6">
-                <input type="number" min="1" max="5" name="csat_score" class="form-control" placeholder="CSAT Score (1–5)">
+        <!-- ================= Customer Feedback ================= -->
+        <div class="section mt-5">
+            <i class="fas fa-star"></i> Customer Feedback
+        </div>
+        <div class="form-grid">
+            <div>
+                <label class="form-label">⭐ CSAT Score (1-5)</label>
+                <input type="number" min="1" max="5" name="csat_score" class="form-control" placeholder="1-5" required>
             </div>
-            <div class="col-md-6">
-                <input type="number" name="nps_score" class="form-control" placeholder="NPS Score">
+            <div>
+                <label class="form-label">📈 NPS Score</label>
+                <input type="number" name="nps_score" class="form-control" placeholder="-100 to 100" required>
             </div>
         </div>
 
-        <!-- ================= Submit Button ================= -->
-        <button type="submit" class="btn btn-primary w-100 mt-4">🔍 Predict Churn</button>
+        <!-- Submit Button -->
+        <div class="text-center">
+            <button type="submit" class="btn btn-predict-submit px-5">
+                <i class="fas fa-flask me-2"></i>
+                Predict Churn Probability
+                <i class="fas fa-arrow-right ms-2"></i>
+            </button>
+        </div>
 
         <!-- Loader -->
-        <div id="loader" class="text-center mt-3" style="display:none;">
-            <div class="spinner-border text-primary"></div>
-            <p>Processing Prediction...</p>
+        <div id="loader" class="loader">
+            <div class="spinner"></div>
+            <p style="color: #667eea; font-weight: 600;">Analyzing customer data...</p>
         </div>
 
     </form>
 
-    <!-- ================= Result ================= -->
+    <!-- ================= Result Section (Preserved Logic) ================= -->
     {% if results %}
         {% if results == "Churn" %}
-            <div class="alert alert-danger mt-4 text-center">
-                ⚠ Customer is Likely to Churn
+            <div class="alert alert-danger text-center">
+                <i class="fas fa-exclamation-triangle me-3" style="font-size: 1.8rem;"></i>
+                <strong>High Churn Risk</strong> - Customer is likely to churn
             </div>
         {% else %}
-            <div class="alert alert-success mt-4 text-center">
-                ✅ Customer is Not Likely to Churn
+            <div class="alert alert-success text-center">
+                <i class="fas fa-check-circle me-3" style="font-size: 1.8rem;"></i>
+                <strong>Low Churn Risk</strong> - Customer is likely to stay
             </div>
         {% endif %}
     {% endif %}

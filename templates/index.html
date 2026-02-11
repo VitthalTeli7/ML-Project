@@ -1,1 +1,19 @@
-<h1>Welcome to the home page</h1>
+{% extends "base.html" %}
+{% block title %}Welcome to ChurnAI{% endblock %}
+
+{% block content %}
+<!-- Auto-redirect to home page -->
+<script>
+    window.location.href = "{{ url_for('home_page') }}";
+</script>
+
+<!-- Fallback in case redirect fails -->
+<div class="text-center py-5" style="color: white;">
+    <h1><i class="fas fa-robot fa-3x mb-4"></i></h1>
+    <h2>Welcome to ChurnAI</h2>
+    <p>Redirecting to home page...</p>
+    <a href="{{ url_for('home_page') }}" class="btn btn-light mt-3">
+        Click here if not redirected
+    </a>
+</div>
+{% endblock %}

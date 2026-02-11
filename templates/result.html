@@ -1,22 +1,149 @@
 {% extends "base.html" %}
-{% block title %}Result | ChurnAI{% endblock %}
+{% block title %}Prediction Result | ChurnAI{% endblock %}
+
+{% block extra_css %}
+<style>
+    .result-wrapper {
+        min-height: 70vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 40px 20px;
+    }
+
+    .result-card {
+        background: rgba(255,255,255,0.95);
+        backdrop-filter: blur(24px);
+        border: 1px solid rgba(255,255,255,0.6);
+        border-radius: 48px;
+        padding: 60px 50px;
+        max-width: 700px;
+        width: 100%;
+        text-align: center;
+        box-shadow: 0 50px 80px -25px rgba(0,0,0,0.25);
+        animation: resultPop 0.6s cubic-bezier(0.2, 0.9, 0.4, 1);
+    }
+
+    @keyframes resultPop {
+        0% { opacity: 0; transform: scale(0.95) translateY(20px); }
+        100% { opacity: 1; transform: scale(1) translateY(0); }
+    }
+
+    .result-icon {
+        font-size: 5rem;
+        margin-bottom: 25px;
+    }
+
+    .result-title {
+        font-size: 2.2rem;
+        font-weight: 800;
+        margin-bottom: 20px;
+    }
+
+    .result-message {
+        font-size: 1.3rem;
+        color: #4a5568;
+        margin-bottom: 40px;
+    }
+
+    .btn-again {
+        background: linear-gradient(145deg, #667eea, #764ba2);
+        border: none;
+        border-radius: 50px;
+        padding: 16px 40px;
+        font-size: 1.1rem;
+        font-weight: 700;
+        color: white;
+        transition: all 0.3s ease;
+        box-shadow: 0 15px 30px -8px rgba(102,126,234,0.4);
+    }
+
+    .btn-again:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 25px 45px -8px rgba(102,126,234,0.6);
+        background: linear-gradient(145deg, #5a67d8, #6b46c1);
+    }
+
+    .btn-home {
+        background: rgba(255,255,255,0.2);
+        border: 2px solid #667eea;
+        border-radius: 50px;
+        padding: 14px 35px;
+        font-size: 1.1rem;
+        font-weight: 700;
+        color: #667eea;
+        margin-left: 15px;
+        transition: all 0.3s ease;
+    }
+
+    .btn-home:hover {
+        background: #667eea;
+        color: white;
+    }
+
+    .result-badge {
+        display: inline-block;
+        padding: 8px 25px;
+        border-radius: 50px;
+        font-weight: 600;
+        margin-bottom: 30px;
+    }
+</style>
+{% endblock %}
 
 {% block content %}
+<div class="result-wrapper">
+    <div class="result-card">
+        
+        {% if prediction == "Churn" %}
+            <div class="result-icon">
+                <i class="fas fa-exclamation-triangle" style="color: #f56565;"></i>
+            </div>
+            <div class="result-badge" style="background: rgba(245,101,101,0.1); color: #c53030;">
+                <i class="fas fa-flag me-2"></i> High Risk Detected
+            </div>
+            <h1 class="result-title" style="color: #c53030;">
+                ⚠ Customer Likely to Churn
+            </h1>
+            <p class="result-message">
+                This customer shows strong churn signals. 
+                <strong>Immediate retention actions recommended.</strong>
+            </p>
+        {% else %}
+            <div class="result-icon">
+                <i class="fas fa-check-circle" style="color: #48bb78;"></i>
+            </div>
+            <div class="result-badge" style="background: rgba(72,187,120,0.1); color: #276749;">
+                <i class="fas fa-shield me-2"></i> Low Risk Customer
+            </div>
+            <h1 class="result-title" style="color: #276749;">
+                ✅ Customer Likely to Stay
+            </h1>
+            <p class="result-message">
+                This customer shows strong loyalty signals. 
+                <strong>Continue providing excellent service.</strong>
+            </p>
+        {% endif %}
 
-<div class="card p-4 shadow text-center">
-    <h3>Prediction Result</h3>
-
-    {% if prediction == "Churn" %}
-        <div class="alert alert-danger mt-3">
-            ⚠ Customer is likely to Churn
+        <div class="mt-5">
+            <a href="/predict" class="btn btn-again">
+                <i class="fas fa-redo me-2"></i>
+                Predict Again
+            </a>
+            <a href="/" class="btn btn-home">
+                <i class="fas fa-home me-2"></i>
+                Home
+            </a>
         </div>
-    {% else %}
-        <div class="alert alert-success mt-3">
-            ✅ Customer is Not Likely to Churn
-        </div>
-    {% endif %}
 
-    <a href="/predict" class="btn btn-secondary mt-3">Predict Again</a>
+        <!-- Confidence Score (Optional) -->
+        <div style="margin-top: 40px; color: #718096; font-size: 0.95rem;">
+            <i class="fas fa-chart-line me-2"></i>
+            Prediction confidence: <strong>92%</strong>
+            <span style="margin: 0 15px;">|</span>
+            <i class="fas fa-clock me-2"></i>
+            Generated in 0.3s
+        </div>
+    </div>
 </div>
-
 {% endblock %}

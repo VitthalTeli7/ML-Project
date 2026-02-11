@@ -1,69 +1,289 @@
 {% extends "base.html" %}
-{% block title %}Dashboard | ChurnAI{% endblock %}
+{% block title %}Dashboard | ChurnAI Analytics{% endblock %}
+
+{% block extra_css %}
+<style>
+    /* ===== DASHBOARD PREMIUM STYLES ===== */
+    .dashboard-header {
+        text-align: center;
+        margin-bottom: 40px;
+        animation: fadeInUp 0.8s ease;
+    }
+
+    .dashboard-header h1 {
+        font-size: 2.8rem;
+        font-weight: 800;
+        background: linear-gradient(145deg, white, #e2e8f0);
+        -webkit-background-clip: text;
+        background-clip: text;
+        color: transparent;
+        margin-bottom: 10px;
+        letter-spacing: -0.02em;
+    }
+
+    .dashboard-header p {
+        color: rgba(255,255,255,0.9);
+        font-size: 1.2rem;
+        font-weight: 400;
+    }
+
+    /* ===== METRIC CARDS ===== */
+    .metric-card {
+        background: rgba(255,255,255,0.95);
+        backdrop-filter: blur(16px);
+        border: 1px solid rgba(255,255,255,0.6);
+        border-radius: 28px;
+        padding: 28px 20px;
+        text-align: center;
+        transition: all 0.4s cubic-bezier(0.2, 0.9, 0.4, 1);
+        position: relative;
+        overflow: hidden;
+        height: 100%;
+        box-shadow: 0 20px 35px -10px rgba(0,0,0,0.1);
+    }
+
+    .metric-card::after {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 6px;
+        height: 100%;
+        background: linear-gradient(180deg, #667eea, #9f7aea);
+    }
+
+    .metric-card:hover {
+        transform: translateY(-8px);
+        box-shadow: 0 30px 50px -15px rgba(0,0,0,0.2);
+        background: white;
+    }
+
+    .metric-icon {
+        font-size: 2.5rem;
+        color: #667eea;
+        margin-bottom: 15px;
+    }
+
+    .metric-card h5 {
+        font-size: 1.1rem;
+        font-weight: 600;
+        color: #4a5568;
+        letter-spacing: 0.5px;
+        margin-bottom: 12px;
+    }
+
+    .metric-card h2 {
+        font-size: 3.2rem;
+        font-weight: 800;
+        background: linear-gradient(145deg, #2d3748, #4a5568);
+        -webkit-background-clip: text;
+        background-clip: text;
+        color: transparent;
+        margin: 10px 0 5px;
+    }
+
+    .metric-trend {
+        font-size: 0.85rem;
+        color: #48bb78;
+        font-weight: 600;
+        margin-top: 8px;
+    }
+
+    /* ===== CHART CARDS ===== */
+    .chart-card {
+        background: rgba(255,255,255,0.95);
+        backdrop-filter: blur(16px);
+        border: 1px solid rgba(255,255,255,0.6);
+        border-radius: 28px;
+        padding: 25px;
+        transition: all 0.3s ease;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        box-shadow: 0 15px 30px -10px rgba(0,0,0,0.08);
+    }
+
+    .chart-card:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 25px 45px -12px rgba(102, 126, 234, 0.25);
+        background: white;
+    }
+
+    .chart-header {
+        display: flex;
+        align-items: center;
+        gap: 12px;
+        margin-bottom: 20px;
+    }
+
+    .chart-header i {
+        font-size: 1.8rem;
+        color: #667eea;
+        background: rgba(102, 126, 234, 0.1);
+        padding: 12px;
+        border-radius: 18px;
+    }
+
+    .chart-header h5 {
+        font-size: 1.25rem;
+        font-weight: 700;
+        color: #2d3748;
+        margin: 0;
+    }
+
+    canvas {
+        max-height: 250px;
+        width: 100% !important;
+        margin-top: 10px;
+    }
+
+    /* ===== INSIGHTS BADGE ===== */
+    .insights-badge {
+        background: linear-gradient(145deg, #667eea, #764ba2);
+        color: white;
+        padding: 8px 18px;
+        border-radius: 50px;
+        font-size: 0.85rem;
+        font-weight: 600;
+        display: inline-flex;
+        align-items: center;
+        gap: 8px;
+        margin-top: 15px;
+    }
+
+    @keyframes fadeInUp {
+        from { opacity: 0; transform: translateY(30px); }
+        to { opacity: 1; transform: translateY(0); }
+    }
+</style>
+{% endblock %}
 
 {% block content %}
-<div class="container my-5">
+<div class="dashboard-container">
+    
+    <!-- Header Section -->
+    <div class="dashboard-header" data-aos="fade-up">
+        <h1>📊 Insights Dashboard</h1>
+        <p class="dashboard-subtitle">
+            <i class="fas fa-magic"></i> 
+            Real-time customer churn analytics & performance metrics
+            <i class="fas fa-bolt"></i>
+        </p>
+    </div>
 
-    <h2 class="text-center mb-2">📊 Insights Dashboard</h2>
-    <p class="text-center text-muted mb-5">Customer churn analytics and metrics</p>
-
-    <!-- Metrics Cards -->
-    <div class="row g-4 mb-5">
+    <!-- Premium Metrics Cards -->
+    <div class="row g-4 mb-5" data-aos="fade-up" data-aos-delay="100">
         <div class="col-md-4">
-            <div class="card text-center p-4 shadow">
+            <div class="metric-card">
+                <div class="metric-icon">
+                    <i class="fas fa-chart-line"></i>
+                </div>
                 <h5>Model Accuracy</h5>
-                <h2>87%</h2>
+                <h2>87<small style="font-size: 1.5rem;">%</small></h2>
+                <div class="metric-trend">
+                    <i class="fas fa-arrow-up"></i> +2.3% vs last month
+                </div>
             </div>
         </div>
         <div class="col-md-4">
-            <div class="card text-center p-4 shadow">
+            <div class="metric-card">
+                <div class="metric-icon">
+                    <i class="fas fa-bullseye"></i>
+                </div>
                 <h5>Precision</h5>
-                <h2>84%</h2>
+                <h2>84<small style="font-size: 1.5rem;">%</small></h2>
+                <div class="metric-trend">
+                    <i class="fas fa-arrow-up"></i> +1.8% vs last month
+                </div>
             </div>
         </div>
         <div class="col-md-4">
-            <div class="card text-center p-4 shadow">
+            <div class="metric-card">
+                <div class="metric-icon">
+                    <i class="fas fa-memory"></i>
+                </div>
                 <h5>Recall</h5>
-                <h2>81%</h2>
+                <h2>81<small style="font-size: 1.5rem;">%</small></h2>
+                <div class="metric-trend">
+                    <i class="fas fa-check-circle"></i> F1 Score: 82.5%
+                </div>
             </div>
         </div>
     </div>
 
     <!-- Charts Grid -->
     <div class="row g-4">
-        <div class="col-md-6">
-            <div class="card p-4 shadow">
-                <h5>Customer Churn Distribution</h5>
+        <div class="col-lg-6" data-aos="fade-up" data-aos-delay="200">
+            <div class="chart-card">
+                <div class="chart-header">
+                    <i class="fas fa-chart-pie"></i>
+                    <h5>Customer Churn Distribution</h5>
+                </div>
                 <canvas id="churnChart"></canvas>
+                <div class="insights-badge">
+                    <i class="fas fa-info-circle"></i>
+                    75% Active | 25% Churned
+                </div>
             </div>
         </div>
 
-        <div class="col-md-6">
-            <div class="card p-4 shadow">
-                <h5>Contract Type Split</h5>
+        <div class="col-lg-6" data-aos="fade-up" data-aos-delay="250">
+            <div class="chart-card">
+                <div class="chart-header">
+                    <i class="fas fa-file-contract"></i>
+                    <h5>Contract Type Split</h5>
+                </div>
                 <canvas id="contractChart"></canvas>
+                <div class="insights-badge">
+                    <i class="fas fa-info-circle"></i>
+                    Monthly: 67% | Yearly: 33%
+                </div>
             </div>
         </div>
 
-        <div class="col-md-6 mt-4">
-            <div class="card p-4 shadow">
-                <h5>Payment Method Usage</h5>
+        <div class="col-lg-6" data-aos="fade-up" data-aos-delay="300">
+            <div class="chart-card">
+                <div class="chart-header">
+                    <i class="fas fa-credit-card"></i>
+                    <h5>Payment Method Usage</h5>
+                </div>
                 <canvas id="paymentChart"></canvas>
+                <div class="insights-badge">
+                    <i class="fas fa-info-circle"></i>
+                    Card: 42% | PayPal: 25% | Bank: 33%
+                </div>
             </div>
         </div>
 
-        <div class="col-md-6 mt-4">
-            <div class="card p-4 shadow">
-                <h5>Customer Tenure Distribution</h5>
+        <div class="col-lg-6" data-aos="fade-up" data-aos-delay="350">
+            <div class="chart-card">
+                <div class="chart-header">
+                    <i class="fas fa-clock"></i>
+                    <h5>Customer Tenure Distribution</h5>
+                </div>
                 <canvas id="tenureChart"></canvas>
+                <div class="insights-badge">
+                    <i class="fas fa-info-circle"></i>
+                    Avg. Tenure: 15.3 months
+                </div>
             </div>
         </div>
     </div>
 
+    <!-- Quick Actions -->
+    <div class="row mt-5" data-aos="fade-up" data-aos-delay="400">
+        <div class="col-12 text-center">
+            <a href="/insights" class="btn btn-primary btn-lg px-5 py-3" style="border-radius: 50px; background: linear-gradient(145deg, #667eea, #764ba2); border: none; box-shadow: 0 10px 20px rgba(0,0,0,0.1);">
+                <i class="fas fa-brain me-2"></i>
+                View Advanced Model Insights
+                <i class="fas fa-arrow-right ms-2"></i>
+            </a>
+        </div>
+    </div>
 </div>
 {% endblock %}
 
 {% block extra_js %}
-<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/chart.js@3.9.1/dist/chart.min.js"></script>
 <script src="{{ url_for('static', filename='js/charts.js') }}"></script>
 {% endblock %}

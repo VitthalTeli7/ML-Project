@@ -2,37 +2,279 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>{% block title %}{% endblock %}</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.5">
+    <title>{% block title %}ChurnAI{% endblock %}</title>
 
-    <!-- Bootstrap -->
+    <!-- Bootstrap 5 (preserved) -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
-
-    <!-- AOS Animation -->
+    
+    <!-- AOS Animation (preserved) -->
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    
+    <!-- Font Awesome 6 (NEW) -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    
+    <!-- Google Fonts: Inter (NEW) -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
 
     <style>
+        /* ===== GLOBAL VARIABLES ===== */
+        :root {
+            --primary: #667eea;
+            --primary-dark: #5a67d8;
+            --secondary: #764ba2;
+            --accent: #9f7aea;
+            --success: #48bb78;
+            --danger: #f56565;
+            --warning: #ecc94b;
+            --dark: #1a202c;
+            --light: #f7fafc;
+            --glass: rgba(255, 255, 255, 0.9);
+            --glass-dark: rgba(255, 255, 255, 0.7);
+            --shadow-sm: 0 4px 6px rgba(0,0,0,0.05);
+            --shadow-md: 0 10px 25px rgba(0,0,0,0.08);
+            --shadow-lg: 0 20px 40px rgba(0,0,0,0.12);
+            --shadow-xl: 0 30px 60px rgba(0,0,0,0.15);
+            --border-radius: 24px;
+            --border-radius-sm: 16px;
+            --border-radius-lg: 32px;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
         body {
-            background: linear-gradient(135deg, #667eea, #764ba2);
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+            background: linear-gradient(145deg, #667eea, #764ba2, #6b46c1);
+            background-attachment: fixed;
             min-height: 100vh;
             display: flex;
             flex-direction: column;
+            color: #1a202c;
+            position: relative;
+            line-height: 1.6;
+        }
+
+        /* Floating Blobs Background */
+        body::before {
+            content: '';
+            position: fixed;
+            width: 100%;
+            height: 100%;
+            background-image: 
+                radial-gradient(circle at 10% 20%, rgba(255,255,255,0.08) 0%, transparent 30%),
+                radial-gradient(circle at 90% 70%, rgba(255,215,245,0.08) 0%, transparent 35%),
+                radial-gradient(circle at 30% 80%, rgba(200,230,255,0.08) 0%, transparent 40%),
+                radial-gradient(circle at 70% 30%, rgba(180,140,255,0.08) 0%, transparent 45%);
+            pointer-events: none;
+            z-index: 0;
         }
 
         .content {
             flex: 1;
+            position: relative;
+            z-index: 2;
         }
 
+        /* ===== PREMIUM NAVBAR ===== */
+        .navbar {
+            background: rgba(26, 32, 44, 0.8);
+            backdrop-filter: blur(16px) saturate(180%);
+            -webkit-backdrop-filter: blur(16px) saturate(180%);
+            border-bottom: 1px solid rgba(255,255,255,0.15);
+            padding: 12px 0;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+        }
+
+        .navbar-brand {
+            font-weight: 700;
+            font-size: 1.6rem;
+            background: linear-gradient(145deg, #fff, #e2e8f0);
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+            letter-spacing: -0.02em;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .navbar-brand i {
+            background: rgba(255,255,255,0.15);
+            padding: 8px;
+            border-radius: 14px;
+            color: var(--accent);
+            font-size: 1.4rem;
+        }
+
+        .nav-link {
+            color: rgba(255,255,255,0.85) !important;
+            font-weight: 500;
+            padding: 8px 18px !important;
+            margin: 0 4px;
+            border-radius: 40px;
+            transition: all 0.3s ease;
+            font-size: 0.95rem;
+        }
+
+        .nav-link:hover {
+            background: rgba(255,255,255,0.12);
+            color: white !important;
+            transform: translateY(-1px);
+        }
+
+        .nav-link i {
+            margin-right: 6px;
+            font-size: 0.9rem;
+        }
+
+        /* ===== PREMIUM FOOTER ===== */
         footer {
-            background: rgba(0,0,0,0.2);
-            color: white;
+            background: rgba(26, 32, 44, 0.9);
+            backdrop-filter: blur(12px);
+            color: rgba(255,255,255,0.9);
             text-align: center;
-            padding: 10px;
+            padding: 20px;
+            margin-top: 60px;
+            border-top: 1px solid rgba(255,255,255,0.1);
+            position: relative;
+            z-index: 2;
+            font-size: 0.95rem;
+            letter-spacing: 0.3px;
         }
 
+        footer i {
+            color: var(--accent);
+            margin: 0 4px;
+        }
+
+        /* ===== GITHUB FLOATING BUTTON ===== */
         .github-btn {
             position: fixed;
-            bottom: 20px;
-            right: 20px;
+            bottom: 25px;
+            right: 25px;
+            background: rgba(26, 32, 44, 0.9);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255,255,255,0.2);
+            color: white;
+            padding: 14px 28px;
+            border-radius: 50px;
+            font-weight: 600;
+            font-size: 0.95rem;
+            letter-spacing: 0.5px;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+            transition: all 0.3s cubic-bezier(0.2, 0.9, 0.4, 1);
+            z-index: 1000;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            border: none;
+        }
+
+        .github-btn i {
+            font-size: 1.2rem;
+            color: var(--accent);
+        }
+
+        .github-btn:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 15px 35px rgba(102, 126, 234, 0.3);
+            background: #2d3748;
+            color: white;
+        }
+
+        /* ===== PREMIUM CARD STYLES ===== */
+        .card {
+            background: var(--glass);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+            border: 1px solid rgba(255,255,255,0.6);
+            border-radius: var(--border-radius);
+            box-shadow: var(--shadow-lg);
+            padding: 30px;
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .card::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -20%;
+            width: 140%;
+            height: 200%;
+            background: radial-gradient(circle at 30% 30%, rgba(255,255,255,0.2) 0%, transparent 70%);
+            opacity: 0;
+            transition: opacity 0.5s ease;
+            pointer-events: none;
+        }
+
+        .card:hover::before {
+            opacity: 1;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: var(--shadow-xl);
+        }
+
+        /* ===== ANIMATIONS ===== */
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes float {
+            0% { transform: translateY(0px); }
+            50% { transform: translateY(-10px); }
+            100% { transform: translateY(0px); }
+        }
+
+        .content {
+            animation: fadeInUp 0.8s ease-out;
+        }
+
+        /* ===== RESPONSIVE ===== */
+        @media (max-width: 768px) {
+            .navbar-brand { font-size: 1.3rem; }
+            .github-btn { 
+                bottom: 15px; 
+                right: 15px; 
+                padding: 10px 20px;
+            }
+        }
+
+        /* ===== CUSTOM SCROLLBAR ===== */
+        ::-webkit-scrollbar {
+            width: 12px;
+        }
+
+        ::-webkit-scrollbar-track {
+            background: rgba(230, 240, 255, 0.2);
+            backdrop-filter: blur(8px);
+        }
+
+        ::-webkit-scrollbar-thumb {
+            background: linear-gradient(145deg, #9f7aea, #805ad5);
+            border-radius: 20px;
+            border: 3px solid rgba(255,255,255,0.3);
+        }
+
+        ::-webkit-scrollbar-thumb:hover {
+            background: linear-gradient(145deg, #b794f4, #9f7aea);
         }
     </style>
 
@@ -40,34 +282,64 @@
 </head>
 <body>
 
-<!-- NAVBAR -->
-<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-  <div class="container">
-    <a class="navbar-brand" href="/">ChurnAI</a>
-    <div>
-      <a class="nav-link d-inline text-white" href="/">Home</a>
-      <a class="nav-link d-inline text-white" href="/dashboard">Dashboard</a>
-      <a class="nav-link d-inline text-white" href="/about">About</a>
-      <a class="nav-link d-inline text-white" href="/contact">Contact</a>
+<!-- ===== PREMIUM NAVBAR ===== -->
+<nav class="navbar navbar-expand-lg">
+    <div class="container">
+        <a class="navbar-brand" href="/">
+            <i class="fas fa-shield-alt"></i>
+            Churn<span style="font-weight: 300;">AI</span>
+        </a>
+        <div>
+            <a class="nav-link d-inline" href="/">
+                <i class="fas fa-home"></i> Home
+            </a>
+            <a class="nav-link d-inline" href="/dashboard">
+                <i class="fas fa-chart-pie"></i> Dashboard
+            </a>
+            <a class="nav-link d-inline" href="/predict">
+                <i class="fas fa-robot"></i> Predict
+            </a>
+            <a class="nav-link d-inline" href="/insights">
+                <i class="fas fa-brain"></i> Insights
+            </a>
+            <a class="nav-link d-inline" href="/about">
+                <i class="fas fa-info-circle"></i> About
+            </a>
+            <a class="nav-link d-inline" href="/contact">
+                <i class="fas fa-envelope"></i> Contact
+            </a>
+        </div>
     </div>
-  </div>
 </nav>
 
+<!-- ===== MAIN CONTENT ===== -->
 <div class="content container mt-5">
     {% block content %}{% endblock %}
 </div>
 
+<!-- ===== PREMIUM FOOTER ===== -->
 <footer>
-    © 2026 ChurnAI | Developed by Vitthal Teli
+    <div class="container">
+        <i class="fas fa-code"></i> Developed with 
+        <i class="fas fa-heart" style="color: #f56565;"></i> by 
+        <strong>Vitthal Teli</strong> 
+        <span style="margin: 0 10px; opacity: 0.3;">|</span>
+        <i class="fas fa-copyright"></i> 2026 ChurnAI 
+        <span style="margin: 0 10px; opacity: 0.3;">|</span>
+        <i class="fas fa-robot"></i> ML-Powered Churn Prediction
+    </div>
 </footer>
 
-<!-- GitHub Floating Button -->
-<a href="https://github.com/VitthalTeli7/ML-Project" target="_blank" class="btn btn-dark github-btn">
-    View Source Code
-</a>
 
+<!-- AOS Animation (preserved) -->
 <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-<script>AOS.init();</script>
+<script>
+    AOS.init({
+        duration: 800,
+        once: true,
+        easing: 'ease-out-cubic'
+    });
+</script>
 
 {% block extra_js %}{% endblock %}
 </body>

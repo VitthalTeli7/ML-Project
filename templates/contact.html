@@ -1,0 +1,129 @@
+{% extends "base.html" %}
+{% block title %}Contact | ChurnAI{% endblock %}
+
+{% block extra_css %}
+<style>
+    .contact-wrapper {
+        padding: 40px 20px 80px;
+    }
+    
+    .contact-card {
+        background: rgba(255,255,255,0.95);
+        backdrop-filter: blur(20px);
+        border-radius: 48px;
+        padding: 50px;
+        max-width: 900px;
+        margin: 0 auto;
+        box-shadow: 0 40px 70px -20px rgba(0,0,0,0.2);
+    }
+    
+    .contact-header {
+        text-align: center;
+        margin-bottom: 50px;
+    }
+    
+    .contact-header h1 {
+        font-size: 2.8rem;
+        font-weight: 800;
+        background: linear-gradient(145deg, #1a202c, #4a5568);
+        -webkit-background-clip: text;
+        background-clip: text;
+        color: transparent;
+    }
+    
+    .contact-methods {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+        gap: 30px;
+        margin-top: 50px;
+    }
+    
+    .contact-method {
+        text-align: center;
+        padding: 30px;
+        background: white;
+        border-radius: 32px;
+        transition: all 0.3s ease;
+        border: 1px solid #edf2f7;
+    }
+    
+    .contact-method:hover {
+        transform: translateY(-8px);
+        box-shadow: 0 20px 35px -10px rgba(102,126,234,0.2);
+        border-color: #667eea;
+    }
+    
+    .contact-method i {
+        font-size: 3rem;
+        color: #667eea;
+        margin-bottom: 20px;
+    }
+    
+    .contact-form {
+        margin-top: 50px;
+        padding: 40px;
+        background: linear-gradient(145deg, #f7fafc, #edf2f7);
+        border-radius: 32px;
+    }
+</style>
+{% endblock %}
+
+{% block content %}
+<div class="contact-wrapper">
+    <div class="contact-card">
+        
+        <div class="contact-header">
+            <h1><i class="fas fa-envelope me-3" style="color: #667eea;"></i>Get in Touch</h1>
+            <p class="subtitle">Have questions? We'd love to hear from you.</p>
+        </div>
+        
+        <div class="contact-methods">
+            <div class="contact-method">
+                <i class="fas fa-envelope"></i>
+                <h4>Email</h4>
+                <p>vitthalteli7001@gmail.com</p>
+                <a href="mailto:vitthalteli7001@gmail.com" style="color: #667eea;">Send Message →</a>
+            </div>
+            
+            <div class="contact-method">
+                <i class="fab fa-github"></i>
+                <h4>GitHub</h4>
+                <p>VitthalTeli7</p>
+                <a href="https://github.com/VitthalTeli7" target="_blank" style="color: #667eea;">View Profile →</a>
+            </div>
+            
+            <div class="contact-method">
+                <i class="fab fa-linkedin"></i>
+                <h4>LinkedIn</h4>
+                <p>Vitthal Teli</p>
+                <a href="https://www.linkedin.com/in/vitthal-teli/" target="_blank" style="color: #667eea;">Connect →</a>
+            </div>
+        </div>
+        
+        <!-- Simple Contact Form (Static - no backend) -->
+        <div class="contact-form">
+            <h3 class="text-center mb-4">Send a Quick Message</h3>
+            <form>
+                <div class="row g-3">
+                    <div class="col-md-6">
+                        <input type="text" class="form-control" placeholder="Your Name" style="border-radius: 20px; padding: 15px;">
+                    </div>
+                    <div class="col-md-6">
+                        <input type="email" class="form-control" placeholder="Your Email" style="border-radius: 20px; padding: 15px;">
+                    </div>
+                    <div class="col-12">
+                        <textarea class="form-control" rows="4" placeholder="Your Message" style="border-radius: 20px; padding: 15px;"></textarea>
+                    </div>
+                    <div class="col-12 text-center">
+                        <button type="submit" class="btn btn-primary px-5 py-3" style="border-radius: 50px; background: linear-gradient(145deg, #667eea, #764ba2); border: none;">
+                            <i class="fas fa-paper-plane me-2"></i>
+                            Send Message
+                        </button>
+                    </div>
+                </div>
+            </form>
+        </div>
+        
+    </div>
+</div>
+{% endblock %}
