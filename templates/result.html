@@ -1,0 +1,22 @@
+{% extends "base.html" %}
+{% block title %}Result | ChurnAI{% endblock %}
+
+{% block content %}
+
+<div class="card p-4 shadow text-center">
+    <h3>Prediction Result</h3>
+
+    {% if prediction == "Churn" %}
+        <div class="alert alert-danger mt-3">
+            ⚠ Customer is likely to Churn
+        </div>
+    {% else %}
+        <div class="alert alert-success mt-3">
+            ✅ Customer is Not Likely to Churn
+        </div>
+    {% endif %}
+
+    <a href="/predict" class="btn btn-secondary mt-3">Predict Again</a>
+</div>
+
+{% endblock %}

@@ -5,19 +5,13 @@ import pandas as pd
 from sklearn.preprocessing import StandardScaler
 from src.pipeline.predict_pipeline import PredictPipeline, CustomData
 
-
-
 application = Flask(__name__)
 app = application
 
-
-# 🏠 Landing Page
 @app.route('/')
 def home():
     return render_template('home.html')
 
-
-# 🧪 Prediction Page
 @app.route('/predict')
 def predict_page():
     return render_template('predict.html')

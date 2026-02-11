@@ -2,33 +2,73 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>{% block title %}Churn Predictor{% endblock %}</title>
+    <title>{% block title %}{% endblock %}</title>
 
-    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <!-- Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
 
-    <!-- Chart.js -->
-    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <!-- AOS Animation -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+    <style>
+        body {
+            background: linear-gradient(135deg, #667eea, #764ba2);
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .content {
+            flex: 1;
+        }
+
+        footer {
+            background: rgba(0,0,0,0.2);
+            color: white;
+            text-align: center;
+            padding: 10px;
+        }
+
+        .github-btn {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+        }
+    </style>
+
+    {% block extra_css %}{% endblock %}
 </head>
-
 <body>
 
-<nav class="navbar">
-    <div class="logo">📊 ChurnAI</div>
-
-    <div class="nav-links">
-        <a href="/">Home</a>
-        <a href="/predict">Predict</a>
-        <a href="/dashboard">Dashboard</a>
-        <a href="/insights">Model Insights</a>
+<!-- NAVBAR -->
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+  <div class="container">
+    <a class="navbar-brand" href="/">ChurnAI</a>
+    <div>
+      <a class="nav-link d-inline text-white" href="/">Home</a>
+      <a class="nav-link d-inline text-white" href="/dashboard">Dashboard</a>
+      <a class="nav-link d-inline text-white" href="/about">About</a>
+      <a class="nav-link d-inline text-white" href="/contact">Contact</a>
     </div>
+  </div>
 </nav>
 
-
-<div class="page-container">
+<div class="content container mt-5">
     {% block content %}{% endblock %}
 </div>
 
-{% block scripts %}{% endblock %}
+<footer>
+    © 2026 ChurnAI | Developed by Vitthal Teli
+</footer>
+
+<!-- GitHub Floating Button -->
+<a href="https://github.com/VitthalTeli7/ML-Project" target="_blank" class="btn btn-dark github-btn">
+    View Source Code
+</a>
+
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script>AOS.init();</script>
+
+{% block extra_js %}{% endblock %}
 </body>
 </html>

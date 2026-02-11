@@ -1,34 +1,69 @@
 {% extends "base.html" %}
-{% block title %}Dashboard{% endblock %}
+{% block title %}Dashboard | ChurnAI{% endblock %}
 
 {% block content %}
-<div class="dashboard-container">
-  <h2 class="dashboard-title">Insights Dashboard</h2>
-  <p class="dashboard-subtitle">Customer churn analytics</p>
+<div class="container my-5">
 
-  <div class="chart-grid">
+    <h2 class="text-center mb-2">📊 Insights Dashboard</h2>
+    <p class="text-center text-muted mb-5">Customer churn analytics and metrics</p>
 
-    <div class="chart-card">
-      <h3>Customer Churn Distribution</h3>
-      <canvas id="churnChart"></canvas>
+    <!-- Metrics Cards -->
+    <div class="row g-4 mb-5">
+        <div class="col-md-4">
+            <div class="card text-center p-4 shadow">
+                <h5>Model Accuracy</h5>
+                <h2>87%</h2>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="card text-center p-4 shadow">
+                <h5>Precision</h5>
+                <h2>84%</h2>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="card text-center p-4 shadow">
+                <h5>Recall</h5>
+                <h2>81%</h2>
+            </div>
+        </div>
     </div>
 
-    <div class="chart-card">
-      <h3>Contract Type Split</h3>
-      <canvas id="contractChart"></canvas>
+    <!-- Charts Grid -->
+    <div class="row g-4">
+        <div class="col-md-6">
+            <div class="card p-4 shadow">
+                <h5>Customer Churn Distribution</h5>
+                <canvas id="churnChart"></canvas>
+            </div>
+        </div>
+
+        <div class="col-md-6">
+            <div class="card p-4 shadow">
+                <h5>Contract Type Split</h5>
+                <canvas id="contractChart"></canvas>
+            </div>
+        </div>
+
+        <div class="col-md-6 mt-4">
+            <div class="card p-4 shadow">
+                <h5>Payment Method Usage</h5>
+                <canvas id="paymentChart"></canvas>
+            </div>
+        </div>
+
+        <div class="col-md-6 mt-4">
+            <div class="card p-4 shadow">
+                <h5>Customer Tenure Distribution</h5>
+                <canvas id="tenureChart"></canvas>
+            </div>
+        </div>
     </div>
 
-    <div class="chart-card">
-      <h3>Payment Method Usage</h3>
-      <canvas id="paymentChart"></canvas>
-    </div>
-
-  </div>
 </div>
+{% endblock %}
 
-
-
+{% block extra_js %}
 <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 <script src="{{ url_for('static', filename='js/charts.js') }}"></script>
-
 {% endblock %}

@@ -3,9 +3,10 @@
 {% block title %}Home | ChurnAI{% endblock %}
 
 {% block content %}
+
 <div class="hero-wrapper">
 
-    <div class="card hero-card">
+    <div class="card hero-card text-center p-5 shadow">
 
         <h1 class="title">📊 Customer Churn Prediction</h1>
 
@@ -13,28 +14,33 @@
             Predict customer churn using Machine Learning before it happens.
         </p>
 
-        <a href="{{ url_for('predict_page') }}" class="btn">
+        <a href="{{ url_for('predict_page') }}" class="btn btn-primary mt-3">
             🚀 Start Prediction
         </a>
 
-        <!-- ✅ ADD THIS BLOCK HERE -->
-        <div class="stats">
+        <!-- Stats Section -->
+        <div class="stats d-flex justify-content-around mt-5">
+
             <div>
                 <h2 class="counter" data-target="95">0</h2>
                 <p>Accuracy %</p>
             </div>
+
             <div>
                 <h2 class="counter" data-target="1200">0</h2>
                 <p>Customers Analyzed</p>
             </div>
+
             <div>
                 <h2 class="counter" data-target="30">0</h2>
                 <p>Features Used</p>
             </div>
-        </div>
-        <!-- ✅ END -->
 
-        <div class="features">
+        </div>
+
+        <!-- Features Section -->
+        <div class="features d-flex justify-content-around mt-5">
+
             <div>
                 <h3>⚡ Fast</h3>
                 <p>Real-time predictions</p>
@@ -49,31 +55,35 @@
                 <h3>📈 Business Ready</h3>
                 <p>Decision support</p>
             </div>
+
         </div>
 
     </div>
 
 </div>
 
-<!-- ✅ ADD THIS AT VERY BOTTOM -->
+{% endblock %}
+
+{% block extra_js %}
 <script>
-const counters = document.querySelectorAll('.counter');
+document.addEventListener("DOMContentLoaded", function() {
+    const counters = document.querySelectorAll('.counter');
 
-counters.forEach(counter => {
-    const update = () => {
-        const target = +counter.dataset.target;
-        const current = +counter.innerText;
-        const increment = target / 80;
+    counters.forEach(counter => {
+        const update = () => {
+            const target = +counter.dataset.target;
+            const current = +counter.innerText;
+            const increment = target / 80;
 
-        if (current < target) {
-            counter.innerText = Math.ceil(current + increment);
-            setTimeout(update, 20);
-        } else {
-            counter.innerText = target;
-        }
-    };
-    update();
+            if (current < target) {
+                counter.innerText = Math.ceil(current + increment);
+                setTimeout(update, 20);
+            } else {
+                counter.innerText = target;
+            }
+        };
+        update();
+    });
 });
 </script>
-
 {% endblock %}

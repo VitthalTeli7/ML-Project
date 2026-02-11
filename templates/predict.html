@@ -2,86 +2,135 @@
 {% block title %}Predict Churn{% endblock %}
 
 {% block content %}
-<div class="card">
+<div class="card p-4 shadow">
 
-    <h1 class="title">Customer Churn Prediction</h1>
-    <p class="subtitle">ML-powered churn risk analysis</p>
+    <h1 class="title text-center mb-3">Customer Churn Prediction</h1>
+    <p class="subtitle text-center mb-4">ML-powered churn risk analysis</p>
 
-    <form method="post" action="{{ url_for('predict_datapoint') }}">
+    <form method="post" action="{{ url_for('predict_datapoint') }}" onsubmit="showLoader()">
 
         <!-- ================= Customer Profile ================= -->
         <h3 class="section">👤 Customer Profile</h3>
+        <div class="form-grid row g-3">
+            <div class="col-md-6">
+                <input type="number" name="age" class="form-control" placeholder="Age (e.g. 30)" required>
+            </div>
 
-        <div class="form-grid">
-            <input type="number" name="age" placeholder="Age (e.g. 30)" required>
+            <div class="col-md-6">
+                <select name="gender" class="form-select" required>
+                    <option value="" disabled selected>Select Gender</option>
+                    <option value="Male">Male</option>
+                    <option value="Female">Female</option>
+                </select>
+            </div>
 
-            <select name="gender" required>
-                <option value="" disabled selected>Select Gender</option>
-                <option value="Male">Male</option>
-                <option value="Female">Female</option>
-            </select>
+            <div class="col-md-6">
+                <input type="number" name="weekly_active_days" class="form-control" placeholder="Weekly Active Days (0–7)" required>
+            </div>
 
-            <input type="number" name="weekly_active_days" placeholder="Weekly Active Days (0–7)" required>
+            <div class="col-md-6">
+                <input type="number" step="0.1" name="avg_session_time" class="form-control" placeholder="Avg Session Time (minutes)" required>
+            </div>
 
-            <input type="number" step="0.1" name="avg_session_time" placeholder="Avg Session Time (minutes)" required>
+            <div class="col-md-6">
+                <input type="number" step="0.01" name="total_revenue" class="form-control" placeholder="Total Revenue (₹)" required>
+            </div>
 
-            <input type="number" step="0.01" name="total_revenue" placeholder="Total Revenue (₹)" required>
+            <div class="col-md-6">
+                <input type="number" name="payment_failures" class="form-control" placeholder="Payment Failures" required>
+            </div>
 
-            <input type="number" name="payment_failures" placeholder="Payment Failures" required>
+            <div class="col-md-6">
+                <select name="contract_type" class="form-select" required>
+                    <option value="" disabled selected>Select Contract Type</option>
+                    <option value="Monthly">Monthly</option>
+                    <option value="Yearly">Yearly</option>
+                </select>
+            </div>
 
-            <select name="contract_type" required>
-                <option value="" disabled selected>Select Contract Type</option>
-                <option value="Monthly">Monthly</option>
-                <option value="Yearly">Yearly</option>
-            </select>
+            <div class="col-md-6">
+                <select name="payment_method" class="form-select" required>
+                    <option value="" disabled selected>Select Payment Method</option>
+                    <option value="Card">Card</option>
+                    <option value="PayPal">PayPal</option>
+                    <option value="Bank Transfer">Bank Transfer</option>
+                </select>
+            </div>
 
-            <select name="payment_method" required>
-                <option value="" disabled selected>Select Payment Method</option>
-                <option value="Card">Card</option>
-                <option value="PayPal">PayPal</option>
-                <option value="Bank Transfer">Bank Transfer</option>
-            </select>
-
-            <select name="complaint_type">
-                <option value="No Complaint" selected>No Complaint</option>
-                <option value="Billing">Billing Issue</option>
-                <option value="Service">Service Issue</option>
-                <option value="Technical">Technical Issue</option>
-            </select>
+            <div class="col-md-6">
+                <select name="complaint_type" class="form-select">
+                    <option value="No Complaint" selected>No Complaint</option>
+                    <option value="Billing">Billing Issue</option>
+                    <option value="Service">Service Issue</option>
+                    <option value="Technical">Technical Issue</option>
+                </select>
+            </div>
         </div>
 
         <!-- ================= Usage Behavior ================= -->
-        <h3 class="section">📊 Usage Behavior</h3>
-
-        <div class="form-grid">
-            <input type="number" name="tenure_months" placeholder="Tenure (months)">
-            <input type="number" name="monthly_logins" placeholder="Monthly Logins">
+        <h3 class="section mt-4">📊 Usage Behavior</h3>
+        <div class="form-grid row g-3">
+            <div class="col-md-6">
+                <input type="number" name="tenure_months" class="form-control" placeholder="Tenure (months)">
+            </div>
+            <div class="col-md-6">
+                <input type="number" name="monthly_logins" class="form-control" placeholder="Monthly Logins">
+            </div>
         </div>
 
         <!-- ================= Billing & Support ================= -->
-        <h3 class="section">💳 Billing & Support</h3>
-
-        <div class="form-grid">
-            <input type="number" step="0.01" name="monthly_fee" placeholder="Monthly Fee (₹)">
-            <input type="number" name="support_tickets" placeholder="Support Tickets Raised">
+        <h3 class="section mt-4">💳 Billing & Support</h3>
+        <div class="form-grid row g-3">
+            <div class="col-md-6">
+                <input type="number" step="0.01" name="monthly_fee" class="form-control" placeholder="Monthly Fee (₹)">
+            </div>
+            <div class="col-md-6">
+                <input type="number" name="support_tickets" class="form-control" placeholder="Support Tickets Raised">
+            </div>
         </div>
 
         <!-- ================= Feedback ================= -->
-        <h3 class="section">⭐ Customer Feedback</h3>
-
-        <div class="form-grid">
-            <input type="number" min="1" max="5" name="csat_score" placeholder="CSAT Score (1–5)">
-            <input type="number" name="nps_score" placeholder="NPS Score">
+        <h3 class="section mt-4">⭐ Customer Feedback</h3>
+        <div class="form-grid row g-3">
+            <div class="col-md-6">
+                <input type="number" min="1" max="5" name="csat_score" class="form-control" placeholder="CSAT Score (1–5)">
+            </div>
+            <div class="col-md-6">
+                <input type="number" name="nps_score" class="form-control" placeholder="NPS Score">
+            </div>
         </div>
 
-        <button class="btn">🔍 Predict Churn</button>
+        <!-- ================= Submit Button ================= -->
+        <button type="submit" class="btn btn-primary w-100 mt-4">🔍 Predict Churn</button>
+
+        <!-- Loader -->
+        <div id="loader" class="text-center mt-3" style="display:none;">
+            <div class="spinner-border text-primary"></div>
+            <p>Processing Prediction...</p>
+        </div>
+
     </form>
 
+    <!-- ================= Result ================= -->
     {% if results %}
-        <div class="result {{ 'churn' if results=='Churn' else 'safe' }}">
-            {{ results }}
-        </div>
+        {% if results == "Churn" %}
+            <div class="alert alert-danger mt-4 text-center">
+                ⚠ Customer is Likely to Churn
+            </div>
+        {% else %}
+            <div class="alert alert-success mt-4 text-center">
+                ✅ Customer is Not Likely to Churn
+            </div>
+        {% endif %}
     {% endif %}
 
 </div>
+{% endblock %}
+
+{% block extra_js %}
+<script>
+function showLoader(){
+    document.getElementById("loader").style.display = "block";
+}
+</script>
 {% endblock %}
