@@ -1,0 +1,851 @@
+{% extends "base.html" %}
+
+{% block title %}Model Benchmark | ChurnAI - Enterprise ML Performance{% endblock %}
+
+{% block extra_css %}
+<style>
+    /* =====================================================
+       BENCHMARK PAGE - PREMIUM ENTERPRISE EDITION
+       Model Comparison | Performance Metrics | Leaderboard
+       Glassmorphism | 3D Effects | Micro-interactions
+       Dark Mode Ready | Fully Responsive
+       ===================================================== */
+
+    :root {
+        --benchmark-primary: #6366f1;
+        --benchmark-secondary: #8b5cf6;
+        --benchmark-accent: #ec4899;
+        --benchmark-success: #10b981;
+        --benchmark-warning: #f59e0b;
+        --benchmark-danger: #ef4444;
+        --benchmark-info: #3b82f6;
+        --benchmark-dark: #0f172a;
+        --benchmark-light: #f8fafc;
+    }
+
+    .benchmark-wrapper {
+        padding: 30px 0 60px;
+        animation: fadeIn 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+
+    @keyframes fadeIn {
+        from { opacity: 0; transform: translateY(20px); }
+        to { opacity: 1; transform: translateY(0); }
+    }
+
+    @keyframes slideInRight {
+        from { opacity: 0; transform: translateX(30px); }
+        to { opacity: 1; transform: translateX(0); }
+    }
+
+    /* ===== PREMIUM HEADER ===== */
+    .benchmark-header {
+        background: rgba(255, 255, 255, 0.92);
+        backdrop-filter: blur(24px) saturate(180%);
+        -webkit-backdrop-filter: blur(24px) saturate(180%);
+        border-radius: 48px;
+        padding: 40px 50px;
+        margin-bottom: 40px;
+        border: 1px solid rgba(255, 255, 255, 0.6);
+        box-shadow: 0 30px 60px -20px rgba(0, 0, 0, 0.2);
+        position: relative;
+        overflow: hidden;
+        animation: slideInRight 0.6s ease-out;
+    }
+
+    .benchmark-header::before {
+        content: '';
+        position: absolute;
+        top: -30%;
+        right: -20%;
+        width: 400px;
+        height: 400px;
+        background: radial-gradient(circle, rgba(99, 102, 241, 0.08) 0%, transparent 70%);
+        border-radius: 50%;
+        pointer-events: none;
+        animation: float 20s ease-in-out infinite;
+    }
+
+    .benchmark-header::after {
+        content: '';
+        position: absolute;
+        bottom: -30%;
+        left: -20%;
+        width: 400px;
+        height: 400px;
+        background: radial-gradient(circle, rgba(139, 92, 246, 0.08) 0%, transparent 70%);
+        border-radius: 50%;
+        pointer-events: none;
+        animation: float 25s ease-in-out infinite reverse;
+    }
+
+    @keyframes float {
+        0%, 100% { transform: translate(0, 0) scale(1); }
+        50% { transform: translate(30px, -20px) scale(1.1); }
+    }
+
+    .benchmark-title {
+        font-size: 2.8rem;
+        font-weight: 800;
+        background: linear-gradient(145deg, #1e293b, #0f172a);
+        -webkit-background-clip: text;
+        background-clip: text;
+        color: transparent;
+        margin-bottom: 15px;
+        display: flex;
+        align-items: center;
+        gap: 15px;
+    }
+
+    .benchmark-title i {
+        background: linear-gradient(135deg, var(--benchmark-primary), var(--benchmark-secondary));
+        -webkit-background-clip: text;
+        background-clip: text;
+        color: transparent;
+        animation: pulse 3s ease-in-out infinite;
+    }
+
+    @keyframes pulse {
+        0%, 100% { transform: scale(1); }
+        50% { transform: scale(1.05); }
+    }
+
+    .benchmark-subtitle {
+        color: #475569;
+        font-size: 1.2rem;
+        max-width: 700px;
+    }
+
+    /* ===== MODEL CARDS GRID ===== */
+    .model-grid {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 25px;
+        margin-bottom: 40px;
+    }
+
+    .model-card {
+        background: rgba(255, 255, 255, 0.95);
+        backdrop-filter: blur(20px);
+        border-radius: 36px;
+        padding: 30px;
+        border: 1px solid rgba(255, 255, 255, 0.6);
+        box-shadow: 0 25px 45px -15px rgba(0, 0, 0, 0.1);
+        transition: all 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
+        position: relative;
+        overflow: hidden;
+        animation: slideInRight 0.6s ease-out;
+        animation-fill-mode: both;
+    }
+
+    .model-card:nth-child(1) { animation-delay: 0.1s; }
+    .model-card:nth-child(2) { animation-delay: 0.15s; }
+    .model-card:nth-child(3) { animation-delay: 0.2s; }
+
+    .model-card:hover {
+        transform: translateY(-10px) scale(1.02);
+        box-shadow: 0 35px 60px -20px rgba(99, 102, 241, 0.25);
+        background: white;
+    }
+
+    .winner-badge {
+        position: absolute;
+        top: 20px;
+        right: 25px;
+        padding: 8px 20px;
+        background: linear-gradient(135deg, #f59e0b, #fbbf24);
+        border-radius: 50px;
+        color: white;
+        font-weight: 700;
+        font-size: 0.8rem;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+        display: flex;
+        align-items: center;
+        gap: 8px;
+        box-shadow: 0 10px 20px -8px rgba(245, 158, 11, 0.3);
+    }
+
+    .model-icon {
+        width: 80px;
+        height: 80px;
+        background: linear-gradient(135deg, rgba(99, 102, 241, 0.1), rgba(139, 92, 246, 0.1));
+        border-radius: 24px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 2.5rem;
+        color: var(--benchmark-primary);
+        margin-bottom: 20px;
+        transition: all 0.3s ease;
+    }
+
+    .model-card:hover .model-icon {
+        background: linear-gradient(135deg, var(--benchmark-primary), var(--benchmark-secondary));
+        color: white;
+        transform: rotate(5deg) scale(1.1);
+    }
+
+    .model-name {
+        font-size: 1.6rem;
+        font-weight: 700;
+        color: #0f172a;
+        margin-bottom: 5px;
+    }
+
+    .model-version {
+        display: inline-block;
+        padding: 4px 12px;
+        background: rgba(99, 102, 241, 0.1);
+        border-radius: 50px;
+        color: var(--benchmark-primary);
+        font-size: 0.8rem;
+        font-weight: 600;
+        margin-bottom: 20px;
+    }
+
+    .metric-list {
+        margin-top: 20px;
+    }
+
+    .metric-item {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin-bottom: 15px;
+        padding: 8px 0;
+        border-bottom: 1px solid rgba(203, 213, 225, 0.3);
+    }
+
+    .metric-label {
+        color: #64748b;
+        font-weight: 600;
+        font-size: 0.9rem;
+    }
+
+    .metric-value {
+        font-weight: 700;
+        color: #0f172a;
+        font-size: 1.1rem;
+    }
+
+    .metric-badge {
+        display: inline-block;
+        padding: 4px 12px;
+        border-radius: 50px;
+        font-size: 0.75rem;
+        font-weight: 600;
+    }
+
+    .badge-1 { background: linear-gradient(135deg, #f59e0b, #fbbf24); color: white; }
+    .badge-2 { background: linear-gradient(135deg, #64748b, #94a3b8); color: white; }
+    .badge-3 { background: linear-gradient(135deg, #92400e, #b45309); color: white; }
+
+    /* ===== CONFUSION MATRIX COMPARISON ===== */
+    .matrix-section {
+        background: rgba(255, 255, 255, 0.95);
+        backdrop-filter: blur(20px);
+        border-radius: 48px;
+        padding: 40px;
+        margin-bottom: 40px;
+        border: 1px solid rgba(255, 255, 255, 0.6);
+        box-shadow: 0 30px 50px -20px rgba(0, 0, 0, 0.15);
+        animation: slideInRight 0.6s ease-out 0.25s both;
+    }
+
+    .section-title {
+        font-size: 1.8rem;
+        font-weight: 700;
+        color: #0f172a;
+        margin-bottom: 30px;
+        display: flex;
+        align-items: center;
+        gap: 15px;
+    }
+
+    .section-title i {
+        color: var(--benchmark-primary);
+        background: rgba(99, 102, 241, 0.1);
+        padding: 12px;
+        border-radius: 16px;
+    }
+
+    .matrix-grid {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 30px;
+    }
+
+    .matrix-card {
+        background: #f8fafc;
+        border-radius: 28px;
+        padding: 25px;
+        border: 1px solid #e2e8f0;
+    }
+
+    .matrix-card h4 {
+        font-size: 1.2rem;
+        font-weight: 700;
+        color: #0f172a;
+        margin-bottom: 20px;
+        text-align: center;
+    }
+
+    .matrix-row {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 15px;
+        margin-bottom: 15px;
+    }
+
+    .matrix-cell {
+        background: white;
+        padding: 15px;
+        border-radius: 16px;
+        text-align: center;
+        border: 1px solid #e2e8f0;
+    }
+
+    .matrix-label {
+        font-size: 0.75rem;
+        color: #64748b;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+        margin-bottom: 5px;
+    }
+
+    .matrix-value {
+        font-size: 1.4rem;
+        font-weight: 800;
+        color: #0f172a;
+    }
+
+    /* ===== PERFORMANCE CHART ===== */
+    .chart-card {
+        background: rgba(255, 255, 255, 0.95);
+        backdrop-filter: blur(20px);
+        border-radius: 48px;
+        padding: 40px;
+        margin-bottom: 40px;
+        border: 1px solid rgba(255, 255, 255, 0.6);
+        box-shadow: 0 30px 50px -20px rgba(0, 0, 0, 0.15);
+        animation: slideInRight 0.6s ease-out 0.3s both;
+    }
+
+    .chart-container {
+        height: 350px;
+        position: relative;
+        margin-top: 30px;
+    }
+
+    /* ===== INFERENCE SPEED ===== */
+    .speed-section {
+        background: rgba(255, 255, 255, 0.95);
+        backdrop-filter: blur(20px);
+        border-radius: 48px;
+        padding: 40px;
+        margin-bottom: 40px;
+        border: 1px solid rgba(255, 255, 255, 0.6);
+        box-shadow: 0 30px 50px -20px rgba(0, 0, 0, 0.15);
+        animation: slideInRight 0.6s ease-out 0.35s both;
+    }
+
+    .speed-grid {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 30px;
+        margin-top: 30px;
+    }
+
+    .speed-card {
+        background: linear-gradient(145deg, white, #f8fafc);
+        border-radius: 28px;
+        padding: 25px;
+        text-align: center;
+        border: 1px solid #e2e8f0;
+        transition: all 0.3s ease;
+    }
+
+    .speed-card:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 20px 35px -15px rgba(99, 102, 241, 0.15);
+        border-color: var(--benchmark-primary);
+    }
+
+    .speed-value {
+        font-size: 2.5rem;
+        font-weight: 800;
+        color: var(--benchmark-primary);
+        line-height: 1;
+        margin-bottom: 10px;
+    }
+
+    .speed-label {
+        color: #64748b;
+        font-size: 0.9rem;
+        font-weight: 600;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+    }
+
+    /* ===== RECOMMENDATION CARD ===== */
+    .recommendation-card {
+        background: linear-gradient(145deg, rgba(99, 102, 241, 0.08), rgba(139, 92, 246, 0.08));
+        backdrop-filter: blur(20px);
+        border-radius: 48px;
+        padding: 40px;
+        border: 1px solid rgba(255, 255, 255, 0.2);
+        animation: slideInRight 0.6s ease-out 0.4s both;
+        display: flex;
+        align-items: center;
+        gap: 30px;
+    }
+
+    .recommendation-icon {
+        width: 80px;
+        height: 80px;
+        background: linear-gradient(135deg, var(--benchmark-success), #34d399);
+        border-radius: 24px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 2.5rem;
+        color: white;
+        box-shadow: 0 20px 30px -10px rgba(16, 185, 129, 0.3);
+    }
+
+    .recommendation-content {
+        flex: 1;
+    }
+
+    .recommendation-title {
+        font-size: 1.4rem;
+        font-weight: 700;
+        color: #0f172a;
+        margin-bottom: 10px;
+    }
+
+    .recommendation-text {
+        color: #475569;
+        font-size: 1.1rem;
+        margin: 0;
+        line-height: 1.6;
+    }
+
+    /* ===== RESPONSIVE ===== */
+    @media (max-width: 1200px) {
+        .model-grid { grid-template-columns: repeat(2, 1fr); }
+        .matrix-grid { grid-template-columns: repeat(2, 1fr); }
+        .speed-grid { grid-template-columns: repeat(2, 1fr); }
+    }
+
+    @media (max-width: 992px) {
+        .benchmark-title { font-size: 2.2rem; }
+        .model-grid { grid-template-columns: 1fr; }
+        .matrix-grid { grid-template-columns: 1fr; }
+        .speed-grid { grid-template-columns: 1fr; }
+        .recommendation-card { flex-direction: column; text-align: center; }
+    }
+
+    @media (max-width: 768px) {
+        .benchmark-header { padding: 30px; }
+        .benchmark-title { font-size: 1.8rem; flex-direction: column; }
+        .matrix-section { padding: 25px; }
+        .chart-card { padding: 25px; }
+    }
+
+    /* ===== DARK MODE ===== */
+    @media (prefers-color-scheme: dark) {
+        .benchmark-header,
+        .model-card,
+        .matrix-section,
+        .chart-card,
+        .speed-section {
+            background: rgba(15, 23, 42, 0.92);
+            border-color: rgba(255, 255, 255, 0.1);
+        }
+
+        .benchmark-title {
+            background: linear-gradient(145deg, #f1f5f9, #e2e8f0);
+            -webkit-background-clip: text;
+            background-clip: text;
+        }
+
+        .benchmark-subtitle {
+            color: #cbd5e1;
+        }
+
+        .model-name,
+        .section-title,
+        .recommendation-title,
+        .metric-value,
+        .matrix-value {
+            color: #f1f5f9;
+        }
+
+        .model-version {
+            background: rgba(99, 102, 241, 0.2);
+            color: #a5b4fc;
+        }
+
+        .metric-label,
+        .matrix-label,
+        .speed-label {
+            color: #94a3b8;
+        }
+
+        .matrix-card,
+        .speed-card {
+            background: #1e293b;
+            border-color: #334155;
+        }
+
+        .matrix-cell {
+            background: #0f172a;
+            border-color: #334155;
+            color: #f1f5f9;
+        }
+
+        .recommendation-card {
+            background: linear-gradient(145deg, rgba(99, 102, 241, 0.15), rgba(139, 92, 246, 0.15));
+        }
+
+        .recommendation-text {
+            color: #cbd5e1;
+        }
+    }
+</style>
+{% endblock %}
+
+{% block content %}
+<div class="benchmark-wrapper">
+    
+    <!-- ===== HEADER ===== -->
+    <div class="benchmark-header">
+        <h1 class="benchmark-title">
+            <i class="fas fa-trophy"></i>
+            Model Benchmark
+        </h1>
+        <p class="benchmark-subtitle">
+            Compare performance metrics across different ML models to choose the best for your churn prediction task
+        </p>
+    </div>
+
+    <!-- ===== MODEL COMPARISON GRID ===== -->
+    <div class="model-grid">
+        <!-- XGBoost - Winner -->
+        <div class="model-card">
+            <span class="winner-badge">
+                <i class="fas fa-crown"></i> BEST PERFORMER
+            </span>
+            <div class="model-icon">
+                <i class="fas fa-bolt"></i>
+            </div>
+            <h3 class="model-name">XGBoost</h3>
+            <span class="model-version">v2.1.0</span>
+            
+            <div class="metric-list">
+                <div class="metric-item">
+                    <span class="metric-label">Accuracy</span>
+                    <span class="metric-value">92.3%</span>
+                </div>
+                <div class="metric-item">
+                    <span class="metric-label">Precision</span>
+                    <span class="metric-value">89.7%</span>
+                </div>
+                <div class="metric-item">
+                    <span class="metric-label">Recall</span>
+                    <span class="metric-value">86.2%</span>
+                </div>
+                <div class="metric-item">
+                    <span class="metric-label">F1 Score</span>
+                    <span class="metric-value">0.879</span>
+                </div>
+                <div class="metric-item">
+                    <span class="metric-label">ROC-AUC</span>
+                    <span class="metric-value">94.1%</span>
+                </div>
+                <div class="metric-item">
+                    <span class="metric-label">Inference Time</span>
+                    <span class="metric-value">45ms</span>
+                </div>
+            </div>
+            <div style="margin-top: 20px;">
+                <span class="metric-badge badge-1">#1 Recommended</span>
+            </div>
+        </div>
+
+        <!-- Random Forest -->
+        <div class="model-card">
+            <div class="model-icon">
+                <i class="fas fa-tree"></i>
+            </div>
+            <h3 class="model-name">Random Forest</h3>
+            <span class="model-version">v1.8.0</span>
+            
+            <div class="metric-list">
+                <div class="metric-item">
+                    <span class="metric-label">Accuracy</span>
+                    <span class="metric-value">89.1%</span>
+                </div>
+                <div class="metric-item">
+                    <span class="metric-label">Precision</span>
+                    <span class="metric-value">86.3%</span>
+                </div>
+                <div class="metric-item">
+                    <span class="metric-label">Recall</span>
+                    <span class="metric-value">83.5%</span>
+                </div>
+                <div class="metric-item">
+                    <span class="metric-label">F1 Score</span>
+                    <span class="metric-value">0.849</span>
+                </div>
+                <div class="metric-item">
+                    <span class="metric-label">ROC-AUC</span>
+                    <span class="metric-value">91.2%</span>
+                </div>
+                <div class="metric-item">
+                    <span class="metric-label">Inference Time</span>
+                    <span class="metric-value">120ms</span>
+                </div>
+            </div>
+            <div style="margin-top: 20px;">
+                <span class="metric-badge badge-2">#2 Runner Up</span>
+            </div>
+        </div>
+
+        <!-- LightGBM -->
+        <div class="model-card">
+            <div class="model-icon">
+                <i class="fas fa-bolt-lightning"></i>
+            </div>
+            <h3 class="model-name">LightGBM</h3>
+            <span class="model-version">v3.2.0</span>
+            
+            <div class="metric-list">
+                <div class="metric-item">
+                    <span class="metric-label">Accuracy</span>
+                    <span class="metric-value">91.2%</span>
+                </div>
+                <div class="metric-item">
+                    <span class="metric-label">Precision</span>
+                    <span class="metric-value">88.4%</span>
+                </div>
+                <div class="metric-item">
+                    <span class="metric-label">Recall</span>
+                    <span class="metric-value">84.9%</span>
+                </div>
+                <div class="metric-item">
+                    <span class="metric-label">F1 Score</span>
+                    <span class="metric-value">0.866</span>
+                </div>
+                <div class="metric-item">
+                    <span class="metric-label">ROC-AUC</span>
+                    <span class="metric-value">92.8%</span>
+                </div>
+                <div class="metric-item">
+                    <span class="metric-label">Inference Time</span>
+                    <span class="metric-value">38ms</span>
+                </div>
+            </div>
+            <div style="margin-top: 20px;">
+                <span class="metric-badge badge-3">#3 Fastest</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- ===== CONFUSION MATRIX COMPARISON ===== -->
+    <div class="matrix-section">
+        <h2 class="section-title">
+            <i class="fas fa-table"></i>
+            Confusion Matrix Comparison
+        </h2>
+        <div class="matrix-grid">
+            <!-- XGBoost Matrix -->
+            <div class="matrix-card">
+                <h4>XGBoost</h4>
+                <div class="matrix-row">
+                    <div class="matrix-cell">
+                        <div class="matrix-label">True Positives</div>
+                        <div class="matrix-value" style="color: #10b981;">1,284</div>
+                    </div>
+                    <div class="matrix-cell">
+                        <div class="matrix-label">False Positives</div>
+                        <div class="matrix-value" style="color: #ef4444;">156</div>
+                    </div>
+                </div>
+                <div class="matrix-row">
+                    <div class="matrix-cell">
+                        <div class="matrix-label">False Negatives</div>
+                        <div class="matrix-value" style="color: #ef4444;">204</div>
+                    </div>
+                    <div class="matrix-cell">
+                        <div class="matrix-label">True Negatives</div>
+                        <div class="matrix-value" style="color: #10b981;">2,356</div>
+                    </div>
+                </div>
+            </div>
+            <!-- Random Forest Matrix -->
+            <div class="matrix-card">
+                <h4>Random Forest</h4>
+                <div class="matrix-row">
+                    <div class="matrix-cell">
+                        <div class="matrix-label">True Positives</div>
+                        <div class="matrix-value" style="color: #10b981;">1,198</div>
+                    </div>
+                    <div class="matrix-cell">
+                        <div class="matrix-label">False Positives</div>
+                        <div class="matrix-value" style="color: #ef4444;">242</div>
+                    </div>
+                </div>
+                <div class="matrix-row">
+                    <div class="matrix-cell">
+                        <div class="matrix-label">False Negatives</div>
+                        <div class="matrix-value" style="color: #ef4444;">290</div>
+                    </div>
+                    <div class="matrix-cell">
+                        <div class="matrix-label">True Negatives</div>
+                        <div class="matrix-value" style="color: #10b981;">2,270</div>
+                    </div>
+                </div>
+            </div>
+            <!-- LightGBM Matrix -->
+            <div class="matrix-card">
+                <h4>LightGBM</h4>
+                <div class="matrix-row">
+                    <div class="matrix-cell">
+                        <div class="matrix-label">True Positives</div>
+                        <div class="matrix-value" style="color: #10b981;">1,245</div>
+                    </div>
+                    <div class="matrix-cell">
+                        <div class="matrix-label">False Positives</div>
+                        <div class="matrix-value" style="color: #ef4444;">195</div>
+                    </div>
+                </div>
+                <div class="matrix-row">
+                    <div class="matrix-cell">
+                        <div class="matrix-label">False Negatives</div>
+                        <div class="matrix-value" style="color: #ef4444;">243</div>
+                    </div>
+                    <div class="matrix-cell">
+                        <div class="matrix-label">True Negatives</div>
+                        <div class="matrix-value" style="color: #10b981;">2,317</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ===== PERFORMANCE METRICS CHART ===== -->
+    <div class="chart-card">
+        <h2 class="section-title">
+            <i class="fas fa-chart-line"></i>
+            Performance Comparison
+        </h2>
+        <div class="chart-container">
+            <canvas id="benchmarkChart"></canvas>
+        </div>
+    </div>
+
+    <!-- ===== INFERENCE SPEED COMPARISON ===== -->
+    <div class="speed-section">
+        <h2 class="section-title">
+            <i class="fas fa-bolt"></i>
+            Inference Speed
+        </h2>
+        <div class="speed-grid">
+            <div class="speed-card">
+                <div class="speed-value">38ms</div>
+                <div class="speed-label">LightGBM</div>
+                <p style="color: #64748b; margin-top: 10px;">Fastest</p>
+            </div>
+            <div class="speed-card">
+                <div class="speed-value">45ms</div>
+                <div class="speed-label">XGBoost</div>
+                <p style="color: #64748b; margin-top: 10px;">Balanced</p>
+            </div>
+            <div class="speed-card">
+                <div class="speed-value">120ms</div>
+                <div class="speed-label">Random Forest</div>
+                <p style="color: #64748b; margin-top: 10px;">Slower</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- ===== RECOMMENDATION ===== -->
+    <div class="recommendation-card">
+        <div class="recommendation-icon">
+            <i class="fas fa-robot"></i>
+        </div>
+        <div class="recommendation-content">
+            <h3 class="recommendation-title">🏆 Recommended: XGBoost</h3>
+            <p class="recommendation-text">
+                XGBoost delivers the best overall performance with 92.3% accuracy and balanced inference speed. 
+                It's the optimal choice for production deployment with excellent precision-recall trade-off.
+            </p>
+        </div>
+    </div>
+
+</div>
+
+<!-- ===== CHART.JS ===== -->
+<script src="https://cdn.jsdelivr.net/npm/chart.js@3.9.1/dist/chart.min.js"></script>
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        const ctx = document.getElementById('benchmarkChart').getContext('2d');
+        new Chart(ctx, {
+            type: 'radar',
+            data: {
+                labels: ['Accuracy', 'Precision', 'Recall', 'F1 Score', 'ROC-AUC', 'Speed'],
+                datasets: [
+                    {
+                        label: 'XGBoost',
+                        data: [92.3, 89.7, 86.2, 87.9, 94.1, 85],
+                        backgroundColor: 'rgba(99, 102, 241, 0.2)',
+                        borderColor: '#6366f1',
+                        borderWidth: 3,
+                        pointBackgroundColor: '#6366f1',
+                    },
+                    {
+                        label: 'Random Forest',
+                        data: [89.1, 86.3, 83.5, 84.9, 91.2, 60],
+                        backgroundColor: 'rgba(16, 185, 129, 0.2)',
+                        borderColor: '#10b981',
+                        borderWidth: 3,
+                        pointBackgroundColor: '#10b981',
+                    },
+                    {
+                        label: 'LightGBM',
+                        data: [91.2, 88.4, 84.9, 86.6, 92.8, 95],
+                        backgroundColor: 'rgba(139, 92, 246, 0.2)',
+                        borderColor: '#8b5cf6',
+                        borderWidth: 3,
+                        pointBackgroundColor: '#8b5cf6',
+                    }
+                ]
+            },
+            options: {
+                responsive: true,
+                maintainAspectRatio: false,
+                plugins: {
+                    legend: {
+                        position: 'bottom',
+                        labels: { color: '#64748b', usePointStyle: true, pointStyle: 'circle' }
+                    }
+                },
+                scales: {
+                    r: {
+                        beginAtZero: true,
+                        max: 100,
+                        ticks: { stepSize: 20, color: '#64748b' },
+                        grid: { color: 'rgba(203, 213, 225, 0.3)' },
+                        pointLabels: { color: '#0f172a', font: { weight: '600' } }
+                    }
+                }
+            }
+        });
+    });
+</script>
+{% endblock %}
+
+{% block extra_js %}{% endblock %}

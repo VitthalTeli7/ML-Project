@@ -1,0 +1,585 @@
+2026-02-12 11:22:49,698 - INFO - This is an INFO message
+2026-02-12 11:22:49,698 - ERROR - This is an ERROR message
+2026-02-12 11:22:49,698 - WARNING - This is a WARNING message
+2026-02-12 11:22:50,443 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2026-02-12 11:22:50,443 - INFO - [33mPress CTRL+C to quit[0m
+2026-02-12 11:22:50,444 - INFO -  * Restarting with stat
+2026-02-12 11:22:53,144 - INFO - This is an INFO message
+2026-02-12 11:22:53,144 - ERROR - This is an ERROR message
+2026-02-12 11:22:53,144 - WARNING - This is a WARNING message
+2026-02-12 11:22:53,277 - WARNING -  * Debugger is active!
+2026-02-12 11:22:53,283 - INFO -  * Debugger PIN: 720-349-404
+2026-02-12 11:23:14,405 - INFO - 127.0.0.1 - - [12/Feb/2026 11:23:14] "GET / HTTP/1.1" 200 -
+2026-02-12 11:23:14,631 - INFO - 127.0.0.1 - - [12/Feb/2026 11:23:14] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2026-02-12 11:23:22,254 - INFO - 127.0.0.1 - - [12/Feb/2026 11:23:22] "GET /dashboard HTTP/1.1" 200 -
+2026-02-12 11:23:22,458 - INFO - 127.0.0.1 - - [12/Feb/2026 11:23:22] "[36mGET /static/js/charts.js HTTP/1.1[0m" 304 -
+2026-02-12 11:23:29,059 - INFO - 127.0.0.1 - - [12/Feb/2026 11:23:29] "GET /predict HTTP/1.1" 200 -
+2026-02-12 11:23:36,654 - INFO - 127.0.0.1 - - [12/Feb/2026 11:23:36] "GET /about HTTP/1.1" 200 -
+2026-02-12 11:23:36,697 - INFO - 127.0.0.1 - - [12/Feb/2026 11:23:36] "[36mGET /static/images/vitthal-teli.jpg HTTP/1.1[0m" 304 -
+2026-02-12 11:23:55,418 - INFO - 127.0.0.1 - - [12/Feb/2026 11:23:55] "GET /contact HTTP/1.1" 200 -
+2026-02-12 11:24:08,662 - INFO - 127.0.0.1 - - [12/Feb/2026 11:24:08] "GET / HTTP/1.1" 200 -
+2026-02-12 11:32:49,171 - INFO - This is an INFO message
+2026-02-12 11:32:49,171 - ERROR - This is an ERROR message
+2026-02-12 11:32:49,171 - WARNING - This is a WARNING message
+2026-02-12 11:32:49,286 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2026-02-12 11:32:49,286 - INFO - [33mPress CTRL+C to quit[0m
+2026-02-12 11:32:49,286 - INFO -  * Restarting with stat
+2026-02-12 11:32:51,560 - INFO - This is an INFO message
+2026-02-12 11:32:51,560 - ERROR - This is an ERROR message
+2026-02-12 11:32:51,560 - WARNING - This is a WARNING message
+2026-02-12 11:32:51,680 - WARNING -  * Debugger is active!
+2026-02-12 11:32:51,691 - INFO -  * Debugger PIN: 720-349-404
+2026-02-12 11:32:54,561 - INFO - 127.0.0.1 - - [12/Feb/2026 11:32:54] "GET / HTTP/1.1" 200 -
+2026-02-12 11:32:55,875 - INFO - 127.0.0.1 - - [12/Feb/2026 11:32:55] "GET / HTTP/1.1" 200 -
+2026-02-12 11:33:05,066 - INFO - 127.0.0.1 - - [12/Feb/2026 11:33:05] "GET / HTTP/1.1" 200 -
+2026-02-12 11:33:12,651 - INFO - 127.0.0.1 - - [12/Feb/2026 11:33:12] "GET / HTTP/1.1" 200 -
+2026-02-12 11:33:17,704 - INFO - 127.0.0.1 - - [12/Feb/2026 11:33:17] "GET /dashboard HTTP/1.1" 200 -
+2026-02-12 11:33:17,845 - INFO - 127.0.0.1 - - [12/Feb/2026 11:33:17] "[36mGET /static/js/charts.js HTTP/1.1[0m" 304 -
+2026-02-12 11:33:25,860 - INFO - 127.0.0.1 - - [12/Feb/2026 11:33:25] "GET /insights HTTP/1.1" 200 -
+2026-02-12 11:33:25,925 - INFO - 127.0.0.1 - - [12/Feb/2026 11:33:25] "[36mGET /static/js/model_insights.js HTTP/1.1[0m" 304 -
+2026-02-12 11:33:28,709 - INFO - 127.0.0.1 - - [12/Feb/2026 11:33:28] "GET /predict HTTP/1.1" 200 -
+2026-02-12 11:33:35,019 - INFO - 127.0.0.1 - - [12/Feb/2026 11:33:35] "GET /about HTTP/1.1" 200 -
+2026-02-12 11:33:35,044 - INFO - 127.0.0.1 - - [12/Feb/2026 11:33:35] "[36mGET /static/images/vitthal-teli.jpg HTTP/1.1[0m" 304 -
+2026-02-12 11:33:38,337 - INFO - 127.0.0.1 - - [12/Feb/2026 11:33:38] "GET /contact HTTP/1.1" 200 -
+2026-02-12 11:33:42,048 - INFO - 127.0.0.1 - - [12/Feb/2026 11:33:42] "GET / HTTP/1.1" 200 -
+2026-02-12 11:33:43,542 - INFO - 127.0.0.1 - - [12/Feb/2026 11:33:43] "GET / HTTP/1.1" 200 -
+2026-02-12 11:34:03,138 - INFO -  * Detected change in 'F:\\DATA-SCIENCE\\ML-Project\\app.py', reloading
+2026-02-12 11:34:03,348 - INFO -  * Restarting with stat
+2026-02-12 11:34:05,467 - INFO - This is an INFO message
+2026-02-12 11:34:05,467 - ERROR - This is an ERROR message
+2026-02-12 11:34:05,467 - WARNING - This is a WARNING message
+2026-02-12 11:34:05,556 - WARNING -  * Debugger is active!
+2026-02-12 11:34:05,556 - INFO -  * Debugger PIN: 720-349-404
+2026-02-12 11:34:17,079 - INFO - This is an INFO message
+2026-02-12 11:34:17,079 - ERROR - This is an ERROR message
+2026-02-12 11:34:17,079 - WARNING - This is a WARNING message
+2026-02-12 11:34:17,174 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2026-02-12 11:34:17,174 - INFO - [33mPress CTRL+C to quit[0m
+2026-02-12 11:34:17,176 - INFO -  * Restarting with stat
+2026-02-12 11:34:19,213 - INFO - This is an INFO message
+2026-02-12 11:34:19,213 - ERROR - This is an ERROR message
+2026-02-12 11:34:19,213 - WARNING - This is a WARNING message
+2026-02-12 11:34:19,286 - WARNING -  * Debugger is active!
+2026-02-12 11:34:19,294 - INFO -  * Debugger PIN: 720-349-404
+2026-02-12 11:34:31,305 - INFO - 127.0.0.1 - - [12/Feb/2026 11:34:31] "GET / HTTP/1.1" 200 -
+2026-02-12 11:34:41,636 - INFO - 127.0.0.1 - - [12/Feb/2026 11:34:41] "GET /predict HTTP/1.1" 200 -
+2026-02-12 11:34:48,845 - INFO - 127.0.0.1 - - [12/Feb/2026 11:34:48] "GET /insights HTTP/1.1" 200 -
+2026-02-12 11:34:48,974 - INFO - 127.0.0.1 - - [12/Feb/2026 11:34:48] "[36mGET /static/js/model_insights.js HTTP/1.1[0m" 304 -
+2026-02-12 11:34:54,095 - INFO - 127.0.0.1 - - [12/Feb/2026 11:34:54] "GET /about HTTP/1.1" 200 -
+2026-02-12 11:34:54,119 - INFO - 127.0.0.1 - - [12/Feb/2026 11:34:54] "[36mGET /static/images/vitthal-teli.jpg HTTP/1.1[0m" 304 -
+2026-02-12 11:34:57,689 - INFO - 127.0.0.1 - - [12/Feb/2026 11:34:57] "GET /contact HTTP/1.1" 200 -
+2026-02-12 11:35:01,205 - INFO - 127.0.0.1 - - [12/Feb/2026 11:35:01] "GET / HTTP/1.1" 200 -
+2026-02-12 11:38:57,305 - INFO - This is an INFO message
+2026-02-12 11:38:57,309 - ERROR - This is an ERROR message
+2026-02-12 11:38:57,309 - WARNING - This is a WARNING message
+2026-02-12 11:38:57,416 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2026-02-12 11:38:57,416 - INFO - [33mPress CTRL+C to quit[0m
+2026-02-12 11:38:57,416 - INFO -  * Restarting with stat
+2026-02-12 11:38:59,999 - INFO - This is an INFO message
+2026-02-12 11:38:59,999 - ERROR - This is an ERROR message
+2026-02-12 11:38:59,999 - WARNING - This is a WARNING message
+2026-02-12 11:39:00,109 - WARNING -  * Debugger is active!
+2026-02-12 11:39:00,115 - INFO -  * Debugger PIN: 720-349-404
+2026-02-12 11:39:09,127 - INFO - 127.0.0.1 - - [12/Feb/2026 11:39:09] "GET / HTTP/1.1" 200 -
+2026-02-12 11:39:15,725 - INFO - 127.0.0.1 - - [12/Feb/2026 11:39:15] "[33mGET /customer-360 HTTP/1.1[0m" 404 -
+2026-02-12 11:40:06,064 - INFO - 127.0.0.1 - - [12/Feb/2026 11:40:06] "GET / HTTP/1.1" 200 -
+2026-02-12 11:40:08,908 - INFO - 127.0.0.1 - - [12/Feb/2026 11:40:08] "GET /customers HTTP/1.1" 200 -
+2026-02-12 11:40:27,208 - INFO - 127.0.0.1 - - [12/Feb/2026 11:40:27] "GET /customers HTTP/1.1" 200 -
+2026-02-12 11:41:19,727 - INFO - 127.0.0.1 - - [12/Feb/2026 11:41:19] "GET /customers HTTP/1.1" 200 -
+2026-02-12 11:44:20,195 - INFO -  * Detected change in 'F:\\DATA-SCIENCE\\ML-Project\\app.py', reloading
+2026-02-12 11:44:20,383 - INFO -  * Restarting with stat
+2026-02-12 11:44:23,028 - INFO - This is an INFO message
+2026-02-12 11:44:23,028 - ERROR - This is an ERROR message
+2026-02-12 11:44:23,028 - WARNING - This is a WARNING message
+2026-02-12 11:44:23,095 - WARNING -  * Debugger is active!
+2026-02-12 11:44:23,111 - INFO -  * Debugger PIN: 720-349-404
+2026-02-12 12:01:13,891 - INFO - This is an INFO message
+2026-02-12 12:01:13,891 - ERROR - This is an ERROR message
+2026-02-12 12:01:13,891 - WARNING - This is a WARNING message
+2026-02-12 12:01:14,019 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2026-02-12 12:01:14,019 - INFO - [33mPress CTRL+C to quit[0m
+2026-02-12 12:01:14,019 - INFO -  * Restarting with stat
+2026-02-12 12:01:16,372 - INFO - This is an INFO message
+2026-02-12 12:01:16,372 - ERROR - This is an ERROR message
+2026-02-12 12:01:16,372 - WARNING - This is a WARNING message
+2026-02-12 12:01:16,477 - WARNING -  * Debugger is active!
+2026-02-12 12:01:16,477 - INFO -  * Debugger PIN: 720-349-404
+2026-02-12 12:01:17,727 - INFO - 127.0.0.1 - - [12/Feb/2026 12:01:17] "GET /customers HTTP/1.1" 200 -
+2026-02-12 12:01:23,452 - INFO - 127.0.0.1 - - [12/Feb/2026 12:01:23] "[33mGET /retention-center HTTP/1.1[0m" 404 -
+2026-02-12 12:01:58,174 - INFO - 127.0.0.1 - - [12/Feb/2026 12:01:58] "GET /customers HTTP/1.1" 200 -
+2026-02-12 12:02:00,504 - INFO - 127.0.0.1 - - [12/Feb/2026 12:02:00] "GET /retention HTTP/1.1" 200 -
+2026-02-12 12:02:41,670 - INFO - 127.0.0.1 - - [12/Feb/2026 12:02:41] "GET /customers HTTP/1.1" 200 -
+2026-02-12 12:02:48,465 - INFO - 127.0.0.1 - - [12/Feb/2026 12:02:48] "GET /retention HTTP/1.1" 200 -
+2026-02-12 12:11:07,168 - INFO -  * Detected change in 'F:\\DATA-SCIENCE\\ML-Project\\app.py', reloading
+2026-02-12 14:52:26,125 - INFO - This is an INFO message
+2026-02-12 14:52:26,125 - ERROR - This is an ERROR message
+2026-02-12 14:52:26,125 - WARNING - This is a WARNING message
+2026-02-12 14:52:26,950 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2026-02-12 14:52:26,951 - INFO - [33mPress CTRL+C to quit[0m
+2026-02-12 14:52:26,954 - INFO -  * Restarting with stat
+2026-02-12 14:52:30,021 - INFO - This is an INFO message
+2026-02-12 14:52:30,021 - ERROR - This is an ERROR message
+2026-02-12 14:52:30,021 - WARNING - This is a WARNING message
+2026-02-12 14:52:30,134 - WARNING -  * Debugger is active!
+2026-02-12 14:52:30,149 - INFO -  * Debugger PIN: 720-349-404
+2026-02-12 14:52:37,618 - INFO - 127.0.0.1 - - [12/Feb/2026 14:52:37] "[35m[1mGET / HTTP/1.1[0m" 500 -
+2026-02-12 14:52:37,760 - INFO - 127.0.0.1 - - [12/Feb/2026 14:52:37] "[36mGET /?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1[0m" 304 -
+2026-02-12 14:52:37,784 - INFO - 127.0.0.1 - - [12/Feb/2026 14:52:37] "[36mGET /?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1[0m" 304 -
+2026-02-12 14:52:37,843 - INFO - 127.0.0.1 - - [12/Feb/2026 14:52:37] "GET /?__debugger__=yes&cmd=resource&f=console.png&s=tVUxTCLgCGIS4eIwpksz HTTP/1.1" 200 -
+2026-02-12 14:52:37,875 - INFO - 127.0.0.1 - - [12/Feb/2026 14:52:37] "[36mGET /?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1[0m" 304 -
+2026-02-12 14:53:42,502 - INFO - This is an INFO message
+2026-02-12 14:53:42,502 - ERROR - This is an ERROR message
+2026-02-12 14:53:42,502 - WARNING - This is a WARNING message
+2026-02-12 14:53:42,600 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2026-02-12 14:53:42,601 - INFO - [33mPress CTRL+C to quit[0m
+2026-02-12 14:53:42,603 - INFO -  * Restarting with stat
+2026-02-12 14:53:44,815 - INFO - This is an INFO message
+2026-02-12 14:53:44,815 - ERROR - This is an ERROR message
+2026-02-12 14:53:44,815 - WARNING - This is a WARNING message
+2026-02-12 14:53:44,898 - WARNING -  * Debugger is active!
+2026-02-12 14:53:44,915 - INFO -  * Debugger PIN: 720-349-404
+2026-02-12 14:53:51,919 - INFO - 127.0.0.1 - - [12/Feb/2026 14:53:51] "[31m[1mGET /predictdata HTTP/1.1[0m" 405 -
+2026-02-12 14:53:58,581 - INFO - 127.0.0.1 - - [12/Feb/2026 14:53:58] "[35m[1mGET / HTTP/1.1[0m" 500 -
+2026-02-12 14:53:58,690 - INFO - 127.0.0.1 - - [12/Feb/2026 14:53:58] "[36mGET /?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1[0m" 304 -
+2026-02-12 14:53:58,695 - INFO - 127.0.0.1 - - [12/Feb/2026 14:53:58] "[36mGET /?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1[0m" 304 -
+2026-02-12 14:53:58,740 - INFO - 127.0.0.1 - - [12/Feb/2026 14:53:58] "GET /?__debugger__=yes&cmd=resource&f=console.png&s=1mTrgwFeWOjWNN5MPaY7 HTTP/1.1" 200 -
+2026-02-12 14:54:52,876 - INFO - This is an INFO message
+2026-02-12 14:54:52,876 - ERROR - This is an ERROR message
+2026-02-12 14:54:52,876 - WARNING - This is a WARNING message
+2026-02-12 14:54:52,980 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2026-02-12 14:54:52,980 - INFO - [33mPress CTRL+C to quit[0m
+2026-02-12 14:54:52,980 - INFO -  * Restarting with stat
+2026-02-12 14:54:55,511 - INFO - This is an INFO message
+2026-02-12 14:54:55,511 - ERROR - This is an ERROR message
+2026-02-12 14:54:55,511 - WARNING - This is a WARNING message
+2026-02-12 14:54:55,648 - WARNING -  * Debugger is active!
+2026-02-12 14:54:55,653 - INFO -  * Debugger PIN: 720-349-404
+2026-02-12 14:55:00,601 - INFO - 127.0.0.1 - - [12/Feb/2026 14:55:00] "[35m[1mGET / HTTP/1.1[0m" 500 -
+2026-02-12 14:55:00,701 - INFO - 127.0.0.1 - - [12/Feb/2026 14:55:00] "[36mGET /?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1[0m" 304 -
+2026-02-12 14:55:00,702 - INFO - 127.0.0.1 - - [12/Feb/2026 14:55:00] "[36mGET /?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1[0m" 304 -
+2026-02-12 14:55:00,757 - INFO - 127.0.0.1 - - [12/Feb/2026 14:55:00] "GET /?__debugger__=yes&cmd=resource&f=console.png&s=ClFjHSyZUBLnINdAkPDE HTTP/1.1" 200 -
+2026-02-12 15:25:52,941 - INFO - This is an INFO message
+2026-02-12 15:25:52,941 - ERROR - This is an ERROR message
+2026-02-12 15:25:52,941 - WARNING - This is a WARNING message
+2026-02-12 15:25:53,056 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2026-02-12 15:25:53,056 - INFO - [33mPress CTRL+C to quit[0m
+2026-02-12 15:25:53,056 - INFO -  * Restarting with stat
+2026-02-12 15:25:55,317 - INFO - This is an INFO message
+2026-02-12 15:25:55,317 - ERROR - This is an ERROR message
+2026-02-12 15:25:55,317 - WARNING - This is a WARNING message
+2026-02-12 15:25:55,388 - WARNING -  * Debugger is active!
+2026-02-12 15:25:55,399 - INFO -  * Debugger PIN: 720-349-404
+2026-02-12 15:26:02,084 - INFO - 127.0.0.1 - - [12/Feb/2026 15:26:02] "[35m[1mGET / HTTP/1.1[0m" 500 -
+2026-02-12 15:26:02,363 - INFO - 127.0.0.1 - - [12/Feb/2026 15:26:02] "[36mGET /?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1[0m" 304 -
+2026-02-12 15:26:02,368 - INFO - 127.0.0.1 - - [12/Feb/2026 15:26:02] "[36mGET /?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1[0m" 304 -
+2026-02-12 15:26:02,445 - INFO - 127.0.0.1 - - [12/Feb/2026 15:26:02] "GET /?__debugger__=yes&cmd=resource&f=console.png&s=2Do1JL8X4cG3HcG7nlFO HTTP/1.1" 200 -
+2026-02-12 17:57:22,031 - INFO - This is an INFO message
+2026-02-12 17:57:22,031 - ERROR - This is an ERROR message
+2026-02-12 17:57:22,031 - WARNING - This is a WARNING message
+2026-02-12 17:57:22,257 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2026-02-12 17:57:22,257 - INFO - [33mPress CTRL+C to quit[0m
+2026-02-12 17:57:22,262 - INFO -  * Restarting with stat
+2026-02-12 17:57:25,447 - INFO - This is an INFO message
+2026-02-12 17:57:25,448 - ERROR - This is an ERROR message
+2026-02-12 17:57:25,448 - WARNING - This is a WARNING message
+2026-02-12 17:57:25,668 - WARNING -  * Debugger is active!
+2026-02-12 17:57:25,685 - INFO -  * Debugger PIN: 720-349-404
+2026-02-12 17:57:36,543 - INFO - 127.0.0.1 - - [12/Feb/2026 17:57:36] "[35m[1mGET / HTTP/1.1[0m" 500 -
+2026-02-12 17:57:36,740 - INFO - 127.0.0.1 - - [12/Feb/2026 17:57:36] "[36mGET /?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1[0m" 304 -
+2026-02-12 17:57:36,740 - INFO - 127.0.0.1 - - [12/Feb/2026 17:57:36] "[36mGET /?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1[0m" 304 -
+2026-02-12 17:57:36,806 - INFO - 127.0.0.1 - - [12/Feb/2026 17:57:36] "GET /?__debugger__=yes&cmd=resource&f=console.png&s=dJbl2hTrr5KKFCxKffXS HTTP/1.1" 200 -
+2026-02-12 18:24:22,071 - INFO - This is an INFO message
+2026-02-12 18:24:22,087 - ERROR - This is an ERROR message
+2026-02-12 18:24:22,087 - WARNING - This is a WARNING message
+2026-02-12 18:24:22,277 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2026-02-12 18:24:22,277 - INFO - [33mPress CTRL+C to quit[0m
+2026-02-12 18:24:22,277 - INFO -  * Restarting with stat
+2026-02-12 18:24:24,553 - INFO - This is an INFO message
+2026-02-12 18:24:24,553 - ERROR - This is an ERROR message
+2026-02-12 18:24:24,553 - WARNING - This is a WARNING message
+2026-02-12 18:24:24,652 - WARNING -  * Debugger is active!
+2026-02-12 18:24:24,668 - INFO -  * Debugger PIN: 720-349-404
+2026-02-12 18:24:38,353 - INFO - 127.0.0.1 - - [12/Feb/2026 18:24:38] "[35m[1mGET / HTTP/1.1[0m" 500 -
+2026-02-12 18:24:38,534 - INFO - 127.0.0.1 - - [12/Feb/2026 18:24:38] "[36mGET /?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1[0m" 304 -
+2026-02-12 18:24:38,536 - INFO - 127.0.0.1 - - [12/Feb/2026 18:24:38] "[36mGET /?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1[0m" 304 -
+2026-02-12 18:24:38,611 - INFO - 127.0.0.1 - - [12/Feb/2026 18:24:38] "GET /?__debugger__=yes&cmd=resource&f=console.png&s=rtqykNaMIzJT4EQkcucW HTTP/1.1" 200 -
+2026-02-12 18:26:09,059 - INFO -  * Detected change in 'F:\\DATA-SCIENCE\\ML-Project\\app.py', reloading
+2026-02-12 18:26:09,343 - INFO -  * Restarting with stat
+2026-02-12 18:26:11,781 - INFO - This is an INFO message
+2026-02-12 18:26:11,781 - ERROR - This is an ERROR message
+2026-02-12 18:26:11,781 - WARNING - This is a WARNING message
+2026-02-12 18:26:11,864 - WARNING -  * Debugger is active!
+2026-02-12 18:26:11,864 - INFO -  * Debugger PIN: 720-349-404
+2026-02-12 18:31:09,276 - INFO - This is an INFO message
+2026-02-12 18:31:09,276 - ERROR - This is an ERROR message
+2026-02-12 18:31:09,276 - WARNING - This is a WARNING message
+2026-02-12 18:31:09,453 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2026-02-12 18:31:09,453 - INFO - [33mPress CTRL+C to quit[0m
+2026-02-12 18:31:09,453 - INFO -  * Restarting with stat
+2026-02-12 18:31:12,029 - INFO - This is an INFO message
+2026-02-12 18:31:12,029 - ERROR - This is an ERROR message
+2026-02-12 18:31:12,029 - WARNING - This is a WARNING message
+2026-02-12 18:31:12,118 - WARNING -  * Debugger is active!
+2026-02-12 18:31:12,124 - INFO -  * Debugger PIN: 720-349-404
+2026-02-12 18:31:19,928 - INFO - 127.0.0.1 - - [12/Feb/2026 18:31:19] "[35m[1mGET / HTTP/1.1[0m" 500 -
+2026-02-12 18:31:20,104 - INFO - 127.0.0.1 - - [12/Feb/2026 18:31:20] "[36mGET /?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1[0m" 304 -
+2026-02-12 18:31:20,109 - INFO - 127.0.0.1 - - [12/Feb/2026 18:31:20] "[36mGET /?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1[0m" 304 -
+2026-02-12 18:31:20,167 - INFO - 127.0.0.1 - - [12/Feb/2026 18:31:20] "GET /?__debugger__=yes&cmd=resource&f=console.png&s=ZHRO4gdry8jbMzapWrxt HTTP/1.1" 200 -
+2026-02-12 18:35:40,552 - INFO -  * Detected change in 'F:\\DATA-SCIENCE\\ML-Project\\app.py', reloading
+2026-02-12 18:35:40,744 - INFO -  * Restarting with stat
+2026-02-12 18:35:43,206 - INFO - This is an INFO message
+2026-02-12 18:35:43,206 - ERROR - This is an ERROR message
+2026-02-12 18:35:43,206 - WARNING - This is a WARNING message
+2026-02-12 18:35:43,269 - WARNING -  * Debugger is active!
+2026-02-12 18:35:43,269 - INFO -  * Debugger PIN: 720-349-404
+2026-02-12 18:40:39,270 - INFO -  * Detected change in 'F:\\DATA-SCIENCE\\ML-Project\\app.py', reloading
+2026-02-12 18:40:39,510 - INFO -  * Restarting with stat
+2026-02-12 18:40:42,102 - INFO - This is an INFO message
+2026-02-12 18:40:42,102 - ERROR - This is an ERROR message
+2026-02-12 18:40:42,102 - WARNING - This is a WARNING message
+2026-02-12 18:40:44,426 - WARNING -  * Debugger is active!
+2026-02-12 18:40:44,437 - INFO -  * Debugger PIN: 720-349-404
+2026-02-12 18:44:32,702 - INFO - This is an INFO message
+2026-02-12 18:44:32,702 - ERROR - This is an ERROR message
+2026-02-12 18:44:32,702 - WARNING - This is a WARNING message
+2026-02-12 18:44:33,089 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2026-02-12 18:44:33,089 - INFO - [33mPress CTRL+C to quit[0m
+2026-02-12 18:44:33,095 - INFO -  * Restarting with stat
+2026-02-12 18:44:35,244 - INFO - This is an INFO message
+2026-02-12 18:44:35,244 - ERROR - This is an ERROR message
+2026-02-12 18:44:35,244 - WARNING - This is a WARNING message
+2026-02-12 18:44:35,509 - WARNING -  * Debugger is active!
+2026-02-12 18:44:35,514 - INFO -  * Debugger PIN: 720-349-404
+2026-02-12 18:44:50,361 - INFO - 127.0.0.1 - - [12/Feb/2026 18:44:50] "[35m[1mGET / HTTP/1.1[0m" 500 -
+2026-02-12 18:44:50,655 - INFO - 127.0.0.1 - - [12/Feb/2026 18:44:50] "[36mGET /?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1[0m" 304 -
+2026-02-12 18:44:50,655 - INFO - 127.0.0.1 - - [12/Feb/2026 18:44:50] "[36mGET /?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1[0m" 304 -
+2026-02-12 18:44:50,729 - INFO - 127.0.0.1 - - [12/Feb/2026 18:44:50] "GET /?__debugger__=yes&cmd=resource&f=console.png&s=Fjj0VaR30fChvAUCyMvl HTTP/1.1" 200 -
+2026-02-12 18:50:35,190 - INFO - This is an INFO message
+2026-02-12 18:50:35,190 - ERROR - This is an ERROR message
+2026-02-12 18:50:35,190 - WARNING - This is a WARNING message
+2026-02-12 18:50:35,421 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2026-02-12 18:50:35,421 - INFO - [33mPress CTRL+C to quit[0m
+2026-02-12 18:50:35,423 - INFO -  * Restarting with stat
+2026-02-12 18:50:37,618 - INFO - This is an INFO message
+2026-02-12 18:50:37,618 - ERROR - This is an ERROR message
+2026-02-12 18:50:37,618 - WARNING - This is a WARNING message
+2026-02-12 18:50:37,884 - WARNING -  * Debugger is active!
+2026-02-12 18:50:37,884 - INFO -  * Debugger PIN: 720-349-404
+2026-02-12 18:50:43,631 - INFO - 127.0.0.1 - - [12/Feb/2026 18:50:43] "[35m[1mGET / HTTP/1.1[0m" 500 -
+2026-02-12 18:50:43,811 - INFO - 127.0.0.1 - - [12/Feb/2026 18:50:43] "[36mGET /?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1[0m" 304 -
+2026-02-12 18:50:43,811 - INFO - 127.0.0.1 - - [12/Feb/2026 18:50:43] "[36mGET /?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1[0m" 304 -
+2026-02-12 18:50:43,878 - INFO - 127.0.0.1 - - [12/Feb/2026 18:50:43] "GET /?__debugger__=yes&cmd=resource&f=console.png&s=yAebLpmJor45NA2NRi5g HTTP/1.1" 200 -
+2026-02-12 18:57:51,659 - INFO -  * Detected change in 'F:\\DATA-SCIENCE\\ML-Project\\app.py', reloading
+2026-02-12 18:57:51,994 - INFO -  * Restarting with stat
+2026-02-12 18:57:54,461 - INFO - This is an INFO message
+2026-02-12 18:57:54,461 - ERROR - This is an ERROR message
+2026-02-12 18:57:54,461 - WARNING - This is a WARNING message
+2026-02-12 18:57:54,689 - WARNING -  * Debugger is active!
+2026-02-12 18:57:54,701 - INFO -  * Debugger PIN: 720-349-404
+2026-02-12 19:05:06,606 - INFO - This is an INFO message
+2026-02-12 19:05:06,606 - ERROR - This is an ERROR message
+2026-02-12 19:05:06,606 - WARNING - This is a WARNING message
+2026-02-12 19:05:08,536 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2026-02-12 19:05:08,536 - INFO - [33mPress CTRL+C to quit[0m
+2026-02-12 19:05:08,538 - INFO -  * Restarting with stat
+2026-02-12 19:05:10,424 - INFO - This is an INFO message
+2026-02-12 19:05:10,424 - ERROR - This is an ERROR message
+2026-02-12 19:05:10,424 - WARNING - This is a WARNING message
+2026-02-12 19:05:10,636 - WARNING -  * Debugger is active!
+2026-02-12 19:05:10,655 - INFO -  * Debugger PIN: 720-349-404
+2026-02-12 19:05:22,592 - INFO - 127.0.0.1 - - [12/Feb/2026 19:05:22] "[35m[1mGET / HTTP/1.1[0m" 500 -
+2026-02-12 19:05:22,705 - INFO - 127.0.0.1 - - [12/Feb/2026 19:05:22] "[36mGET /?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1[0m" 304 -
+2026-02-12 19:05:22,724 - INFO - 127.0.0.1 - - [12/Feb/2026 19:05:22] "[36mGET /?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1[0m" 304 -
+2026-02-12 19:05:22,788 - INFO - 127.0.0.1 - - [12/Feb/2026 19:05:22] "GET /?__debugger__=yes&cmd=resource&f=console.png&s=VK9F7du0kmC6aRpxj5nk HTTP/1.1" 200 -
+2026-02-12 19:10:49,903 - INFO - This is an INFO message
+2026-02-12 19:10:49,903 - ERROR - This is an ERROR message
+2026-02-12 19:10:49,903 - WARNING - This is a WARNING message
+2026-02-12 19:10:50,140 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2026-02-12 19:10:50,140 - INFO - [33mPress CTRL+C to quit[0m
+2026-02-12 19:10:50,140 - INFO -  * Restarting with stat
+2026-02-12 19:10:52,236 - INFO - This is an INFO message
+2026-02-12 19:10:52,236 - ERROR - This is an ERROR message
+2026-02-12 19:10:52,236 - WARNING - This is a WARNING message
+2026-02-12 19:10:52,488 - WARNING -  * Debugger is active!
+2026-02-12 19:10:52,500 - INFO -  * Debugger PIN: 720-349-404
+2026-02-12 19:11:00,845 - INFO - 127.0.0.1 - - [12/Feb/2026 19:11:00] "[35m[1mGET / HTTP/1.1[0m" 500 -
+2026-02-12 19:11:00,961 - INFO - 127.0.0.1 - - [12/Feb/2026 19:11:00] "[36mGET /?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1[0m" 304 -
+2026-02-12 19:11:00,965 - INFO - 127.0.0.1 - - [12/Feb/2026 19:11:00] "[36mGET /?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1[0m" 304 -
+2026-02-12 19:11:01,027 - INFO - 127.0.0.1 - - [12/Feb/2026 19:11:01] "GET /?__debugger__=yes&cmd=resource&f=console.png&s=eYAElRncRVnoqbWwhfYQ HTTP/1.1" 200 -
+2026-02-12 19:12:36,052 - INFO -  * Detected change in 'F:\\DATA-SCIENCE\\ML-Project\\app.py', reloading
+2026-02-12 19:12:36,417 - INFO -  * Restarting with stat
+2026-02-12 19:12:38,724 - INFO - This is an INFO message
+2026-02-12 19:12:38,724 - ERROR - This is an ERROR message
+2026-02-12 19:12:38,724 - WARNING - This is a WARNING message
+2026-02-12 19:15:04,789 - INFO - This is an INFO message
+2026-02-12 19:15:04,789 - ERROR - This is an ERROR message
+2026-02-12 19:15:04,789 - WARNING - This is a WARNING message
+2026-02-12 19:15:14,879 - INFO - This is an INFO message
+2026-02-12 19:15:14,879 - ERROR - This is an ERROR message
+2026-02-12 19:15:14,879 - WARNING - This is a WARNING message
+2026-02-12 19:18:35,040 - INFO - This is an INFO message
+2026-02-12 19:18:35,040 - ERROR - This is an ERROR message
+2026-02-12 19:18:35,040 - WARNING - This is a WARNING message
+2026-02-12 19:18:35,272 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2026-02-12 19:18:35,272 - INFO - [33mPress CTRL+C to quit[0m
+2026-02-12 19:18:35,273 - INFO -  * Restarting with stat
+2026-02-12 19:18:37,277 - INFO - This is an INFO message
+2026-02-12 19:18:37,277 - ERROR - This is an ERROR message
+2026-02-12 19:18:37,277 - WARNING - This is a WARNING message
+2026-02-12 19:18:37,512 - WARNING -  * Debugger is active!
+2026-02-12 19:18:37,518 - INFO -  * Debugger PIN: 720-349-404
+2026-02-12 19:18:46,350 - INFO - 127.0.0.1 - - [12/Feb/2026 19:18:46] "[35m[1mGET / HTTP/1.1[0m" 500 -
+2026-02-12 19:18:46,442 - INFO - 127.0.0.1 - - [12/Feb/2026 19:18:46] "[36mGET /?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1[0m" 304 -
+2026-02-12 19:18:46,443 - INFO - 127.0.0.1 - - [12/Feb/2026 19:18:46] "[36mGET /?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1[0m" 304 -
+2026-02-12 19:18:46,489 - INFO - 127.0.0.1 - - [12/Feb/2026 19:18:46] "GET /?__debugger__=yes&cmd=resource&f=console.png&s=iboiVUVhfb5VoQ22OOlc HTTP/1.1" 200 -
+2026-02-12 19:26:48,792 - INFO - This is an INFO message
+2026-02-12 19:26:48,792 - ERROR - This is an ERROR message
+2026-02-12 19:26:48,792 - WARNING - This is a WARNING message
+2026-02-12 19:26:49,032 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2026-02-12 19:26:49,032 - INFO - [33mPress CTRL+C to quit[0m
+2026-02-12 19:26:49,033 - INFO -  * Restarting with stat
+2026-02-12 19:26:51,018 - INFO - This is an INFO message
+2026-02-12 19:26:51,018 - ERROR - This is an ERROR message
+2026-02-12 19:26:51,018 - WARNING - This is a WARNING message
+2026-02-12 19:26:51,252 - WARNING -  * Debugger is active!
+2026-02-12 19:26:51,256 - INFO -  * Debugger PIN: 720-349-404
+2026-02-12 19:26:57,777 - INFO - 127.0.0.1 - - [12/Feb/2026 19:26:57] "[35m[1mGET / HTTP/1.1[0m" 500 -
+2026-02-12 19:26:57,859 - INFO - 127.0.0.1 - - [12/Feb/2026 19:26:57] "[36mGET /?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1[0m" 304 -
+2026-02-12 19:26:57,860 - INFO - 127.0.0.1 - - [12/Feb/2026 19:26:57] "[36mGET /?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1[0m" 304 -
+2026-02-12 19:26:57,911 - INFO - 127.0.0.1 - - [12/Feb/2026 19:26:57] "GET /?__debugger__=yes&cmd=resource&f=console.png&s=x0Ej7oTnfkPPaHKoBvn3 HTTP/1.1" 200 -
+2026-02-12 19:40:27,021 - INFO - This is an INFO message
+2026-02-12 19:40:27,021 - ERROR - This is an ERROR message
+2026-02-12 19:40:27,021 - WARNING - This is a WARNING message
+2026-02-12 19:40:27,340 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2026-02-12 19:40:27,340 - INFO - [33mPress CTRL+C to quit[0m
+2026-02-12 19:40:27,340 - INFO -  * Restarting with stat
+2026-02-12 19:40:29,704 - INFO - This is an INFO message
+2026-02-12 19:40:29,704 - ERROR - This is an ERROR message
+2026-02-12 19:40:29,704 - WARNING - This is a WARNING message
+2026-02-12 19:40:29,945 - WARNING -  * Debugger is active!
+2026-02-12 19:40:29,945 - INFO -  * Debugger PIN: 720-349-404
+2026-02-12 19:40:34,489 - INFO - 127.0.0.1 - - [12/Feb/2026 19:40:34] "GET / HTTP/1.1" 200 -
+2026-02-12 19:40:35,779 - INFO - 127.0.0.1 - - [12/Feb/2026 19:40:35] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2026-02-12 19:41:29,341 - INFO - 127.0.0.1 - - [12/Feb/2026 19:41:29] "[35m[1mGET /dashboard HTTP/1.1[0m" 500 -
+2026-02-12 19:41:29,448 - INFO - 127.0.0.1 - - [12/Feb/2026 19:41:29] "[36mGET /dashboard?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1[0m" 304 -
+2026-02-12 19:41:29,449 - INFO - 127.0.0.1 - - [12/Feb/2026 19:41:29] "[36mGET /dashboard?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1[0m" 304 -
+2026-02-12 19:41:29,488 - INFO - 127.0.0.1 - - [12/Feb/2026 19:41:29] "GET /dashboard?__debugger__=yes&cmd=resource&f=console.png&s=53oxnNDrf0M19HTVzU7y HTTP/1.1" 200 -
+2026-02-12 19:41:35,391 - INFO - 127.0.0.1 - - [12/Feb/2026 19:41:35] "[35m[1mGET /insights HTTP/1.1[0m" 500 -
+2026-02-12 19:41:35,416 - INFO - 127.0.0.1 - - [12/Feb/2026 19:41:35] "GET /insights?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1" 200 -
+2026-02-12 19:41:35,426 - INFO - 127.0.0.1 - - [12/Feb/2026 19:41:35] "GET /insights?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1" 200 -
+2026-02-12 19:41:35,447 - INFO - 127.0.0.1 - - [12/Feb/2026 19:41:35] "GET /insights?__debugger__=yes&cmd=resource&f=console.png&s=53oxnNDrf0M19HTVzU7y HTTP/1.1" 200 -
+2026-02-12 19:41:35,474 - INFO - 127.0.0.1 - - [12/Feb/2026 19:41:35] "GET /insights?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1" 200 -
+2026-02-12 19:41:39,894 - INFO - 127.0.0.1 - - [12/Feb/2026 19:41:39] "GET /predict HTTP/1.1" 200 -
+2026-02-12 19:41:53,274 - INFO - 127.0.0.1 - - [12/Feb/2026 19:41:53] "GET /retention HTTP/1.1" 200 -
+2026-02-12 19:42:27,236 - INFO - 127.0.0.1 - - [12/Feb/2026 19:42:27] "GET /about HTTP/1.1" 200 -
+2026-02-12 19:42:27,326 - INFO - 127.0.0.1 - - [12/Feb/2026 19:42:27] "[36mGET /static/images/vitthal-teli.jpg HTTP/1.1[0m" 304 -
+2026-02-12 19:45:07,759 - INFO - 127.0.0.1 - - [12/Feb/2026 19:45:07] "GET / HTTP/1.1" 200 -
+2026-02-12 19:45:50,443 - INFO - 127.0.0.1 - - [12/Feb/2026 19:45:50] "[35m[1mGET /insights HTTP/1.1[0m" 500 -
+2026-02-12 19:45:50,463 - INFO - 127.0.0.1 - - [12/Feb/2026 19:45:50] "[36mGET /insights?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1[0m" 304 -
+2026-02-12 19:45:50,467 - INFO - 127.0.0.1 - - [12/Feb/2026 19:45:50] "[36mGET /insights?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1[0m" 304 -
+2026-02-12 19:45:50,481 - INFO - 127.0.0.1 - - [12/Feb/2026 19:45:50] "[36mGET /insights?__debugger__=yes&cmd=resource&f=console.png&s=53oxnNDrf0M19HTVzU7y HTTP/1.1[0m" 304 -
+2026-02-12 19:46:13,114 - INFO - 127.0.0.1 - - [12/Feb/2026 19:46:13] "GET /predict HTTP/1.1" 200 -
+2026-02-12 19:46:59,506 - INFO - 127.0.0.1 - - [12/Feb/2026 19:46:59] "[35m[1mGET /cohort-analysis HTTP/1.1[0m" 500 -
+2026-02-12 19:46:59,534 - INFO - 127.0.0.1 - - [12/Feb/2026 19:46:59] "GET /cohort-analysis?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1" 200 -
+2026-02-12 19:46:59,558 - INFO - 127.0.0.1 - - [12/Feb/2026 19:46:59] "GET /cohort-analysis?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1" 200 -
+2026-02-12 19:46:59,596 - INFO - 127.0.0.1 - - [12/Feb/2026 19:46:59] "GET /cohort-analysis?__debugger__=yes&cmd=resource&f=console.png&s=53oxnNDrf0M19HTVzU7y HTTP/1.1" 200 -
+2026-02-12 19:46:59,628 - INFO - 127.0.0.1 - - [12/Feb/2026 19:46:59] "GET /cohort-analysis?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1" 200 -
+2026-02-12 19:47:10,510 - INFO - 127.0.0.1 - - [12/Feb/2026 19:47:10] "GET /contact HTTP/1.1" 200 -
+2026-02-12 19:47:38,125 - INFO - 127.0.0.1 - - [12/Feb/2026 19:47:38] "GET /retention HTTP/1.1" 200 -
+2026-02-12 19:48:37,160 - INFO - 127.0.0.1 - - [12/Feb/2026 19:48:37] "GET / HTTP/1.1" 200 -
+2026-02-12 19:49:02,255 - INFO - 127.0.0.1 - - [12/Feb/2026 19:49:02] "GET /customers HTTP/1.1" 200 -
+2026-02-12 19:49:10,724 - INFO - 127.0.0.1 - - [12/Feb/2026 19:49:10] "[35m[1mGET /customer-360/CUST_00001 HTTP/1.1[0m" 500 -
+2026-02-12 19:49:10,741 - INFO - 127.0.0.1 - - [12/Feb/2026 19:49:10] "GET /customer-360/CUST_00001?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1" 200 -
+2026-02-12 19:49:10,743 - INFO - 127.0.0.1 - - [12/Feb/2026 19:49:10] "GET /customer-360/CUST_00001?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1" 200 -
+2026-02-12 19:49:10,759 - INFO - 127.0.0.1 - - [12/Feb/2026 19:49:10] "GET /customer-360/CUST_00001?__debugger__=yes&cmd=resource&f=console.png&s=53oxnNDrf0M19HTVzU7y HTTP/1.1" 200 -
+2026-02-12 19:49:10,783 - INFO - 127.0.0.1 - - [12/Feb/2026 19:49:10] "GET /customer-360/CUST_00001?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1" 200 -
+2026-02-12 19:49:56,203 - INFO - 127.0.0.1 - - [12/Feb/2026 19:49:56] "GET / HTTP/1.1" 200 -
+2026-02-12 19:50:15,768 - INFO - 127.0.0.1 - - [12/Feb/2026 19:50:15] "GET /predict HTTP/1.1" 200 -
+2026-02-12 19:50:30,305 - INFO - 127.0.0.1 - - [12/Feb/2026 19:50:30] "GET /about HTTP/1.1" 200 -
+2026-02-12 19:50:30,375 - INFO - 127.0.0.1 - - [12/Feb/2026 19:50:30] "[36mGET /static/images/vitthal-teli.jpg HTTP/1.1[0m" 304 -
+2026-02-12 19:50:53,415 - INFO - 127.0.0.1 - - [12/Feb/2026 19:50:53] "GET /customers HTTP/1.1" 200 -
+2026-02-12 19:51:49,699 - INFO - 127.0.0.1 - - [12/Feb/2026 19:51:49] "GET /retention HTTP/1.1" 200 -
+2026-02-12 19:52:45,065 - INFO - 127.0.0.1 - - [12/Feb/2026 19:52:45] "GET / HTTP/1.1" 200 -
+2026-02-12 19:53:47,875 - INFO - 127.0.0.1 - - [12/Feb/2026 19:53:47] "[35m[1mGET /dashboard HTTP/1.1[0m" 500 -
+2026-02-12 19:53:47,909 - INFO - 127.0.0.1 - - [12/Feb/2026 19:53:47] "[36mGET /dashboard?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1[0m" 304 -
+2026-02-12 19:53:47,912 - INFO - 127.0.0.1 - - [12/Feb/2026 19:53:47] "[36mGET /dashboard?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1[0m" 304 -
+2026-02-12 19:53:47,929 - INFO - 127.0.0.1 - - [12/Feb/2026 19:53:47] "[36mGET /dashboard?__debugger__=yes&cmd=resource&f=console.png&s=53oxnNDrf0M19HTVzU7y HTTP/1.1[0m" 304 -
+2026-02-12 19:53:55,086 - INFO - 127.0.0.1 - - [12/Feb/2026 19:53:55] "[35m[1mGET /cohort-analysis HTTP/1.1[0m" 500 -
+2026-02-12 19:53:55,116 - INFO - 127.0.0.1 - - [12/Feb/2026 19:53:55] "[36mGET /cohort-analysis?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1[0m" 304 -
+2026-02-12 19:53:55,133 - INFO - 127.0.0.1 - - [12/Feb/2026 19:53:55] "[36mGET /cohort-analysis?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1[0m" 304 -
+2026-02-12 19:53:55,174 - INFO - 127.0.0.1 - - [12/Feb/2026 19:53:55] "[36mGET /cohort-analysis?__debugger__=yes&cmd=resource&f=console.png&s=53oxnNDrf0M19HTVzU7y HTTP/1.1[0m" 304 -
+2026-02-12 19:54:03,193 - INFO - 127.0.0.1 - - [12/Feb/2026 19:54:03] "GET /predict HTTP/1.1" 200 -
+2026-02-12 19:55:34,601 - INFO - 127.0.0.1 - - [12/Feb/2026 19:55:34] "POST /predictdata HTTP/1.1" 200 -
+2026-02-12 19:56:23,255 - INFO - 127.0.0.1 - - [12/Feb/2026 19:56:23] "GET /about HTTP/1.1" 200 -
+2026-02-12 19:56:23,335 - INFO - 127.0.0.1 - - [12/Feb/2026 19:56:23] "[36mGET /static/images/vitthal-teli.jpg HTTP/1.1[0m" 304 -
+2026-02-12 19:57:31,340 - INFO - 127.0.0.1 - - [12/Feb/2026 19:57:31] "GET /customers HTTP/1.1" 200 -
+2026-02-12 19:57:39,301 - INFO - 127.0.0.1 - - [12/Feb/2026 19:57:39] "[35m[1mGET /customer-360/CUST_00020 HTTP/1.1[0m" 500 -
+2026-02-12 19:57:39,312 - INFO - 127.0.0.1 - - [12/Feb/2026 19:57:39] "GET /customer-360/CUST_00020?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1" 200 -
+2026-02-12 19:57:39,312 - INFO - 127.0.0.1 - - [12/Feb/2026 19:57:39] "GET /customer-360/CUST_00020?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1" 200 -
+2026-02-12 19:57:39,329 - INFO - 127.0.0.1 - - [12/Feb/2026 19:57:39] "GET /customer-360/CUST_00020?__debugger__=yes&cmd=resource&f=console.png&s=53oxnNDrf0M19HTVzU7y HTTP/1.1" 200 -
+2026-02-12 19:57:39,352 - INFO - 127.0.0.1 - - [12/Feb/2026 19:57:39] "GET /customer-360/CUST_00020?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1" 200 -
+2026-02-12 20:03:40,162 - INFO -  * Detected change in 'F:\\DATA-SCIENCE\\ML-Project\\app.py', reloading
+2026-02-12 20:03:40,731 - INFO -  * Restarting with stat
+2026-02-12 20:03:43,112 - INFO - This is an INFO message
+2026-02-12 20:03:43,112 - ERROR - This is an ERROR message
+2026-02-12 20:03:43,112 - WARNING - This is a WARNING message
+2026-02-12 20:03:43,428 - WARNING -  * Debugger is active!
+2026-02-12 20:03:43,432 - INFO -  * Debugger PIN: 720-349-404
+2026-02-12 20:31:31,518 - INFO - This is an INFO message
+2026-02-12 20:31:31,523 - ERROR - This is an ERROR message
+2026-02-12 20:31:31,523 - WARNING - This is a WARNING message
+2026-02-12 20:31:31,926 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2026-02-12 20:31:31,926 - INFO - [33mPress CTRL+C to quit[0m
+2026-02-12 20:31:31,926 - INFO -  * Restarting with stat
+2026-02-12 20:31:34,086 - INFO - This is an INFO message
+2026-02-12 20:31:34,086 - ERROR - This is an ERROR message
+2026-02-12 20:31:34,086 - WARNING - This is a WARNING message
+2026-02-12 20:31:34,343 - WARNING -  * Debugger is active!
+2026-02-12 20:31:34,348 - INFO -  * Debugger PIN: 720-349-404
+2026-02-12 20:31:37,076 - INFO - 127.0.0.1 - - [12/Feb/2026 20:31:37] "GET /customers HTTP/1.1" 200 -
+2026-02-12 20:31:45,498 - INFO - 127.0.0.1 - - [12/Feb/2026 20:31:45] "GET / HTTP/1.1" 200 -
+2026-02-12 20:31:52,486 - INFO - 127.0.0.1 - - [12/Feb/2026 20:31:52] "GET /customers HTTP/1.1" 200 -
+2026-02-12 20:31:57,691 - INFO - 127.0.0.1 - - [12/Feb/2026 20:31:57] "GET /customer-360/CUST_00002 HTTP/1.1" 200 -
+2026-02-12 20:32:18,935 - INFO - 127.0.0.1 - - [12/Feb/2026 20:32:18] "GET /customers HTTP/1.1" 200 -
+2026-02-12 20:32:33,523 - INFO - 127.0.0.1 - - [12/Feb/2026 20:32:33] "GET /customer-360/CUST_00033 HTTP/1.1" 200 -
+2026-02-12 20:33:00,451 - INFO - 127.0.0.1 - - [12/Feb/2026 20:33:00] "GET / HTTP/1.1" 200 -
+2026-02-12 20:45:55,477 - INFO - This is an INFO message
+2026-02-12 20:45:55,477 - ERROR - This is an ERROR message
+2026-02-12 20:45:55,477 - WARNING - This is a WARNING message
+2026-02-12 20:45:55,863 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2026-02-12 20:45:55,863 - INFO - [33mPress CTRL+C to quit[0m
+2026-02-12 20:45:55,863 - INFO -  * Restarting with stat
+2026-02-12 20:45:58,195 - INFO - This is an INFO message
+2026-02-12 20:45:58,195 - ERROR - This is an ERROR message
+2026-02-12 20:45:58,195 - WARNING - This is a WARNING message
+2026-02-12 20:45:58,466 - WARNING -  * Debugger is active!
+2026-02-12 20:45:58,466 - INFO -  * Debugger PIN: 720-349-404
+2026-02-12 20:46:02,631 - INFO - 127.0.0.1 - - [12/Feb/2026 20:46:02] "[35m[1mGET / HTTP/1.1[0m" 500 -
+2026-02-12 20:46:02,781 - INFO - 127.0.0.1 - - [12/Feb/2026 20:46:02] "[36mGET /?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1[0m" 304 -
+2026-02-12 20:46:02,782 - INFO - 127.0.0.1 - - [12/Feb/2026 20:46:02] "[36mGET /?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1[0m" 304 -
+2026-02-12 20:46:02,839 - INFO - 127.0.0.1 - - [12/Feb/2026 20:46:02] "GET /?__debugger__=yes&cmd=resource&f=console.png&s=FtWnz0o7RVxMgGkRq1n3 HTTP/1.1" 200 -
+2026-02-12 20:46:12,683 - INFO - 127.0.0.1 - - [12/Feb/2026 20:46:12] "[31m[1mGET /predictdata HTTP/1.1[0m" 405 -
+2026-02-12 20:46:21,438 - INFO - 127.0.0.1 - - [12/Feb/2026 20:46:21] "[35m[1mGET / HTTP/1.1[0m" 500 -
+2026-02-12 20:46:21,464 - INFO - 127.0.0.1 - - [12/Feb/2026 20:46:21] "[36mGET /?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1[0m" 304 -
+2026-02-12 20:46:21,468 - INFO - 127.0.0.1 - - [12/Feb/2026 20:46:21] "[36mGET /?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1[0m" 304 -
+2026-02-12 20:46:21,487 - INFO - 127.0.0.1 - - [12/Feb/2026 20:46:21] "[36mGET /?__debugger__=yes&cmd=resource&f=console.png&s=FtWnz0o7RVxMgGkRq1n3 HTTP/1.1[0m" 304 -
+2026-02-12 20:55:43,583 - INFO -  * Detected change in 'F:\\DATA-SCIENCE\\ML-Project\\app.py', reloading
+2026-02-12 20:55:44,262 - INFO -  * Restarting with stat
+2026-02-12 20:55:46,871 - INFO - This is an INFO message
+2026-02-12 20:55:46,871 - ERROR - This is an ERROR message
+2026-02-12 20:55:46,871 - WARNING - This is a WARNING message
+2026-02-12 20:55:47,166 - WARNING -  * Debugger is active!
+2026-02-12 20:55:47,183 - INFO -  * Debugger PIN: 720-349-404
+2026-02-12 20:55:58,800 - INFO - This is an INFO message
+2026-02-12 20:55:58,800 - ERROR - This is an ERROR message
+2026-02-12 20:55:58,800 - WARNING - This is a WARNING message
+2026-02-12 20:55:59,076 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2026-02-12 20:55:59,077 - INFO - [33mPress CTRL+C to quit[0m
+2026-02-12 20:55:59,078 - INFO -  * Restarting with stat
+2026-02-12 20:56:01,361 - INFO - This is an INFO message
+2026-02-12 20:56:01,361 - ERROR - This is an ERROR message
+2026-02-12 20:56:01,361 - WARNING - This is a WARNING message
+2026-02-12 20:56:01,655 - WARNING -  * Debugger is active!
+2026-02-12 20:56:01,659 - INFO -  * Debugger PIN: 720-349-404
+2026-02-12 20:56:14,996 - INFO - 127.0.0.1 - - [12/Feb/2026 20:56:14] "GET / HTTP/1.1" 200 -
+2026-02-12 20:56:58,366 - INFO - 127.0.0.1 - - [12/Feb/2026 20:56:58] "GET /benchmark HTTP/1.1" 200 -
+2026-02-12 20:57:28,248 - INFO - 127.0.0.1 - - [12/Feb/2026 20:57:28] "[35m[1mGET /dashboard HTTP/1.1[0m" 500 -
+2026-02-12 20:57:28,345 - INFO - 127.0.0.1 - - [12/Feb/2026 20:57:28] "[36mGET /dashboard?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1[0m" 304 -
+2026-02-12 20:57:28,345 - INFO - 127.0.0.1 - - [12/Feb/2026 20:57:28] "[36mGET /dashboard?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1[0m" 304 -
+2026-02-12 20:57:28,398 - INFO - 127.0.0.1 - - [12/Feb/2026 20:57:28] "GET /dashboard?__debugger__=yes&cmd=resource&f=console.png&s=ZPaBwbqtRUMZEquR3Oux HTTP/1.1" 200 -
+2026-02-12 21:01:41,936 - INFO -  * Detected change in 'F:\\DATA-SCIENCE\\ML-Project\\app.py', reloading
+2026-02-12 21:01:42,247 - INFO -  * Restarting with stat
+2026-02-12 21:01:44,525 - INFO - This is an INFO message
+2026-02-12 21:01:44,525 - ERROR - This is an ERROR message
+2026-02-12 21:01:44,525 - WARNING - This is a WARNING message
+2026-02-12 21:01:44,789 - WARNING -  * Debugger is active!
+2026-02-12 21:01:44,793 - INFO -  * Debugger PIN: 720-349-404
+2026-02-12 21:02:07,699 - INFO -  * Detected change in 'F:\\DATA-SCIENCE\\ML-Project\\app.py', reloading
+2026-02-12 21:02:07,889 - INFO -  * Restarting with stat
+2026-02-12 21:02:10,285 - INFO - This is an INFO message
+2026-02-12 21:02:10,285 - ERROR - This is an ERROR message
+2026-02-12 21:02:10,286 - WARNING - This is a WARNING message
+2026-02-12 21:02:10,561 - WARNING -  * Debugger is active!
+2026-02-12 21:02:10,568 - INFO -  * Debugger PIN: 720-349-404
+2026-02-12 21:02:36,856 - INFO - 127.0.0.1 - - [12/Feb/2026 21:02:36] "GET /benchmark HTTP/1.1" 200 -
+2026-02-12 21:02:43,981 - INFO - 127.0.0.1 - - [12/Feb/2026 21:02:43] "GET /dashboard HTTP/1.1" 200 -
+2026-02-12 21:02:44,234 - INFO - 127.0.0.1 - - [12/Feb/2026 21:02:44] "GET /static/js/charts.js HTTP/1.1" 200 -
+2026-02-12 21:03:22,214 - INFO - 127.0.0.1 - - [12/Feb/2026 21:03:22] "[35m[1mGET /insights HTTP/1.1[0m" 500 -
+2026-02-12 21:03:22,243 - INFO - 127.0.0.1 - - [12/Feb/2026 21:03:22] "[36mGET /insights?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1[0m" 304 -
+2026-02-12 21:03:22,243 - INFO - 127.0.0.1 - - [12/Feb/2026 21:03:22] "[36mGET /insights?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1[0m" 304 -
+2026-02-12 21:03:22,257 - INFO - 127.0.0.1 - - [12/Feb/2026 21:03:22] "GET /insights?__debugger__=yes&cmd=resource&f=console.png&s=ru4SlJZX3CQmWgYQLAzK HTTP/1.1" 200 -
+2026-02-12 21:13:49,167 - INFO - This is an INFO message
+2026-02-12 21:13:49,167 - ERROR - This is an ERROR message
+2026-02-12 21:13:49,167 - WARNING - This is a WARNING message
+2026-02-12 21:13:49,867 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2026-02-12 21:13:49,867 - INFO - [33mPress CTRL+C to quit[0m
+2026-02-12 21:13:49,867 - INFO -  * Restarting with stat
+2026-02-12 21:13:52,482 - INFO - This is an INFO message
+2026-02-12 21:13:52,482 - ERROR - This is an ERROR message
+2026-02-12 21:13:52,482 - WARNING - This is a WARNING message
+2026-02-12 21:13:52,784 - WARNING -  * Debugger is active!
+2026-02-12 21:13:52,795 - INFO -  * Debugger PIN: 720-349-404
+2026-02-12 21:14:01,064 - INFO - 127.0.0.1 - - [12/Feb/2026 21:14:01] "GET / HTTP/1.1" 200 -
+2026-02-12 21:14:05,894 - INFO - 127.0.0.1 - - [12/Feb/2026 21:14:05] "GET /dashboard HTTP/1.1" 200 -
+2026-02-12 21:14:35,849 - INFO - 127.0.0.1 - - [12/Feb/2026 21:14:35] "[35m[1mGET /insights HTTP/1.1[0m" 500 -
+2026-02-12 21:14:35,947 - INFO - 127.0.0.1 - - [12/Feb/2026 21:14:35] "[36mGET /insights?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1[0m" 304 -
+2026-02-12 21:14:35,947 - INFO - 127.0.0.1 - - [12/Feb/2026 21:14:35] "[36mGET /insights?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1[0m" 304 -
+2026-02-12 21:14:35,989 - INFO - 127.0.0.1 - - [12/Feb/2026 21:14:35] "GET /insights?__debugger__=yes&cmd=resource&f=console.png&s=lJOyyUf2bMZZRXlcxzng HTTP/1.1" 200 -
+2026-02-12 21:16:05,673 - INFO -  * Detected change in 'F:\\DATA-SCIENCE\\ML-Project\\app.py', reloading
+2026-02-12 21:16:06,261 - INFO -  * Restarting with stat
+2026-02-12 21:16:08,660 - INFO - This is an INFO message
+2026-02-12 21:16:08,660 - ERROR - This is an ERROR message
+2026-02-12 21:16:08,660 - WARNING - This is a WARNING message
+2026-02-12 21:16:08,928 - WARNING -  * Debugger is active!
+2026-02-12 21:16:08,941 - INFO -  * Debugger PIN: 720-349-404
+2026-02-12 21:16:45,513 - INFO -  * Detected change in 'F:\\DATA-SCIENCE\\ML-Project\\app.py', reloading
+2026-02-12 21:16:45,794 - INFO -  * Restarting with stat
+2026-02-12 21:16:48,118 - INFO - This is an INFO message
+2026-02-12 21:16:48,118 - ERROR - This is an ERROR message
+2026-02-12 21:16:48,118 - WARNING - This is a WARNING message
+2026-02-12 21:16:48,392 - WARNING -  * Debugger is active!
+2026-02-12 21:16:48,407 - INFO -  * Debugger PIN: 720-349-404
+2026-02-12 21:16:49,978 - INFO - 127.0.0.1 - - [12/Feb/2026 21:16:49] "GET /dashboard HTTP/1.1" 200 -
+2026-02-12 21:16:53,592 - INFO - 127.0.0.1 - - [12/Feb/2026 21:16:53] "GET /insights HTTP/1.1" 200 -
+2026-02-12 21:16:53,674 - INFO - 127.0.0.1 - - [12/Feb/2026 21:16:53] "[36mGET /static/js/charts.js HTTP/1.1[0m" 304 -
+2026-02-12 21:16:53,791 - INFO - 127.0.0.1 - - [12/Feb/2026 21:16:53] "GET /static/js/model_insights.js HTTP/1.1" 200 -
+2026-02-12 21:18:18,432 - INFO - 127.0.0.1 - - [12/Feb/2026 21:18:18] "GET / HTTP/1.1" 200 -
+2026-02-12 21:18:55,389 - INFO - 127.0.0.1 - - [12/Feb/2026 21:18:55] "GET /dashboard HTTP/1.1" 200 -
+2026-02-12 21:19:08,540 - INFO - 127.0.0.1 - - [12/Feb/2026 21:19:08] "GET /insights HTTP/1.1" 200 -
+2026-02-12 21:19:08,559 - INFO - 127.0.0.1 - - [12/Feb/2026 21:19:08] "[36mGET /static/js/charts.js HTTP/1.1[0m" 304 -
+2026-02-12 21:19:08,559 - INFO - 127.0.0.1 - - [12/Feb/2026 21:19:08] "[36mGET /static/js/model_insights.js HTTP/1.1[0m" 304 -
+2026-02-12 21:19:41,119 - INFO - 127.0.0.1 - - [12/Feb/2026 21:19:41] "GET /customers HTTP/1.1" 200 -
+2026-02-12 21:19:50,453 - INFO - 127.0.0.1 - - [12/Feb/2026 21:19:50] "GET /customer-360/CUST_00002 HTTP/1.1" 200 -
+2026-02-12 21:20:14,867 - INFO - 127.0.0.1 - - [12/Feb/2026 21:20:14] "GET /customers HTTP/1.1" 200 -
+2026-02-12 21:21:23,635 - INFO - 127.0.0.1 - - [12/Feb/2026 21:21:23] "GET / HTTP/1.1" 200 -
+2026-02-12 21:28:21,009 - INFO - 127.0.0.1 - - [12/Feb/2026 21:28:21] "GET /about HTTP/1.1" 200 -
+2026-02-12 21:28:21,111 - INFO - 127.0.0.1 - - [12/Feb/2026 21:28:21] "[36mGET /static/images/vitthal-teli.jpg HTTP/1.1[0m" 304 -
+2026-02-12 21:29:18,388 - INFO - 127.0.0.1 - - [12/Feb/2026 21:29:18] "GET / HTTP/1.1" 200 -
+2026-02-12 21:29:24,909 - INFO - 127.0.0.1 - - [12/Feb/2026 21:29:24] "GET /dashboard HTTP/1.1" 200 -
+2026-02-12 21:31:14,543 - INFO - 127.0.0.1 - - [12/Feb/2026 21:31:14] "GET /insights HTTP/1.1" 200 -
+2026-02-12 21:31:14,569 - INFO - 127.0.0.1 - - [12/Feb/2026 21:31:14] "[36mGET /static/js/charts.js HTTP/1.1[0m" 304 -
+2026-02-12 21:31:14,569 - INFO - 127.0.0.1 - - [12/Feb/2026 21:31:14] "[36mGET /static/js/model_insights.js HTTP/1.1[0m" 304 -
+2026-02-12 21:34:32,570 - INFO - 127.0.0.1 - - [12/Feb/2026 21:34:32] "GET / HTTP/1.1" 200 -

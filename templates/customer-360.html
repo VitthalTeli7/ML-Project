@@ -1,0 +1,708 @@
+{% extends "base.html" %}
+
+{% block title %}Customer 360° | {{ customer.customer_id }} | ChurnAI Enterprise{% endblock %}
+
+{% block extra_css %}
+<style>
+    /* =====================================================
+       CUSTOMER 360° - PREMIUM ENTERPRISE EDITION
+       ===================================================== */
+
+    :root {
+        --customer-primary: #6366f1;
+        --customer-secondary: #8b5cf6;
+        --customer-accent: #ec4899;
+        --customer-success: #10b981;
+        --customer-warning: #f59e0b;
+        --customer-danger: #ef4444;
+        --customer-info: #3b82f6;
+        --customer-dark: #0f172a;
+        --customer-light: #f8fafc;
+    }
+
+    .customer-wrapper {
+        padding: 30px 0 60px;
+        animation: fadeIn 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+
+    @keyframes fadeIn {
+        from { opacity: 0; transform: translateY(20px); }
+        to { opacity: 1; transform: translateY(0); }
+    }
+
+    @keyframes slideInRight {
+        from { opacity: 0; transform: translateX(30px); }
+        to { opacity: 1; transform: translateX(0); }
+    }
+
+    @keyframes float {
+        0%, 100% { transform: translateY(0); }
+        50% { transform: translateY(-10px); }
+    }
+
+    /* ===== PROFILE HEADER ===== */
+    .profile-header {
+        background: rgba(255, 255, 255, 0.92);
+        backdrop-filter: blur(24px) saturate(180%);
+        -webkit-backdrop-filter: blur(24px) saturate(180%);
+        border-radius: 48px;
+        padding: 40px 50px;
+        margin-bottom: 30px;
+        border: 1px solid rgba(255, 255, 255, 0.6);
+        box-shadow: 0 30px 60px -20px rgba(0, 0, 0, 0.2);
+        display: flex;
+        align-items: center;
+        gap: 40px;
+    }
+
+    .profile-avatar {
+        width: 140px;
+        height: 140px;
+        background: linear-gradient(135deg, var(--customer-primary), var(--customer-secondary));
+        border-radius: 32px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 3.5rem;
+        color: white;
+        box-shadow: 0 20px 40px -15px rgba(99, 102, 241, 0.3);
+        border: 4px solid rgba(255, 255, 255, 0.5);
+        animation: float 6s ease-in-out infinite;
+    }
+
+    .profile-info {
+        flex: 1;
+    }
+
+    .customer-id {
+        font-size: 2.2rem;
+        font-weight: 800;
+        color: #0f172a;
+        margin-bottom: 10px;
+        display: flex;
+        align-items: center;
+        gap: 15px;
+        flex-wrap: wrap;
+    }
+
+    .customer-badge {
+        display: inline-flex;
+        align-items: center;
+        padding: 8px 20px;
+        background: rgba(99, 102, 241, 0.1);
+        border-radius: 50px;
+        color: var(--customer-primary);
+        font-weight: 600;
+        font-size: 0.9rem;
+        border: 1px solid rgba(99, 102, 241, 0.2);
+    }
+
+    .customer-meta {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 25px;
+        margin-top: 15px;
+    }
+
+    .meta-item {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        color: #475569;
+    }
+
+    .meta-item i {
+        color: var(--customer-primary);
+        width: 20px;
+    }
+
+    /* ===== RISK GAUGE ===== */
+    .risk-gauge-card {
+        background: rgba(255, 255, 255, 0.95);
+        backdrop-filter: blur(20px);
+        border-radius: 36px;
+        padding: 30px;
+        height: 100%;
+        border: 1px solid rgba(255, 255, 255, 0.6);
+        box-shadow: 0 25px 45px -15px rgba(0, 0, 0, 0.1);
+        transition: all 0.4s ease;
+    }
+
+    .gauge-container {
+        position: relative;
+        width: 200px;
+        height: 100px;
+        margin: 20px auto;
+        overflow: hidden;
+    }
+
+    .gauge-bg {
+        position: absolute;
+        width: 200px;
+        height: 100px;
+        background: linear-gradient(90deg, #10b981 0%, #f59e0b 50%, #ef4444 100%);
+        border-radius: 100px 100px 0 0;
+        opacity: 0.15;
+    }
+
+    .gauge-fill {
+        position: absolute;
+        width: 200px;
+        height: 100px;
+        border-radius: 100px 100px 0 0;
+        background: conic-gradient(
+            from 0deg at 50% 100%,
+            #10b981 0deg,
+            #f59e0b 180deg,
+            #ef4444 360deg
+        );
+        -webkit-mask: radial-gradient(circle at 50% 100%, transparent 60px, black 61px);
+        mask: radial-gradient(circle at 50% 100%, transparent 60px, black 61px);
+        transform: rotate(0deg);
+        transition: transform 1.5s ease;
+    }
+
+    .gauge-center {
+        position: absolute;
+        width: 140px;
+        height: 70px;
+        background: white;
+        border-radius: 70px 70px 0 0;
+        bottom: 0;
+        left: 50%;
+        transform: translateX(-50%);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: flex-end;
+        padding-bottom: 15px;
+    }
+
+    .gauge-value {
+        font-size: 2.2rem;
+        font-weight: 800;
+        background: linear-gradient(135deg, #0f172a, #1e293b);
+        -webkit-background-clip: text;
+        background-clip: text;
+        color: transparent;
+        line-height: 1;
+    }
+
+    .gauge-label {
+        font-size: 0.8rem;
+        color: #64748b;
+        font-weight: 700;
+        text-transform: uppercase;
+        letter-spacing: 2px;
+    }
+
+    /* ===== METRIC CARDS ===== */
+    .metric-card {
+        background: rgba(255, 255, 255, 0.9);
+        backdrop-filter: blur(12px);
+        border-radius: 24px;
+        padding: 20px;
+        border: 1px solid rgba(255, 255, 255, 0.6);
+        display: flex;
+        align-items: center;
+        gap: 15px;
+        margin-bottom: 20px;
+    }
+
+    .metric-icon {
+        width: 50px;
+        height: 50px;
+        background: linear-gradient(135deg, rgba(99, 102, 241, 0.1), rgba(139, 92, 246, 0.1));
+        border-radius: 16px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 1.5rem;
+        color: var(--customer-primary);
+    }
+
+    .metric-label {
+        font-size: 0.8rem;
+        color: #64748b;
+        font-weight: 600;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+        margin-bottom: 5px;
+    }
+
+    .metric-value {
+        font-size: 1.3rem;
+        font-weight: 700;
+        color: #0f172a;
+        line-height: 1;
+    }
+
+    /* ===== CONTRACT CARD ===== */
+    .contract-card {
+        background: linear-gradient(145deg, white, #f8fafc);
+        border-radius: 28px;
+        padding: 25px;
+        border: 1px solid #e2e8f0;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin-top: 20px;
+    }
+
+    .plan-name {
+        font-size: 1.2rem;
+        font-weight: 700;
+        color: #0f172a;
+        margin-bottom: 5px;
+    }
+
+    .plan-price {
+        font-size: 1.6rem;
+        font-weight: 800;
+        color: var(--customer-primary);
+        line-height: 1;
+    }
+
+    /* ===== TIMELINE ===== */
+    .timeline-card {
+        background: rgba(255, 255, 255, 0.95);
+        backdrop-filter: blur(20px);
+        border-radius: 36px;
+        padding: 30px;
+        height: 100%;
+        border: 1px solid rgba(255, 255, 255, 0.6);
+    }
+
+    .timeline {
+        position: relative;
+        padding-left: 30px;
+        margin-top: 20px;
+    }
+
+    .timeline::before {
+        content: '';
+        position: absolute;
+        left: 10px;
+        top: 0;
+        bottom: 0;
+        width: 2px;
+        background: linear-gradient(180deg, var(--customer-primary), var(--customer-secondary));
+        opacity: 0.3;
+    }
+
+    .timeline-item {
+        position: relative;
+        padding-bottom: 25px;
+        display: flex;
+        gap: 15px;
+    }
+
+    .timeline-dot {
+        position: absolute;
+        left: -30px;
+        width: 16px;
+        height: 16px;
+        border-radius: 50%;
+        background: white;
+        border: 3px solid var(--customer-primary);
+    }
+
+    .timeline-content {
+        flex: 1;
+        background: #f8fafc;
+        padding: 15px 20px;
+        border-radius: 20px;
+    }
+
+    .timeline-time {
+        font-size: 0.75rem;
+        color: #64748b;
+        font-weight: 600;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+        margin-bottom: 5px;
+    }
+
+    .timeline-title {
+        font-size: 1rem;
+        font-weight: 700;
+        color: #0f172a;
+        margin-bottom: 5px;
+    }
+
+    .timeline-desc {
+        font-size: 0.9rem;
+        color: #475569;
+        margin: 0;
+    }
+
+    /* ===== RECOMMENDATIONS ===== */
+    .recommendations-card {
+        background: linear-gradient(145deg, #f0f9ff, #e6f7ff);
+        border-radius: 28px;
+        padding: 25px;
+        border-left: 6px solid var(--customer-primary);
+        margin-top: 20px;
+    }
+
+    .recommendation-item {
+        display: flex;
+        align-items: center;
+        gap: 12px;
+        padding: 10px 0;
+        border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+    }
+
+    .recommendation-item i {
+        color: var(--customer-success);
+        font-size: 1.1rem;
+    }
+
+    /* ===== USAGE PATTERNS ===== */
+    .usage-card {
+        background: rgba(255, 255, 255, 0.95);
+        backdrop-filter: blur(20px);
+        border-radius: 36px;
+        padding: 30px;
+        border: 1px solid rgba(255, 255, 255, 0.6);
+        margin-top: 30px;
+    }
+
+    .usage-item {
+        display: flex;
+        align-items: center;
+        margin-bottom: 20px;
+        padding: 10px;
+        background: #f8fafc;
+        border-radius: 16px;
+    }
+
+    .usage-label {
+        width: 140px;
+        font-weight: 600;
+        color: #1e293b;
+        display: flex;
+        align-items: center;
+        gap: 10px;
+    }
+
+    .usage-bar {
+        flex: 1;
+        height: 10px;
+        background: #e2e8f0;
+        border-radius: 10px;
+        margin: 0 20px;
+        overflow: hidden;
+    }
+
+    .usage-fill {
+        height: 100%;
+        background: linear-gradient(90deg, var(--customer-primary), var(--customer-secondary));
+        border-radius: 10px;
+        width: 0%;
+        transition: width 1s ease;
+    }
+
+    .usage-value {
+        font-weight: 700;
+        color: var(--customer-primary);
+        min-width: 80px;
+        text-align: right;
+    }
+
+    /* ===== ACTION BUTTONS ===== */
+    .btn-action {
+        padding: 12px 28px;
+        border-radius: 50px;
+        font-weight: 600;
+        display: inline-flex;
+        align-items: center;
+        gap: 10px;
+        text-decoration: none;
+        border: none;
+        cursor: pointer;
+    }
+
+    .btn-primary-action {
+        background: linear-gradient(135deg, var(--customer-primary), var(--customer-secondary));
+        color: white;
+    }
+
+    .btn-outline-action {
+        background: transparent;
+        border: 2px solid var(--customer-primary);
+        color: var(--customer-primary);
+    }
+
+    /* ===== RESPONSIVE ===== */
+    @media (max-width: 992px) {
+        .profile-header { flex-direction: column; text-align: center; }
+        .customer-meta { justify-content: center; }
+    }
+
+    @media (max-width: 768px) {
+        .profile-header { padding: 30px; }
+        .customer-id { font-size: 1.8rem; flex-direction: column; }
+        .profile-avatar { width: 120px; height: 120px; font-size: 3rem; }
+        .gauge-container { width: 180px; height: 90px; }
+        .gauge-center { width: 120px; height: 60px; }
+        .gauge-value { font-size: 1.8rem; }
+        .contract-card { flex-direction: column; text-align: center; }
+    }
+
+    /* ===== DARK MODE ===== */
+    @media (prefers-color-scheme: dark) {
+        .profile-header,
+        .risk-gauge-card,
+        .timeline-card,
+        .usage-card {
+            background: rgba(15, 23, 42, 0.92);
+            border-color: rgba(255, 255, 255, 0.1);
+        }
+
+        .customer-id,
+        .plan-name,
+        .timeline-title,
+        .metric-value,
+        .gauge-value {
+            color: #f1f5f9;
+        }
+
+        .gauge-center {
+            background: #1e293b;
+        }
+
+        .metric-card,
+        .contract-card,
+        .timeline-content,
+        .usage-item {
+            background: #1e293b;
+            border-color: #334155;
+        }
+
+        .metric-label,
+        .timeline-time,
+        .usage-label,
+        .meta-item {
+            color: #94a3b8;
+        }
+    }
+</style>
+{% endblock %}
+
+{% block content %}
+<div class="customer-wrapper">
+    
+    <!-- ===== PROFILE HEADER ===== -->
+    <div class="profile-header">
+        <div class="profile-avatar">
+            {% if customer.gender == 'Male' %}
+                <i class="fas fa-user-tie"></i>
+            {% else %}
+                <i class="fas fa-user-circle"></i>
+            {% endif %}
+        </div>
+        <div class="profile-info">
+            <div class="customer-id">
+                {{ customer.customer_id|default('CUST-1001') }}
+                <span class="customer-badge">
+                    <i class="fas fa-shield-alt me-2"></i> Verified
+                </span>
+                {% if customer.risk_score|default(35) >= 60 %}
+                    <span class="customer-badge" style="background: rgba(239,68,68,0.1); color: #ef4444;">
+                        <i class="fas fa-exclamation-triangle me-2"></i> High Risk
+                    </span>
+                {% elif customer.risk_score|default(35) >= 30 %}
+                    <span class="customer-badge" style="background: rgba(245,158,11,0.1); color: #f59e0b;">
+                        <i class="fas fa-chart-line me-2"></i> Medium Risk
+                    </span>
+                {% else %}
+                    <span class="customer-badge" style="background: rgba(16,185,129,0.1); color: #10b981;">
+                        <i class="fas fa-check-circle me-2"></i> Low Risk
+                    </span>
+                {% endif %}
+            </div>
+            <p style="font-size: 1.2rem; color: var(--customer-primary); font-weight: 600; margin-bottom: 15px;">
+                {% if customer.gender == 'Male' %}Mr.{% else %}Ms.{% endif %} 
+                {{ customer.customer_name|default('Valued Customer') }}
+            </p>
+            <div class="customer-meta">
+                <div class="meta-item">
+                    <i class="fas fa-calendar"></i>
+                    <span>Since: {{ customer.tenure_months|default('12') }} months</span>
+                </div>
+                <div class="meta-item">
+                    <i class="fas fa-venus-mars"></i>
+                    <span>Gender: {{ customer.gender|default('N/A') }}</span>
+                </div>
+                <div class="meta-item">
+                    <i class="fas fa-birthday-cake"></i>
+                    <span>Age: {{ customer.age|default('32') }}</span>
+                </div>
+            </div>
+            <div style="display: flex; gap: 15px; margin-top: 25px;">
+                <a href="{{ url_for('customer_360_list') }}" class="btn-action btn-outline-action">
+                    <i class="fas fa-arrow-left"></i> Back
+                </a>
+                <button class="btn-action btn-primary-action" onclick="sendOffer()">
+                    <i class="fas fa-gift"></i> Send Offer
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- ===== RISK SCORE & KEY METRICS ===== -->
+    <div class="row g-4">
+        <div class="col-lg-4">
+            <div class="risk-gauge-card">
+                <h4 style="font-weight: 700; color: #0f172a; margin-bottom: 20px;">
+                    <i class="fas fa-shield-alt" style="color: var(--customer-primary);"></i>
+                    Risk Score
+                </h4>
+                <div class="gauge-container">
+                    <div class="gauge-bg"></div>
+                    <div class="gauge-fill" id="gaugeFill"></div>
+                    <div class="gauge-center">
+                        <span class="gauge-value">{{ customer.risk_score|default(35) }}%</span>
+                        <span class="gauge-label">Risk</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-lg-8">
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="metric-card">
+                        <div class="metric-icon"><i class="fas fa-hourglass-half"></i></div>
+                        <div>
+                            <div class="metric-label">Tenure</div>
+                            <div class="metric-value">{{ customer.tenure_months|default('12') }} mo</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="metric-card">
+                        <div class="metric-icon"><i class="fas fa-dollar-sign"></i></div>
+                        <div>
+                            <div class="metric-label">Monthly Fee</div>
+                            <div class="metric-value">${{ "%.2f"|format(customer.monthly_fee|float) if customer.monthly_fee else '49.99' }}</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="metric-card">
+                        <div class="metric-icon"><i class="fas fa-ticket-alt"></i></div>
+                        <div>
+                            <div class="metric-label">Support</div>
+                            <div class="metric-value">{{ customer.support_tickets|default('3') }}</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="metric-card">
+                        <div class="metric-icon"><i class="fas fa-credit-card"></i></div>
+                        <div>
+                            <div class="metric-label">Payment Failures</div>
+                            <div class="metric-value">{{ customer.payment_failures|default('0') }}</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="contract-card">
+                <div>
+                    <div class="plan-name">{{ customer.contract_type|default('Monthly') }} Plan</div>
+                    <span style="color: #475569;"><i class="fas fa-credit-card me-1"></i> {{ customer.payment_method|default('VISA') }}</span>
+                </div>
+                <div class="text-end">
+                    <div class="plan-price">${{ "%.2f"|format(customer.monthly_fee|float) if customer.monthly_fee else '49.99' }}</div>
+                    <span class="badge bg-success">Active</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ===== ACTIVITY TIMELINE ===== -->
+    <div class="row g-4 mt-2">
+        <div class="col-lg-7">
+            <div class="timeline-card">
+                <h4 style="font-weight: 700; color: #0f172a; margin-bottom: 20px;">
+                    <i class="fas fa-clock-rotate-left" style="color: var(--customer-primary);"></i>
+                    Recent Activity
+                </h4>
+                <div class="timeline">
+                    <div class="timeline-item">
+                        <div class="timeline-dot"></div>
+                        <div class="timeline-content">
+                            <div class="timeline-time">Today</div>
+                            <div class="timeline-title">Payment Successful</div>
+                            <div class="timeline-desc">$49.99 processed</div>
+                        </div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-dot"></div>
+                        <div class="timeline-content">
+                            <div class="timeline-time">Yesterday</div>
+                            <div class="timeline-title">Risk Updated</div>
+                            <div class="timeline-desc">42% → 35%</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-lg-5">
+            <div class="timeline-card">
+                <h4 style="font-weight: 700; color: #0f172a; margin-bottom: 20px;">
+                    <i class="fas fa-brain" style="color: var(--customer-primary);"></i>
+                    AI Recommendations
+                </h4>
+                <div class="recommendations-card">
+                    {% if customer.risk_score|default(35) >= 60 %}
+                        <div class="recommendation-item"><i class="fas fa-check-circle"></i> Send 20% discount</div>
+                        <div class="recommendation-item"><i class="fas fa-check-circle"></i> Schedule check-in call</div>
+                    {% elif customer.risk_score|default(35) >= 30 %}
+                        <div class="recommendation-item"><i class="fas fa-check-circle"></i> Send loyalty invitation</div>
+                        <div class="recommendation-item"><i class="fas fa-check-circle"></i> Offer annual upgrade</div>
+                    {% else %}
+                        <div class="recommendation-item"><i class="fas fa-check-circle"></i> Send satisfaction survey</div>
+                        <div class="recommendation-item"><i class="fas fa-check-circle"></i> Enroll in referral</div>
+                    {% endif %}
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>
+
+<!-- ===== SINGLE SCRIPT TAG - CLEAN, NO DUPLICATES ===== -->
+<script>
+    (function() {
+        'use strict';
+        
+        // Set gauge position
+        var gauge = document.getElementById('gaugeFill');
+        if (gauge) {
+            var riskScore = {{ customer.risk_score|default(35) }};
+            gauge.style.transform = 'rotate(' + (riskScore * 1.8) + 'deg)';
+        }
+
+        // Animate usage bars
+        var usageBars = document.querySelectorAll('.usage-fill');
+        for (var i = 0; i < usageBars.length; i++) {
+            var bar = usageBars[i];
+            var width = bar.style.width;
+            bar.style.width = '0%';
+            setTimeout(function(w) {
+                return function() { bar.style.width = w; };
+            }(width), 300 * i);
+        }
+
+        // Send offer function
+        window.sendOffer = function() {
+            var customerId = '{{ customer.customer_id|default("CUST-1001") }}';
+            alert('🎁 Offer sent to ' + customerId);
+        };
+    })();
+</script>
+{% endblock %}
+
+{% block extra_js %}{% endblock %}

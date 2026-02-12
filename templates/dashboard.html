@@ -1,289 +1,809 @@
 {% extends "base.html" %}
-{% block title %}Dashboard | ChurnAI Analytics{% endblock %}
+
+{% block title %}Analytics Dashboard | ChurnAI - Enterprise ML Platform{% endblock %}
 
 {% block extra_css %}
 <style>
-    /* ===== DASHBOARD PREMIUM STYLES ===== */
+    /* =====================================================
+       DASHBOARD - PREMIUM ENTERPRISE ANALYTICS EDITION
+       Real-time Metrics | Interactive Visualizations
+       Dark Mode Ready | Fully Responsive
+       ===================================================== */
+    
+    :root {
+        --dashboard-primary: #6366f1;
+        --dashboard-success: #10b981;
+        --dashboard-warning: #f59e0b;
+        --dashboard-danger: #ef4444;
+        --dashboard-info: #3b82f6;
+    }
+
+    .dashboard-wrapper {
+        padding: 20px 0 60px;
+        animation: fadeIn 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+
+    @keyframes fadeIn {
+        from { opacity: 0; transform: translateY(20px); }
+        to { opacity: 1; transform: translateY(0); }
+    }
+
+    @keyframes slideUp {
+        from {
+            opacity: 0;
+            transform: translateY(30px);
+        }
+        to {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
+
+    /* ===== PREMIUM DASHBOARD HEADER ===== */
     .dashboard-header {
         text-align: center;
-        margin-bottom: 40px;
-        animation: fadeInUp 0.8s ease;
+        margin-bottom: 50px;
+        position: relative;
+        animation: slideUp 0.6s ease-out;
     }
 
     .dashboard-header h1 {
-        font-size: 2.8rem;
+        font-size: 3.2rem;
         font-weight: 800;
-        background: linear-gradient(145deg, white, #e2e8f0);
+        color: white;
+        margin-bottom: 15px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 15px;
+        text-shadow: 0 2px 20px rgba(0, 0, 0, 0.2);
+    }
+
+    .dashboard-header h1 i {
+        background: linear-gradient(135deg, var(--dashboard-primary), var(--dashboard-secondary));
         -webkit-background-clip: text;
         background-clip: text;
         color: transparent;
-        margin-bottom: 10px;
-        letter-spacing: -0.02em;
+        animation: pulse 3s ease-in-out infinite;
+    }
+
+    @keyframes pulse {
+        0%, 100% { transform: scale(1); }
+        50% { transform: scale(1.05); }
     }
 
     .dashboard-header p {
-        color: rgba(255,255,255,0.9);
-        font-size: 1.2rem;
-        font-weight: 400;
+        color: rgba(255, 255, 255, 0.9);
+        font-size: 1.25rem;
+        max-width: 700px;
+        margin: 0 auto;
+        position: relative;
+        padding-bottom: 20px;
     }
 
-    /* ===== METRIC CARDS ===== */
+    .dashboard-header p::after {
+        content: '';
+        position: absolute;
+        bottom: 0;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 80px;
+        height: 4px;
+        background: linear-gradient(90deg, var(--dashboard-primary), var(--dashboard-secondary), var(--dashboard-accent));
+        border-radius: 4px;
+        animation: expandWidth 1.2s cubic-bezier(0.34, 1.56, 0.64, 1);
+    }
+
+    @keyframes expandWidth {
+        from { width: 0; opacity: 0; }
+        to { width: 80px; opacity: 1; }
+    }
+
+    /* ===== PREMIUM METRIC CARDS ===== */
+    .metric-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+        gap: 25px;
+        margin-bottom: 40px;
+    }
+
     .metric-card {
-        background: rgba(255,255,255,0.95);
-        backdrop-filter: blur(16px);
-        border: 1px solid rgba(255,255,255,0.6);
-        border-radius: 28px;
-        padding: 28px 20px;
-        text-align: center;
-        transition: all 0.4s cubic-bezier(0.2, 0.9, 0.4, 1);
+        background: rgba(255, 255, 255, 0.95);
+        backdrop-filter: blur(20px);
+        -webkit-backdrop-filter: blur(20px);
+        border-radius: 32px;
+        padding: 25px;
+        box-shadow: 0 20px 35px -10px rgba(0, 0, 0, 0.1), 0 0 0 1px rgba(255, 255, 255, 0.5) inset;
+        transition: all 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
+        display: flex;
+        align-items: center;
+        gap: 20px;
+        border: 1px solid rgba(255, 255, 255, 0.6);
         position: relative;
         overflow: hidden;
-        height: 100%;
-        box-shadow: 0 20px 35px -10px rgba(0,0,0,0.1);
+        animation: slideUp 0.6s ease-out;
+        animation-fill-mode: both;
     }
 
-    .metric-card::after {
+    .metric-card:nth-child(1) { animation-delay: 0.1s; }
+    .metric-card:nth-child(2) { animation-delay: 0.15s; }
+    .metric-card:nth-child(3) { animation-delay: 0.2s; }
+    .metric-card:nth-child(4) { animation-delay: 0.25s; }
+
+    .metric-card::before {
         content: '';
         position: absolute;
         top: 0;
         left: 0;
         width: 6px;
         height: 100%;
-        background: linear-gradient(180deg, #667eea, #9f7aea);
+        background: linear-gradient(180deg, var(--dashboard-primary), var(--dashboard-secondary));
+        opacity: 0;
+        transition: opacity 0.3s ease;
     }
 
     .metric-card:hover {
-        transform: translateY(-8px);
-        box-shadow: 0 30px 50px -15px rgba(0,0,0,0.2);
-        background: white;
+        transform: translateY(-8px) scale(1.02);
+        box-shadow: 0 30px 45px -15px rgba(99, 102, 241, 0.3), 0 0 0 1px rgba(255, 255, 255, 0.8) inset;
+        background: rgba(255, 255, 255, 0.98);
+    }
+
+    .metric-card:hover::before {
+        opacity: 1;
     }
 
     .metric-icon {
-        font-size: 2.5rem;
-        color: #667eea;
-        margin-bottom: 15px;
+        width: 70px;
+        height: 70px;
+        background: linear-gradient(135deg, rgba(99, 102, 241, 0.12), rgba(139, 92, 246, 0.12));
+        border-radius: 24px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 2rem;
+        color: var(--dashboard-primary);
+        transition: all 0.5s cubic-bezier(0.34, 1.56, 0.64, 1);
+        box-shadow: 0 10px 20px -8px rgba(99, 102, 241, 0.2);
+        border: 1px solid rgba(255, 255, 255, 0.8);
     }
 
-    .metric-card h5 {
-        font-size: 1.1rem;
-        font-weight: 600;
-        color: #4a5568;
-        letter-spacing: 0.5px;
-        margin-bottom: 12px;
+    .metric-card:hover .metric-icon {
+        background: linear-gradient(135deg, var(--dashboard-primary), var(--dashboard-secondary));
+        color: white;
+        transform: rotate(5deg) scale(1.1);
+        box-shadow: 0 15px 30px -8px rgba(99, 102, 241, 0.4);
+        border-color: transparent;
     }
 
-    .metric-card h2 {
-        font-size: 3.2rem;
+    .metric-content {
+        flex: 1;
+    }
+
+    .metric-label {
+        font-size: 0.85rem;
+        color: var(--gray-600);
+        font-weight: 700;
+        text-transform: uppercase;
+        letter-spacing: 1.5px;
+        margin-bottom: 6px;
+        display: flex;
+        align-items: center;
+        gap: 6px;
+    }
+
+    .metric-value {
+        font-size: 2.2rem;
         font-weight: 800;
-        background: linear-gradient(145deg, #2d3748, #4a5568);
-        -webkit-background-clip: text;
-        background-clip: text;
-        color: transparent;
-        margin: 10px 0 5px;
+        color: var(--gray-900);
+        line-height: 1;
+        margin-bottom: 6px;
+        display: flex;
+        align-items: baseline;
+        gap: 4px;
+    }
+
+    .metric-unit {
+        font-size: 1rem;
+        font-weight: 600;
+        color: var(--gray-500);
     }
 
     .metric-trend {
         font-size: 0.85rem;
-        color: #48bb78;
+        display: flex;
+        align-items: center;
+        gap: 6px;
         font-weight: 600;
-        margin-top: 8px;
+        padding: 4px 10px;
+        border-radius: 50px;
+        background: rgba(0, 0, 0, 0.02);
+        width: fit-content;
     }
 
-    /* ===== CHART CARDS ===== */
+    .trend-up { 
+        color: var(--dashboard-success); 
+        background: rgba(16, 185, 129, 0.08);
+    }
+    
+    .trend-down { 
+        color: var(--dashboard-danger); 
+        background: rgba(239, 68, 68, 0.08);
+    }
+
+    .badge {
+        padding: 6px 14px;
+        border-radius: 50px;
+        font-weight: 600;
+        font-size: 0.8rem;
+        letter-spacing: 0.5px;
+    }
+
+    .badge-info {
+        background: rgba(59, 130, 246, 0.1);
+        color: var(--dashboard-info);
+        border: 1px solid rgba(59, 130, 246, 0.2);
+    }
+
+    /* ===== PREMIUM CHART CARDS ===== */
+    .chart-grid {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 25px;
+        margin-top: 30px;
+    }
+
     .chart-card {
-        background: rgba(255,255,255,0.95);
-        backdrop-filter: blur(16px);
-        border: 1px solid rgba(255,255,255,0.6);
-        border-radius: 28px;
+        background: rgba(255, 255, 255, 0.95);
+        backdrop-filter: blur(20px);
+        -webkit-backdrop-filter: blur(20px);
+        border-radius: 36px;
         padding: 25px;
-        transition: all 0.3s ease;
-        height: 100%;
+        box-shadow: 0 20px 35px -10px rgba(0, 0, 0, 0.1), 0 0 0 1px rgba(255, 255, 255, 0.5) inset;
+        border: 1px solid rgba(255, 255, 255, 0.6);
+        transition: all 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
+        animation: slideUp 0.6s ease-out;
+        animation-fill-mode: both;
         display: flex;
         flex-direction: column;
-        box-shadow: 0 15px 30px -10px rgba(0,0,0,0.08);
+        height: 100%;
     }
 
+    .chart-card:nth-child(1) { animation-delay: 0.2s; }
+    .chart-card:nth-child(2) { animation-delay: 0.25s; }
+    .chart-card:nth-child(3) { animation-delay: 0.3s; }
+    .chart-card:nth-child(4) { animation-delay: 0.35s; }
+
     .chart-card:hover {
-        transform: translateY(-5px);
-        box-shadow: 0 25px 45px -12px rgba(102, 126, 234, 0.25);
-        background: white;
+        transform: translateY(-8px) scale(1.02);
+        box-shadow: 0 35px 50px -15px rgba(99, 102, 241, 0.25), 0 0 0 1px rgba(255, 255, 255, 0.8) inset;
+        background: rgba(255, 255, 255, 0.98);
+        border-color: rgba(99, 102, 241, 0.3);
     }
 
     .chart-header {
         display: flex;
         align-items: center;
-        gap: 12px;
+        gap: 15px;
         margin-bottom: 20px;
+        padding-bottom: 15px;
+        border-bottom: 2px solid rgba(203, 213, 225, 0.3);
     }
 
     .chart-header i {
-        font-size: 1.8rem;
-        color: #667eea;
-        background: rgba(102, 126, 234, 0.1);
+        font-size: 1.6rem;
+        color: var(--dashboard-primary);
+        background: linear-gradient(135deg, rgba(99, 102, 241, 0.12), rgba(139, 92, 246, 0.12));
         padding: 12px;
-        border-radius: 18px;
+        border-radius: 20px;
+        transition: all 0.3s ease;
     }
 
-    .chart-header h5 {
-        font-size: 1.25rem;
+    .chart-card:hover .chart-header i {
+        background: linear-gradient(135deg, var(--dashboard-primary), var(--dashboard-secondary));
+        color: white;
+        transform: rotate(5deg) scale(1.1);
+    }
+
+    .chart-header h3 {
+        font-size: 1.3rem;
         font-weight: 700;
-        color: #2d3748;
+        color: var(--gray-800);
         margin: 0;
+        flex: 1;
     }
 
     canvas {
-        max-height: 250px;
         width: 100% !important;
-        margin-top: 10px;
+        height: 250px !important;
+        transition: all 0.3s ease;
     }
 
-    /* ===== INSIGHTS BADGE ===== */
-    .insights-badge {
-        background: linear-gradient(145deg, #667eea, #764ba2);
-        color: white;
-        padding: 8px 18px;
-        border-radius: 50px;
-        font-size: 0.85rem;
-        font-weight: 600;
-        display: inline-flex;
-        align-items: center;
-        gap: 8px;
-        margin-top: 15px;
+    /* ===== RESPONSIVE DESIGN ===== */
+    @media (max-width: 1200px) {
+        .dashboard-header h1 { font-size: 2.8rem; }
+        .chart-grid { grid-template-columns: repeat(2, 1fr); }
     }
 
-    @keyframes fadeInUp {
-        from { opacity: 0; transform: translateY(30px); }
-        to { opacity: 1; transform: translateY(0); }
+    @media (max-width: 992px) {
+        .dashboard-header h1 { font-size: 2.5rem; }
+        .chart-grid { grid-template-columns: 1fr; }
+        .metric-grid { grid-template-columns: repeat(2, 1fr); }
+    }
+
+    @media (max-width: 768px) {
+        .dashboard-header h1 { 
+            font-size: 2rem; 
+            flex-direction: column;
+            gap: 10px;
+        }
+        
+        .dashboard-header p { font-size: 1.1rem; }
+        
+        .metric-grid { grid-template-columns: 1fr; }
+        
+        .metric-card { padding: 20px; }
+        .metric-value { font-size: 1.8rem; }
+        .metric-icon { width: 60px; height: 60px; font-size: 1.6rem; }
+        
+        .chart-card { padding: 20px; }
+        .chart-header h3 { font-size: 1.1rem; }
+        .chart-header i { padding: 10px; font-size: 1.3rem; }
+        
+        canvas { height: 200px !important; }
+    }
+
+    @media (max-width: 576px) {
+        .dashboard-header h1 { font-size: 1.8rem; }
+        .metric-value { font-size: 1.6rem; }
+    }
+
+    /* ===== DARK MODE SUPPORT ===== */
+    @media (prefers-color-scheme: dark) {
+        .metric-card,
+        .chart-card {
+            background: rgba(15, 23, 42, 0.95);
+            border-color: rgba(255, 255, 255, 0.1);
+        }
+        
+        .metric-card:hover,
+        .chart-card:hover {
+            background: rgba(15, 23, 42, 0.98);
+        }
+        
+        .metric-label,
+        .chart-header h3 {
+            color: #f1f5f9;
+        }
+        
+        .metric-value {
+            color: #ffffff;
+        }
+        
+        .badge-info {
+            background: rgba(59, 130, 246, 0.2);
+            color: #93c5fd;
+        }
     }
 </style>
 {% endblock %}
 
 {% block content %}
-<div class="dashboard-container">
+<div class="dashboard-wrapper">
     
-    <!-- Header Section -->
+    <!-- ===== PREMIUM DASHBOARD HEADER ===== -->
     <div class="dashboard-header" data-aos="fade-up">
-        <h1>📊 Insights Dashboard</h1>
-        <p class="dashboard-subtitle">
-            <i class="fas fa-magic"></i> 
-            Real-time customer churn analytics & performance metrics
-            <i class="fas fa-bolt"></i>
+        <h1>
+            <i class="fas fa-chart-pie"></i>
+            Analytics Dashboard
+        </h1>
+        <p>Real-time customer churn metrics and model performance</p>
+    </div>
+    
+    <!-- ===== KEY METRICS - FROM YOUR BACKEND ===== -->
+    <div class="metric-grid">
+        <div class="metric-card">
+            <div class="metric-icon">
+                <i class="fas fa-chart-line"></i>
+            </div>
+            <div class="metric-content">
+                <div class="metric-label">
+                    <i class="fas fa-circle" style="color: var(--dashboard-success); font-size: 0.5rem;"></i>
+                    Model Accuracy
+                </div>
+                <div class="metric-value">
+                    {{ metrics.accuracy|default('87') }}<span class="metric-unit">%</span>
+                </div>
+                <div class="metric-trend trend-up">
+                    <i class="fas fa-arrow-up"></i> 
+                    +{{ metrics.accuracy_improvement|default('2.3') }}% vs last month
+                </div>
+            </div>
+        </div>
+        
+        <div class="metric-card">
+            <div class="metric-icon">
+                <i class="fas fa-bullseye"></i>
+            </div>
+            <div class="metric-content">
+                <div class="metric-label">
+                    <i class="fas fa-circle" style="color: var(--dashboard-info); font-size: 0.5rem;"></i>
+                    Precision
+                </div>
+                <div class="metric-value">
+                    {{ metrics.precision|default('84') }}<span class="metric-unit">%</span>
+                </div>
+                <div class="metric-trend trend-up">
+                    <i class="fas fa-arrow-up"></i> 
+                    +{{ metrics.precision_improvement|default('1.8') }}% vs last month
+                </div>
+            </div>
+        </div>
+        
+        <div class="metric-card">
+            <div class="metric-icon">
+                <i class="fas fa-memory"></i>
+            </div>
+            <div class="metric-content">
+                <div class="metric-label">
+                    <i class="fas fa-circle" style="color: var(--dashboard-warning); font-size: 0.5rem;"></i>
+                    Recall
+                </div>
+                <div class="metric-value">
+                    {{ metrics.recall|default('81') }}<span class="metric-unit">%</span>
+                </div>
+                <div class="metric-trend">
+                    <span class="badge badge-info">
+                        <i class="fas fa-chart-simple me-1"></i>
+                        F1 Score: {{ metrics.f1_score|default('82.5') }}%
+                    </span>
+                </div>
+            </div>
+        </div>
+        
+        <div class="metric-card">
+            <div class="metric-icon">
+                <i class="fas fa-users"></i>
+            </div>
+            <div class="metric-content">
+                <div class="metric-label">
+                    <i class="fas fa-circle" style="color: var(--dashboard-danger); font-size: 0.5rem;"></i>
+                    At-Risk Customers
+                </div>
+                <div class="metric-value">
+                    {{ metrics.at_risk|default('284') }}
+                </div>
+                <div class="metric-trend {% if metrics.churn_trend == 'down' %}trend-down{% else %}trend-up{% endif %}">
+                    <i class="fas fa-arrow-{{ metrics.churn_trend_icon|default('down') }}"></i> 
+                    {{ metrics.churn_trend_percentage|default('12') }}% from last month
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <!-- ===== CHARTS GRID - DIRECT INITIALIZATION ===== -->
+    <div class="chart-grid">
+        <!-- Customer Churn Distribution -->
+        <div class="chart-card">
+            <div class="chart-header">
+                <i class="fas fa-chart-pie"></i>
+                <h3>Customer Churn Distribution</h3>
+            </div>
+            <div class="chart-container">
+                <canvas id="churnChart"></canvas>
+            </div>
+        </div>
+        
+        <!-- Contract Type Split -->
+        <div class="chart-card">
+            <div class="chart-header">
+                <i class="fas fa-file-contract"></i>
+                <h3>Contract Type Split</h3>
+            </div>
+            <div class="chart-container">
+                <canvas id="contractChart"></canvas>
+            </div>
+        </div>
+        
+        <!-- Payment Method Usage -->
+        <div class="chart-card">
+            <div class="chart-header">
+                <i class="fas fa-credit-card"></i>
+                <h3>Payment Method Usage</h3>
+            </div>
+            <div class="chart-container">
+                <canvas id="paymentChart"></canvas>
+            </div>
+        </div>
+        
+        <!-- Customer Tenure Distribution -->
+        <div class="chart-card">
+            <div class="chart-header">
+                <i class="fas fa-clock"></i>
+                <h3>Customer Tenure Distribution</h3>
+            </div>
+            <div class="chart-container">
+                <canvas id="tenureChart"></canvas>
+            </div>
+        </div>
+    </div>
+    
+    <!-- ===== QUICK ACTIONS ===== -->
+    <div class="text-center mt-5" data-aos="fade-up" data-aos-delay="400">
+        <a href="{{ url_for('insights') }}" class="btn btn-lg px-5 py-3" 
+           style="border-radius: 50px; background: linear-gradient(135deg, #6366f1, #8b5cf6); border: none; color: white; font-weight: 700; box-shadow: 0 10px 25px -5px rgba(99,102,241,0.4);">
+            <i class="fas fa-brain me-2"></i>
+            View Advanced Model Insights
+            <i class="fas fa-arrow-right ms-2"></i>
+        </a>
+        <p style="color: rgba(255,255,255,0.7); margin-top: 20px; font-size: 0.9rem;">
+            <i class="fas fa-clock me-1"></i> Last updated: {{ last_updated|default('2 minutes ago') }}
         </p>
     </div>
-
-    <!-- Premium Metrics Cards -->
-    <div class="row g-4 mb-5" data-aos="fade-up" data-aos-delay="100">
-        <div class="col-md-4">
-            <div class="metric-card">
-                <div class="metric-icon">
-                    <i class="fas fa-chart-line"></i>
-                </div>
-                <h5>Model Accuracy</h5>
-                <h2>87<small style="font-size: 1.5rem;">%</small></h2>
-                <div class="metric-trend">
-                    <i class="fas fa-arrow-up"></i> +2.3% vs last month
-                </div>
-            </div>
-        </div>
-        <div class="col-md-4">
-            <div class="metric-card">
-                <div class="metric-icon">
-                    <i class="fas fa-bullseye"></i>
-                </div>
-                <h5>Precision</h5>
-                <h2>84<small style="font-size: 1.5rem;">%</small></h2>
-                <div class="metric-trend">
-                    <i class="fas fa-arrow-up"></i> +1.8% vs last month
-                </div>
-            </div>
-        </div>
-        <div class="col-md-4">
-            <div class="metric-card">
-                <div class="metric-icon">
-                    <i class="fas fa-memory"></i>
-                </div>
-                <h5>Recall</h5>
-                <h2>81<small style="font-size: 1.5rem;">%</small></h2>
-                <div class="metric-trend">
-                    <i class="fas fa-check-circle"></i> F1 Score: 82.5%
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <!-- Charts Grid -->
-    <div class="row g-4">
-        <div class="col-lg-6" data-aos="fade-up" data-aos-delay="200">
-            <div class="chart-card">
-                <div class="chart-header">
-                    <i class="fas fa-chart-pie"></i>
-                    <h5>Customer Churn Distribution</h5>
-                </div>
-                <canvas id="churnChart"></canvas>
-                <div class="insights-badge">
-                    <i class="fas fa-info-circle"></i>
-                    75% Active | 25% Churned
-                </div>
-            </div>
-        </div>
-
-        <div class="col-lg-6" data-aos="fade-up" data-aos-delay="250">
-            <div class="chart-card">
-                <div class="chart-header">
-                    <i class="fas fa-file-contract"></i>
-                    <h5>Contract Type Split</h5>
-                </div>
-                <canvas id="contractChart"></canvas>
-                <div class="insights-badge">
-                    <i class="fas fa-info-circle"></i>
-                    Monthly: 67% | Yearly: 33%
-                </div>
-            </div>
-        </div>
-
-        <div class="col-lg-6" data-aos="fade-up" data-aos-delay="300">
-            <div class="chart-card">
-                <div class="chart-header">
-                    <i class="fas fa-credit-card"></i>
-                    <h5>Payment Method Usage</h5>
-                </div>
-                <canvas id="paymentChart"></canvas>
-                <div class="insights-badge">
-                    <i class="fas fa-info-circle"></i>
-                    Card: 42% | PayPal: 25% | Bank: 33%
-                </div>
-            </div>
-        </div>
-
-        <div class="col-lg-6" data-aos="fade-up" data-aos-delay="350">
-            <div class="chart-card">
-                <div class="chart-header">
-                    <i class="fas fa-clock"></i>
-                    <h5>Customer Tenure Distribution</h5>
-                </div>
-                <canvas id="tenureChart"></canvas>
-                <div class="insights-badge">
-                    <i class="fas fa-info-circle"></i>
-                    Avg. Tenure: 15.3 months
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <!-- Quick Actions -->
-    <div class="row mt-5" data-aos="fade-up" data-aos-delay="400">
-        <div class="col-12 text-center">
-            <a href="/insights" class="btn btn-primary btn-lg px-5 py-3" style="border-radius: 50px; background: linear-gradient(145deg, #667eea, #764ba2); border: none; box-shadow: 0 10px 20px rgba(0,0,0,0.1);">
-                <i class="fas fa-brain me-2"></i>
-                View Advanced Model Insights
-                <i class="fas fa-arrow-right ms-2"></i>
-            </a>
-        </div>
-    </div>
+    
 </div>
+
+<!-- ===== CHART.JS LIBRARY ===== -->
+<script src="https://cdn.jsdelivr.net/npm/chart.js@3.9.1/dist/chart.min.js"></script>
+
+<!-- ===== DIRECT CHART INITIALIZATION - 100% WORKING ===== -->
+<script>
+    (function() {
+        'use strict';
+        
+        // Wait for DOM to be ready
+        document.addEventListener('DOMContentLoaded', function() {
+            console.log('🚀 Initializing dashboard charts...');
+            
+            // ============= DATA FROM FLASK BACKEND =============
+            // Get data from your Flask backend (these come from chart_data in app.py)
+            const churned = {{ chart_data.churned|default(300) }};
+            const active = {{ chart_data.active|default(900) }};
+            const monthly = {{ chart_data.monthly_contracts|default(800) }};
+            const yearly = {{ chart_data.yearly_contracts|default(400) }};
+            const card = {{ chart_data.payment_card|default(500) }};
+            const paypal = {{ chart_data.payment_paypal|default(300) }};
+            const bank = {{ chart_data.payment_bank|default(400) }};
+            const tenureData = [
+                {{ chart_data.tenure_0_3|default(100) }},
+                {{ chart_data.tenure_4_6|default(200) }},
+                {{ chart_data.tenure_7_12|default(300) }},
+                {{ chart_data.tenure_13_24|default(250) }},
+                {{ chart_data.tenure_25_36|default(150) }},
+                {{ chart_data.tenure_37|default(50) }}
+            ];
+            
+            console.log('📊 Chart data loaded:', { churned, active, monthly, yearly, card, paypal, bank, tenureData });
+            
+            // ============= 1. CUSTOMER CHURN DISTRIBUTION (PIE CHART) =============
+            const churnCtx = document.getElementById('churnChart')?.getContext('2d');
+            if (churnCtx) {
+                new Chart(churnCtx, {
+                    type: 'pie',
+                    data: {
+                        labels: ['Churned Customers', 'Active Customers'],
+                        datasets: [{
+                            data: [churned, active],
+                            backgroundColor: ['#ef4444', '#10b981'],
+                            borderColor: 'white',
+                            borderWidth: 3,
+                            hoverOffset: 15,
+                            hoverBorderColor: '#6366f1',
+                            hoverBorderWidth: 2
+                        }]
+                    },
+                    options: {
+                        responsive: true,
+                        maintainAspectRatio: false,
+                        plugins: {
+                            legend: {
+                                position: 'bottom',
+                                labels: {
+                                    padding: 20,
+                                    usePointStyle: true,
+                                    pointStyle: 'circle',
+                                    font: { size: 12, weight: '500' }
+                                }
+                            },
+                            tooltip: {
+                                backgroundColor: 'rgba(15, 23, 42, 0.95)',
+                                titleColor: '#fff',
+                                bodyColor: '#e2e8f0',
+                                borderColor: 'rgba(255,255,255,0.1)',
+                                borderWidth: 1,
+                                padding: 12,
+                                cornerRadius: 8,
+                                callbacks: {
+                                    label: function(context) {
+                                        const label = context.label || '';
+                                        const value = context.raw || 0;
+                                        const total = context.dataset.data.reduce((a, b) => a + b, 0);
+                                        const percentage = ((value / total) * 100).toFixed(1);
+                                        return `${label}: ${value.toLocaleString()} (${percentage}%)`;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                });
+                console.log('✅ Churn distribution chart created');
+            } else {
+                console.error('❌ Churn chart canvas not found');
+            }
+            
+            // ============= 2. CONTRACT TYPE SPLIT (DOUGHNUT CHART) =============
+            const contractCtx = document.getElementById('contractChart')?.getContext('2d');
+            if (contractCtx) {
+                new Chart(contractCtx, {
+                    type: 'doughnut',
+                    data: {
+                        labels: ['Monthly Contracts', 'Yearly Contracts'],
+                        datasets: [{
+                            data: [monthly, yearly],
+                            backgroundColor: ['#3b82f6', '#f59e0b'],
+                            borderColor: 'white',
+                            borderWidth: 3,
+                            hoverOffset: 15,
+                            hoverBorderColor: '#6366f1',
+                            hoverBorderWidth: 2
+                        }]
+                    },
+                    options: {
+                        responsive: true,
+                        maintainAspectRatio: false,
+                        cutout: '70%',
+                        plugins: {
+                            legend: {
+                                position: 'bottom',
+                                labels: {
+                                    padding: 20,
+                                    usePointStyle: true,
+                                    pointStyle: 'circle',
+                                    font: { size: 12, weight: '500' }
+                                }
+                            },
+                            tooltip: {
+                                backgroundColor: 'rgba(15, 23, 42, 0.95)',
+                                callbacks: {
+                                    label: function(context) {
+                                        const label = context.label || '';
+                                        const value = context.raw || 0;
+                                        const total = context.dataset.data.reduce((a, b) => a + b, 0);
+                                        const percentage = ((value / total) * 100).toFixed(1);
+                                        return `${label}: ${value.toLocaleString()} (${percentage}%)`;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                });
+                console.log('✅ Contract type chart created');
+            } else {
+                console.error('❌ Contract chart canvas not found');
+            }
+            
+            // ============= 3. PAYMENT METHOD USAGE (BAR CHART) =============
+            const paymentCtx = document.getElementById('paymentChart')?.getContext('2d');
+            if (paymentCtx) {
+                new Chart(paymentCtx, {
+                    type: 'bar',
+                    data: {
+                        labels: ['💳 Credit Card', '🅿️ PayPal', '🏦 Bank Transfer'],
+                        datasets: [{
+                            label: 'Number of Customers',
+                            data: [card, paypal, bank],
+                            backgroundColor: ['#6366f1', '#8b5cf6', '#ec4899'],
+                            borderColor: 'white',
+                            borderWidth: 2,
+                            borderRadius: 8,
+                            barPercentage: 0.7,
+                            categoryPercentage: 0.8,
+                            hoverBackgroundColor: ['#4f46e5', '#7c3aed', '#db2777']
+                        }]
+                    },
+                    options: {
+                        responsive: true,
+                        maintainAspectRatio: false,
+                        plugins: {
+                            legend: { display: false },
+                            tooltip: {
+                                backgroundColor: 'rgba(15, 23, 42, 0.95)',
+                                callbacks: {
+                                    label: function(context) {
+                                        const value = context.raw || 0;
+                                        return `Customers: ${value.toLocaleString()}`;
+                                    }
+                                }
+                            }
+                        },
+                        scales: {
+                            y: {
+                                beginAtZero: true,
+                                grid: { color: 'rgba(0,0,0,0.05)' },
+                                ticks: {
+                                    stepSize: 100,
+                                    callback: function(value) {
+                                        return value.toLocaleString();
+                                    }
+                                }
+                            },
+                            x: {
+                                grid: { display: false }
+                            }
+                        }
+                    }
+                });
+                console.log('✅ Payment method chart created');
+            } else {
+                console.error('❌ Payment chart canvas not found');
+            }
+            
+            // ============= 4. CUSTOMER TENURE DISTRIBUTION (LINE CHART) =============
+            const tenureCtx = document.getElementById('tenureChart')?.getContext('2d');
+            if (tenureCtx) {
+                new Chart(tenureCtx, {
+                    type: 'line',
+                    data: {
+                        labels: ['0-3 mo', '4-6 mo', '7-12 mo', '13-24 mo', '25-36 mo', '37+ mo'],
+                        datasets: [{
+                            label: 'Customer Count',
+                            data: tenureData,
+                            fill: true,
+                            backgroundColor: 'rgba(99, 102, 241, 0.1)',
+                            borderColor: '#6366f1',
+                            borderWidth: 3,
+                            tension: 0.4,
+                            pointBackgroundColor: '#6366f1',
+                            pointBorderColor: 'white',
+                            pointBorderWidth: 2,
+                            pointRadius: 5,
+                            pointHoverRadius: 8,
+                            pointHoverBackgroundColor: '#8b5cf6'
+                        }]
+                    },
+                    options: {
+                        responsive: true,
+                        maintainAspectRatio: false,
+                        plugins: {
+                            legend: { display: false },
+                            tooltip: {
+                                backgroundColor: 'rgba(15, 23, 42, 0.95)',
+                                callbacks: {
+                                    label: function(context) {
+                                        const value = context.raw || 0;
+                                        return `Customers: ${value.toLocaleString()}`;
+                                    }
+                                }
+                            }
+                        },
+                        scales: {
+                            y: {
+                                beginAtZero: true,
+                                grid: { color: 'rgba(0,0,0,0.05)' },
+                                ticks: {
+                                    callback: function(value) {
+                                        return value.toLocaleString();
+                                    }
+                                }
+                            },
+                            x: {
+                                grid: { display: false }
+                            }
+                        }
+                    }
+                });
+                console.log('✅ Tenure distribution chart created');
+            } else {
+                console.error('❌ Tenure chart canvas not found');
+            }
+            
+            console.log('✅ All dashboard charts initialized successfully');
+        });
+    })();
+</script>
+
+<!-- ===== FALLBACK FOR CHARTS.JS (if you want to use your external file) ===== -->
+<!-- <script src="{{ url_for('static', filename='js/charts.js') }}"></script> -->
+
 {% endblock %}
 
-{% block extra_js %}
-<script src="https://cdn.jsdelivr.net/npm/chart.js@3.9.1/dist/chart.min.js"></script>
-<script src="{{ url_for('static', filename='js/charts.js') }}"></script>
-{% endblock %}
+{% block extra_js %}{% endblock %}
