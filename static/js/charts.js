@@ -1,21 +1,3 @@
-/**
- * =====================================================
- * CHARTS.JS - PREMIUM ENTERPRISE EDITION
- * =====================================================
- * ✓ Real-time data integration with your backend
- * ✓ Premium animations & transitions
- * ✓ Interactive tooltips & hover effects
- * ✓ Responsive & mobile optimized
- * ✓ Dark mode support
- * ✓ Accessibility (ARIA labels)
- * ✓ Performance optimized
- * ✓ Memory efficient
- * 
- * Author: Vitthal Teli
- * Version: 3.0.0
- * =====================================================
- */
-
 // ============= GLOBAL CHART CONFIGURATION =============
 Chart.defaults.font.family = "'Inter', 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif";
 Chart.defaults.font.size = 12;

@@ -4,12 +4,6 @@
 
 {% block extra_css %}
 <style>
-    /* =====================================================
-       HOME PAGE - PREMIUM ENTERPRISE LANDING EDITION
-       Hero Section | Animated Stats | Feature Cards
-       Glassmorphism | Micro-interactions | Dark Mode Ready
-       Preserved Backend Logic | Enhanced Visual Design
-       ===================================================== */
 
     :root {
         --home-primary: #6366f1;
@@ -778,7 +772,7 @@
         <!-- Premium Badge -->
         <div class="premium-badge">
             <i class="fas fa-crown"></i>
-            <span>ENTERPRISE-GRADE ML PLATFORM</span>
+            <span>ML PLATFORM</span>
             <i class="fas fa-bolt"></i>
         </div>
         
@@ -804,9 +798,6 @@
             <a href="{{ url_for('dashboard') }}" class="btn-outline-gradient">
                 <i class="fas fa-chart-line"></i> View Dashboard
             </a>
-            <a href="{{ url_for('insights') }}" class="btn-outline-gradient">
-                <i class="fas fa-brain"></i> Model Insights
-            </a>
         </div>
         
         <!-- Stats Counter Section - WITH YOUR EXISTING LOGIC -->
@@ -816,7 +807,7 @@
                 <div class="stat-label">Model Accuracy</div>
                 <p class="stat-desc">
                     <i class="fas fa-check-circle me-1" style="color: var(--home-success);"></i>
-                    XGBoost Optimized
+                    Random Forest Optimized
                 </p>
             </div>
             
@@ -868,7 +859,7 @@
         Why Choose <span class="gradient-text">ChurnAI</span>
     </h2>
     <p class="section-subtitle" data-aos="fade-up" data-aos-delay="100">
-        Enterprise features trusted by Fortune 500 companies and data-driven organizations worldwide
+        Enterprise features trusted by Fortune companies and data-driven organizations worldwide
     </p>
     
     <div class="features-grid">
@@ -879,9 +870,9 @@
             </div>
             <h3 class="feature-title">Real-time Predictions</h3>
             <p class="feature-desc">
-                Get churn predictions in <strong>under 50ms</strong> with our optimized XGBoost model. 
+                Get churn predictions in <strong>under 50ms</strong> with our optimized Random Forest model. 
                 Scale to millions of predictions per day with sub-millisecond latency.
-            </p>
+            </p>    
         </div>
         
         <!-- Feature 2: Explainable AI -->
@@ -891,8 +882,8 @@
             </div>
             <h3 class="feature-title">Explainable AI</h3>
             <p class="feature-desc">
-                Understand exactly why customers are at risk with SHAP values and 
-                feature importance analysis. No black boxes, complete transparency.
+                Understand why a customer may leave by checking the most important reasons 
+                and data points. Simple, clear, and easy to understand.
             </p>
         </div>
         
@@ -909,21 +900,6 @@
         </div>
     </div>
     
-    <!-- Additional Features Row (Hidden on Mobile) -->
-    <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 2rem; margin-top: 2.5rem; opacity: 0.8;">
-        <div style="text-align: center; color: rgba(255,255,255,0.7);">
-            <i class="fas fa-database me-2" style="color: var(--home-primary);"></i>
-            Batch Processing
-        </div>
-        <div style="text-align: center; color: rgba(255,255,255,0.7);">
-            <i class="fas fa-chart-line me-2" style="color: var(--home-secondary);"></i>
-            Cohort Analysis
-        </div>
-        <div style="text-align: center; color: rgba(255,255,255,0.7);">
-            <i class="fas fa-code me-2" style="color: var(--home-accent);"></i>
-            REST API
-        </div>
-    </div>
     
 </section>
 

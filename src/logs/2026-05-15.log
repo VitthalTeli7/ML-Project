@@ -1,0 +1,5 @@
+2026-05-15 00:24:52,684 - INFO - This is an INFO message
+2026-05-15 00:24:52,684 - ERROR - This is an ERROR message
+2026-05-15 00:24:52,684 - WARNING - This is a WARNING message
+2026-05-15 00:24:53,505 - WARNING -  * Debugger is active!
+2026-05-15 00:24:53,522 - INFO -  * Debugger PIN: 293-892-650

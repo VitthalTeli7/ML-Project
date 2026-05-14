@@ -3,14 +3,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.5">
-    <meta name="description" content="ChurnAI - Enterprise Customer Churn Prediction Platform powered by Advanced Machine Learning">
-    <meta name="keywords" content="churn prediction, machine learning, AI, customer retention, data science, XGBoost">
+    <meta name="description" content="ChurnAI - Customer Churn Prediction Platform powered by Advanced Machine Learning">
+    <meta name="keywords" content="churn prediction, machine learning, AI, customer retention, data science, Random Forest">
     <meta name="author" content="Vitthal Teli">
     <meta name="theme-color" content="#6366f1">
     <meta name="robots" content="index, follow">
     
     <!-- Open Graph / Social Media Meta Tags -->
-    <meta property="og:title" content="ChurnAI - Enterprise Churn Prediction Platform">
+    <meta property="og:title" content="ChurnAI -Churn Prediction Platform">
     <meta property="og:description" content="Predict customer churn with 92% accuracy using advanced machine learning">
     <meta property="og:type" content="website">
     <meta property="og:image" content="{{ url_for('static', filename='images/og-image.png') }}">
@@ -21,7 +21,7 @@
     <meta name="twitter:title" content="ChurnAI - Enterprise Churn Prediction">
     <meta name="twitter:description" content="AI-powered customer churn prediction platform">
     
-    <title>{% block title %}ChurnAI - Enterprise Churn Prediction Platform{% endblock %}</title>
+    <title>{% block title %}ChurnAI - Churn Prediction Platform{% endblock %}</title>
     
     <!-- Bootstrap 5.3.2 - Latest compiled and minified -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
@@ -97,7 +97,7 @@
         background: transparent;
         box-shadow: none;
         border: none;
-        padding-left: 1.5rem;
+        padding-center: 1.5rem;
     }
     
     .dropdown-item {
@@ -347,7 +347,7 @@
             --container-padding: clamp(1rem, 5vw, 2rem);
         }
 
-        /* ========== CSS RESET & BASE STYLES ========== */
+    
         *,
         *::before,
         *::after {
@@ -580,7 +580,7 @@
             font-weight: var(--font-medium);
             transition: var(--transition-bounce);
             display: flex;
-            align-items: center;
+            align-items: right;
             gap: var(--space-3);
             font-size: var(--text-sm);
         }
@@ -1013,17 +1013,13 @@
     <div class="loader"></div>
 </div>
 
-<!-- ===== PREMIUM NAVIGATION BAR ===== -->
+
 <!-- ===== PREMIUM NAVIGATION BAR - WITH RIGHT-ALIGNED DROPDOWNS ===== -->
 <nav class="navbar" id="mainNavbar">
     <div class="container">
         <a class="navbar-brand" href="{{ url_for('home') }}">
             <i class="fas fa-shield-halbed"></i>
             Churn<span style="font-weight: 300;">AI</span>
-            <span style="background: var(--gradient-primary); font-size: 0.7rem; padding: 0.25rem 0.75rem; 
-                  border-radius: var(--radius-full); color: white; margin-left: 0.5rem; 
-                  font-weight: var(--font-bold); text-transform: uppercase; letter-spacing: 1px;
-                  box-shadow: var(--shadow-glow);">PRO</span>
         </a>
         
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" 
@@ -1033,7 +1029,7 @@
         </button>
         
         <div class="collapse navbar-collapse" id="navbarMain">
-            <ul class="navbar-nav ms-auto align-items-center">
+            <ul class="navbar-nav ms-auto align-items-left">
                 <!-- Home -->
                 <li class="nav-item">
                     <a class="nav-link {% if request.endpoint == 'home' %}active{% endif %}" 
@@ -1050,30 +1046,6 @@
                     </a>
                 </li>
                 
-                <!-- Analytics Dropdown - RIGHT ALIGNED -->
-                <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" href="#" id="analyticsDropdown" 
-                       role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                        <i class="fas fa-chart-line"></i> Analytics
-                    </a>
-                    <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="analyticsDropdown">
-                        <li>
-                            <a class="dropdown-item" href="{{ url_for('insights') }}">
-                                <i class="fas fa-brain"></i> Model Insights
-                            </a>
-                        </li>
-                        <li>
-                            <a class="dropdown-item" href="{{ url_for('cohort_analysis') }}">
-                                <i class="fas fa-table"></i> Cohort Analysis
-                            </a>
-                        </li>
-                        <li>
-                            <a class="dropdown-item" href="{{ url_for('benchmark') }}">
-                                <i class="fas fa-trophy"></i> Model Benchmark
-                            </a>
-                        </li>
-                    </ul>
-                </li>
                 
                 <!-- Predict -->
                 <li class="nav-item">
@@ -1095,11 +1067,7 @@
                                 <i class="fas fa-user-circle"></i> Customer 360
                             </a>
                         </li>
-                        <li>
-                            <a class="dropdown-item" href="{{ url_for('retention_page') }}">
-                                <i class="fas fa-bullhorn"></i> Retention Center
-                            </a>
-                        </li>
+
                     </ul>
                 </li>
                 
@@ -1125,7 +1093,7 @@
             </ul>
         </div>
     </div>
-</nav>
+</nav> 
 <!-- ===== MAIN CONTENT AREA ===== -->
 <main class="content">
     <div class="container">
@@ -1143,7 +1111,7 @@
                     ChurnAI
                 </div>
                 <p class="footer-description">
-                    Enterprise-grade customer churn prediction platform powered by 
+                    customer churn prediction platform powered by 
                     advanced machine learning. Reduce churn, increase retention, 
                     and maximize customer lifetime value.
                 </p>
@@ -1159,9 +1127,6 @@
                     <a href="mailto:vitthalteli7001@gmail.com" class="social-link">
                         <i class="fas fa-envelope"></i>
                     </a>
-                    <a href="#" class="social-link">
-                        <i class="fab fa-twitter"></i>
-                    </a>
                 </div>
             </div>
             
@@ -1170,18 +1135,7 @@
                 <ul class="footer-links">
                     <li><a href="{{ url_for('dashboard') }}"><i class="fas fa-chevron-right"></i> Dashboard</a></li>
                     <li><a href="{{ url_for('predict_page') }}"><i class="fas fa-chevron-right"></i> Predict</a></li>
-                    <li><a href="{{ url_for('insights') }}"><i class="fas fa-chevron-right"></i> Insights</a></li>
                     <li><a href="{{ url_for('customer_360_list') }}"><i class="fas fa-chevron-right"></i> Customer 360</a></li>
-                </ul>
-            </div>
-            
-            <div class="col-lg-2 col-md-6">
-                <h6 class="footer-title">Resources</h6>
-                <ul class="footer-links">
-                    <li><a href="{{ url_for('retention_page') }}"><i class="fas fa-chevron-right"></i> Retention</a></li>
-                    <li><a href="#"><i class="fas fa-chevron-right"></i> Documentation</a></li>
-                    <li><a href="#"><i class="fas fa-chevron-right"></i> API Reference</a></li>
-                    <li><a href="#"><i class="fas fa-chevron-right"></i> Changelog</a></li>
                 </ul>
             </div>
             
@@ -1198,9 +1152,7 @@
             <div class="col-lg-2 col-md-6">
                 <h6 class="footer-title">Connect</h6>
                 <ul class="footer-links">
-                    <li><a href="https://github.com/VitthalTeli7/ML-Project" target="_blank"><i class="fab fa-github"></i> GitHub</a></li>
-                    <li><a href="#"><i class="fab fa-discord"></i> Discord</a></li>
-                    <li><a href="#"><i class="fab fa-slack"></i> Slack</a></li>
+                    <li><a href="https://github.com/VitthalTeli7/ML-Project" target="_blank"><i class="fab fa-github"></i> GitHub</a></li>  
                     <li><a href="#"><i class="fas fa-headset"></i> Support</a></li>
                 </ul>
             </div>

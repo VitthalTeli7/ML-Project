@@ -4,12 +4,7 @@
 
 {% block extra_css %}
 <style>
-    /* =====================================================
-       RESULT PAGE - PREMIUM ENTERPRISE EDITION
-       Glassmorphism | 3D Effects | Micro-interactions
-       Animated Gradients | Dark Mode Ready
-       Preserved Backend Logic | Enhanced UI/UX
-       ===================================================== */
+    
 
     :root {
         --result-success: #10b981;
@@ -807,7 +802,7 @@
             console.log('📊 Risk Score: ' + riskScore + '%');
             console.log('🎯 Prediction: ' + predictionValue);
             console.log('✅ Confidence: ' + '{{ confidence|default("92") }}%');
-            console.log('🔧 Model Version: ' + '{{ model_version|default("v2.1.0") }}');
+        
             
             // Animate meter fill
             var meterFill = document.querySelector('.meter-fill');

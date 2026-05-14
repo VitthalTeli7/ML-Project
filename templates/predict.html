@@ -1,16 +1,10 @@
 {% extends "base.html" %}
 
-{% block title %}Predict Churn | ChurnAI - Enterprise ML Platform{% endblock %}
+{% block title %}Predict Churn | ChurnAI - ML Platform{% endblock %}
 
 {% block extra_css %}
 <style>
-    /* =====================================================
-       PREDICT PAGE - PREMIUM ENTERPRISE EDITION
-       Glassmorphism | 3D Effects | Micro-interactions
-       Dark Mode Ready | Fully Responsive
-       Preserved Backend Logic | Enhanced UI/UX
-       ===================================================== */
-
+   
     :root {
         --predict-primary: #6366f1;
         --predict-secondary: #8b5cf6;
@@ -689,32 +683,6 @@
                     </label>
                     <input type="number" step="0.01" name="monthly_fee" class="form-control" placeholder="Amount" min="0" required>
                 </div>
-                <div>
-                    <label class="form-label">
-                        <i class="fas fa-ticket-alt"></i> Support Tickets
-                    </label>
-                    <input type="number" name="support_tickets" class="form-control" placeholder="Count" min="0" required>
-                </div>
-            </div>
-
-            <!-- ===== CUSTOMER FEEDBACK SECTION ===== -->
-            <div class="section mt-5">
-                <i class="fas fa-star"></i>
-                Customer Feedback
-            </div>
-            <div class="form-grid">
-                <div>
-                    <label class="form-label">
-                        <i class="fas fa-smile"></i> CSAT Score (1-5)
-                    </label>
-                    <input type="number" min="1" max="5" name="csat_score" class="form-control" placeholder="1-5" required>
-                </div>
-                <div>
-                    <label class="form-label">
-                        <i class="fas fa-chart-line"></i> NPS Score
-                    </label>
-                    <input type="number" name="nps_score" class="form-control" placeholder="-100 to 100" min="-100" max="100" required>
-                </div>
             </div>
 
             <!-- ===== SUBMIT BUTTON ===== -->
@@ -807,5 +775,4 @@
 {% endblock %}
 
 {% block extra_js %}
-<!-- No extra JS - all JavaScript is in the main script block -->
 {% endblock %}
