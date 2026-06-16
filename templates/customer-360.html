@@ -582,10 +582,10 @@
                 </div>
                 <div class="col-md-6">
                     <div class="metric-card">
-                        <div class="metric-icon"><i class="fas fa-dollar-sign"></i></div>
+                        <div class="metric-icon"><i class="fas fa-rupee-sign"></i></div>
                         <div>
                             <div class="metric-label">Monthly Fee</div>
-                            <div class="metric-value">${{ "%.2f"|format(customer.monthly_fee|float) if customer.monthly_fee else '49.99' }}</div>
+                            <div class="metric-value">₹{{ "%.2f"|format(customer.monthly_fee|float) if customer.monthly_fee else '49.99' }}</div>
                         </div>
                     </div>
                 </div>
@@ -614,7 +614,7 @@
                     <span style="color: #475569;"><i class="fas fa-credit-card me-1"></i> {{ customer.payment_method|default('VISA') }}</span>
                 </div>
                 <div class="text-end">
-                    <div class="plan-price">${{ "%.2f"|format(customer.monthly_fee|float) if customer.monthly_fee else '49.99' }}</div>
+                    <div class="plan-price">₹{{ "%.2f"|format(customer.monthly_fee|float) if customer.monthly_fee else '49.99' }}</div>
                     <span class="badge bg-success">Active</span>
                 </div>
             </div>
@@ -635,7 +635,7 @@
                         <div class="timeline-content">
                             <div class="timeline-time">Today</div>
                             <div class="timeline-title">Payment Successful</div>
-                            <div class="timeline-desc">$49.99 processed</div>
+                            <div class="timeline-desc">₹49.99 processed</div>
                         </div>
                     </div>
                     <div class="timeline-item">
@@ -672,37 +672,55 @@
     </div>
 
 </div>
+{% endblock %}
 
-<!-- ===== SINGLE SCRIPT TAG - CLEAN, NO DUPLICATES ===== -->
+{% block extra_js %}
 <script>
+    // Get customer data from server-side rendered attributes
     (function() {
         'use strict';
         
-        // Set gauge position
-        var gauge = document.getElementById('gaugeFill');
-        if (gauge) {
-            var riskScore = {{ customer.risk_score|default(35) }};
-            gauge.style.transform = 'rotate(' + (riskScore * 1.8) + 'deg)';
+        // Get risk score from the DOM instead of Jinja in JS
+        var gaugeElement = document.getElementById('gaugeFill');
+        if (gaugeElement) {
+            var riskValueElement = document.querySelector('.gauge-value');
+            var riskScore = 35; // default value
+            
+            if (riskValueElement) {
+                var riskText = riskValueElement.innerText;
+                riskScore = parseInt(riskText) || 35;
+            }
+            
+            gaugeElement.style.transform = 'rotate(' + (riskScore * 1.8) + 'deg)';
         }
 
-        // Animate usage bars
+        // Animate usage bars if they exist
         var usageBars = document.querySelectorAll('.usage-fill');
         for (var i = 0; i < usageBars.length; i++) {
             var bar = usageBars[i];
             var width = bar.style.width;
-            bar.style.width = '0%';
-            setTimeout(function(w) {
-                return function() { bar.style.width = w; };
-            }(width), 300 * i);
+            if (width) {
+                bar.style.width = '0%';
+                setTimeout(function(w) {
+                    return function() { 
+                        if (bar) bar.style.width = w; 
+                    };
+                }(width), 300 * i);
+            }
         }
 
         // Send offer function
         window.sendOffer = function() {
-            var customerId = '{{ customer.customer_id|default("CUST-1001") }}';
-            alert('🎁 Offer sent to ' + customerId);
+            var customerIdElement = document.querySelector('.customer-id');
+            var customerId = 'CUST-1001';
+            
+            if (customerIdElement) {
+                var idText = customerIdElement.childNodes[0]?.nodeValue?.trim() || 'CUST-1001';
+                customerId = idText;
+            }
+            
+            alert('Offer sent to ' + customerId);
         };
     })();
 </script>
 {% endblock %}
-
-{% block extra_js %}{% endblock %}

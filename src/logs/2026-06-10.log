@@ -1,0 +1,164 @@
+2026-06-10 10:36:45,878 - INFO - This is an INFO message
+2026-06-10 10:36:45,878 - ERROR - This is an ERROR message
+2026-06-10 10:36:45,878 - WARNING - This is a WARNING message
+2026-06-10 10:36:47,245 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2026-06-10 10:36:47,250 - INFO - [33mPress CTRL+C to quit[0m
+2026-06-10 10:36:47,271 - INFO -  * Restarting with watchdog (windowsapi)
+2026-06-10 10:36:49,358 - INFO - This is an INFO message
+2026-06-10 10:36:49,358 - ERROR - This is an ERROR message
+2026-06-10 10:36:49,358 - WARNING - This is a WARNING message
+2026-06-10 10:36:49,587 - WARNING -  * Debugger is active!
+2026-06-10 10:36:49,592 - INFO -  * Debugger PIN: 293-892-650
+2026-06-10 10:38:00,493 - INFO - 127.0.0.1 - - [10/Jun/2026 10:38:00] "GET / HTTP/1.1" 200 -
+2026-06-10 10:38:00,776 - INFO - 127.0.0.1 - - [10/Jun/2026 10:38:00] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2026-06-10 10:38:06,036 - INFO - 127.0.0.1 - - [10/Jun/2026 10:38:06] "GET /dashboard HTTP/1.1" 200 -
+2026-06-10 10:38:14,934 - INFO - 127.0.0.1 - - [10/Jun/2026 10:38:14] "GET /predict HTTP/1.1" 200 -
+2026-06-10 10:38:27,179 - INFO -  * Detected change in 'C:\\Users\\hp\\ML-Project\\venv\\Lib\\site-packages\\sklearn\\utils\\validation.py', reloading
+2026-06-10 10:38:27,870 - INFO -  * Restarting with watchdog (windowsapi)
+2026-06-10 10:38:33,396 - INFO - This is an INFO message
+2026-06-10 10:38:33,396 - ERROR - This is an ERROR message
+2026-06-10 10:38:33,396 - WARNING - This is a WARNING message
+2026-06-10 10:38:34,251 - WARNING -  * Debugger is active!
+2026-06-10 10:38:34,269 - INFO -  * Debugger PIN: 293-892-650
+2026-06-10 10:38:34,712 - INFO - 127.0.0.1 - - [10/Jun/2026 10:38:34] "GET /customers HTTP/1.1" 200 -
+2026-06-10 10:39:14,730 - INFO - 127.0.0.1 - - [10/Jun/2026 10:39:14] "[33mGET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1[0m" 404 -
+2026-06-10 11:14:32,483 - INFO - 127.0.0.1 - - [10/Jun/2026 11:14:32] "GET /customers HTTP/1.1" 200 -
+2026-06-10 11:14:38,999 - INFO - 127.0.0.1 - - [10/Jun/2026 11:14:38] "GET /customers HTTP/1.1" 200 -
+2026-06-10 11:15:13,358 - INFO - This is an INFO message
+2026-06-10 11:15:13,358 - ERROR - This is an ERROR message
+2026-06-10 11:15:13,358 - WARNING - This is a WARNING message
+2026-06-10 11:15:15,096 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2026-06-10 11:15:15,096 - INFO - [33mPress CTRL+C to quit[0m
+2026-06-10 11:15:15,116 - INFO -  * Restarting with watchdog (windowsapi)
+2026-06-10 11:15:17,170 - INFO - This is an INFO message
+2026-06-10 11:15:17,170 - ERROR - This is an ERROR message
+2026-06-10 11:15:17,170 - WARNING - This is a WARNING message
+2026-06-10 11:15:17,404 - WARNING -  * Debugger is active!
+2026-06-10 11:15:17,412 - INFO -  * Debugger PIN: 293-892-650
+2026-06-10 11:15:27,674 - INFO - 127.0.0.1 - - [10/Jun/2026 11:15:27] "GET / HTTP/1.1" 200 -
+2026-06-10 11:15:33,444 - INFO - 127.0.0.1 - - [10/Jun/2026 11:15:33] "GET /customers HTTP/1.1" 200 -
+2026-06-10 11:19:15,829 - INFO - This is an INFO message
+2026-06-10 11:19:15,829 - ERROR - This is an ERROR message
+2026-06-10 11:19:15,829 - WARNING - This is a WARNING message
+2026-06-10 11:19:16,140 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2026-06-10 11:19:16,140 - INFO - [33mPress CTRL+C to quit[0m
+2026-06-10 11:19:16,160 - INFO -  * Restarting with watchdog (windowsapi)
+2026-06-10 11:19:19,015 - INFO - This is an INFO message
+2026-06-10 11:19:19,015 - ERROR - This is an ERROR message
+2026-06-10 11:19:19,015 - WARNING - This is a WARNING message
+2026-06-10 11:19:19,288 - WARNING -  * Debugger is active!
+2026-06-10 11:19:19,292 - INFO -  * Debugger PIN: 293-892-650
+2026-06-10 11:19:26,989 - INFO - 127.0.0.1 - - [10/Jun/2026 11:19:26] "GET / HTTP/1.1" 200 -
+2026-06-10 11:19:31,739 - INFO - 127.0.0.1 - - [10/Jun/2026 11:19:31] "GET /customers HTTP/1.1" 200 -
+2026-06-10 11:21:29,674 - INFO - 127.0.0.1 - - [10/Jun/2026 11:21:29] "[33mGET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1[0m" 404 -
+2026-06-10 11:25:45,313 - INFO - 127.0.0.1 - - [10/Jun/2026 11:25:45] "GET /about HTTP/1.1" 200 -
+2026-06-10 11:25:45,552 - INFO - 127.0.0.1 - - [10/Jun/2026 11:25:45] "[36mGET /static/images/vitthal-teli.jpg HTTP/1.1[0m" 304 -
+2026-06-10 11:27:25,163 - INFO - 127.0.0.1 - - [10/Jun/2026 11:27:25] "GET /about HTTP/1.1" 200 -
+2026-06-10 11:27:25,231 - INFO - 127.0.0.1 - - [10/Jun/2026 11:27:25] "[36mGET /static/images/vitthal-teli.jpg HTTP/1.1[0m" 304 -
+2026-06-10 11:28:15,892 - INFO - 127.0.0.1 - - [10/Jun/2026 11:28:15] "GET /contact HTTP/1.1" 200 -
+2026-06-10 11:28:18,380 - INFO - 127.0.0.1 - - [10/Jun/2026 11:28:18] "GET /contact HTTP/1.1" 200 -
+2026-06-10 11:29:02,645 - INFO - 127.0.0.1 - - [10/Jun/2026 11:29:02] "GET /about HTTP/1.1" 200 -
+2026-06-10 11:29:02,712 - INFO - 127.0.0.1 - - [10/Jun/2026 11:29:02] "[36mGET /static/images/vitthal-teli.jpg HTTP/1.1[0m" 304 -
+2026-06-10 11:29:06,937 - INFO - 127.0.0.1 - - [10/Jun/2026 11:29:06] "GET /customers HTTP/1.1" 200 -
+2026-06-10 11:29:29,983 - INFO - 127.0.0.1 - - [10/Jun/2026 11:29:29] "GET /customer-360/CUST_00100 HTTP/1.1" 200 -
+2026-06-10 11:30:06,217 - INFO - 127.0.0.1 - - [10/Jun/2026 11:30:06] "[33mGET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1[0m" 404 -
+2026-06-10 11:30:27,216 - INFO - 127.0.0.1 - - [10/Jun/2026 11:30:27] "GET /customers HTTP/1.1" 200 -
+2026-06-10 11:30:27,311 - INFO - 127.0.0.1 - - [10/Jun/2026 11:30:27] "[33mGET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1[0m" 404 -
+2026-06-10 11:30:54,615 - INFO - 127.0.0.1 - - [10/Jun/2026 11:30:54] "GET /customer-360/CUST_00100 HTTP/1.1" 200 -
+2026-06-10 11:30:54,832 - INFO - 127.0.0.1 - - [10/Jun/2026 11:30:54] "[33mGET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1[0m" 404 -
+2026-06-10 11:31:00,030 - INFO - 127.0.0.1 - - [10/Jun/2026 11:31:00] "[33mGET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1[0m" 404 -
+2026-06-10 11:31:00,135 - INFO - 127.0.0.1 - - [10/Jun/2026 11:31:00] "[33mGET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1[0m" 404 -
+2026-06-10 11:34:26,905 - INFO - 127.0.0.1 - - [10/Jun/2026 11:34:26] "GET /customer-360/CUST_00100 HTTP/1.1" 200 -
+2026-06-10 11:34:27,011 - INFO - 127.0.0.1 - - [10/Jun/2026 11:34:27] "[33mGET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1[0m" 404 -
+2026-06-10 11:36:41,714 - INFO - 127.0.0.1 - - [10/Jun/2026 11:36:41] "[33mGET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1[0m" 404 -
+2026-06-10 11:39:03,307 - INFO - 127.0.0.1 - - [10/Jun/2026 11:39:03] "GET /customer-360/CUST_00100 HTTP/1.1" 200 -
+2026-06-10 11:39:03,706 - INFO - 127.0.0.1 - - [10/Jun/2026 11:39:03] "[33mGET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1[0m" 404 -
+2026-06-10 11:43:37,742 - INFO - This is an INFO message
+2026-06-10 11:43:37,742 - ERROR - This is an ERROR message
+2026-06-10 11:43:37,742 - WARNING - This is a WARNING message
+2026-06-10 11:43:38,943 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2026-06-10 11:43:38,943 - INFO - [33mPress CTRL+C to quit[0m
+2026-06-10 11:43:38,962 - INFO -  * Restarting with watchdog (windowsapi)
+2026-06-10 11:43:40,767 - INFO - This is an INFO message
+2026-06-10 11:43:40,767 - ERROR - This is an ERROR message
+2026-06-10 11:43:40,767 - WARNING - This is a WARNING message
+2026-06-10 11:43:40,961 - WARNING -  * Debugger is active!
+2026-06-10 11:43:40,974 - INFO -  * Debugger PIN: 293-892-650
+2026-06-10 11:44:04,794 - INFO - 127.0.0.1 - - [10/Jun/2026 11:44:04] "GET / HTTP/1.1" 200 -
+2026-06-10 11:44:07,993 - INFO -  * Detected change in 'C:\\Users\\hp\\ML-Project\\venv\\Lib\\site-packages\\sklearn\\utils\\validation.py', reloading
+2026-06-10 11:44:08,494 - INFO -  * Restarting with watchdog (windowsapi)
+2026-06-10 11:44:11,604 - INFO - This is an INFO message
+2026-06-10 11:44:11,604 - ERROR - This is an ERROR message
+2026-06-10 11:44:11,604 - WARNING - This is a WARNING message
+2026-06-10 11:44:12,153 - WARNING -  * Debugger is active!
+2026-06-10 11:44:12,162 - INFO -  * Debugger PIN: 293-892-650
+2026-06-10 11:44:12,421 - INFO - 127.0.0.1 - - [10/Jun/2026 11:44:12] "GET /customers HTTP/1.1" 200 -
+2026-06-10 11:44:36,980 - INFO - 127.0.0.1 - - [10/Jun/2026 11:44:36] "GET /customer-360/CUST-100 HTTP/1.1" 200 -
+2026-06-10 11:44:56,752 - INFO - 127.0.0.1 - - [10/Jun/2026 11:44:56] "[33mGET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1[0m" 404 -
+2026-06-10 11:45:19,968 - INFO - This is an INFO message
+2026-06-10 11:45:19,968 - ERROR - This is an ERROR message
+2026-06-10 11:45:19,968 - WARNING - This is a WARNING message
+2026-06-10 11:45:20,172 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2026-06-10 11:45:20,172 - INFO - [33mPress CTRL+C to quit[0m
+2026-06-10 11:45:20,188 - INFO -  * Restarting with watchdog (windowsapi)
+2026-06-10 11:45:22,139 - INFO - This is an INFO message
+2026-06-10 11:45:22,139 - ERROR - This is an ERROR message
+2026-06-10 11:45:22,139 - WARNING - This is a WARNING message
+2026-06-10 11:45:22,393 - WARNING -  * Debugger is active!
+2026-06-10 11:45:22,406 - INFO -  * Debugger PIN: 293-892-650
+2026-06-10 11:45:24,006 - INFO - 127.0.0.1 - - [10/Jun/2026 11:45:24] "GET /customers HTTP/1.1" 200 -
+2026-06-10 11:45:45,941 - INFO - 127.0.0.1 - - [10/Jun/2026 11:45:45] "GET /customer-360/CUST_00100 HTTP/1.1" 200 -
+2026-06-10 11:45:57,882 - INFO - 127.0.0.1 - - [10/Jun/2026 11:45:57] "[33mGET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1[0m" 404 -
+2026-06-10 17:39:09,430 - INFO - This is an INFO message
+2026-06-10 17:39:09,430 - ERROR - This is an ERROR message
+2026-06-10 17:39:09,430 - WARNING - This is a WARNING message
+2026-06-10 17:39:09,834 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2026-06-10 17:39:09,834 - INFO - [33mPress CTRL+C to quit[0m
+2026-06-10 17:39:09,850 - INFO -  * Restarting with watchdog (windowsapi)
+2026-06-10 17:39:12,599 - INFO - This is an INFO message
+2026-06-10 17:39:12,599 - ERROR - This is an ERROR message
+2026-06-10 17:39:12,599 - WARNING - This is a WARNING message
+2026-06-10 17:39:12,863 - WARNING -  * Debugger is active!
+2026-06-10 17:39:12,870 - INFO -  * Debugger PIN: 293-892-650
+2026-06-10 17:39:19,909 - INFO - 127.0.0.1 - - [10/Jun/2026 17:39:19] "GET / HTTP/1.1" 200 -
+2026-06-10 17:39:20,280 - INFO - 127.0.0.1 - - [10/Jun/2026 17:39:20] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2026-06-10 17:39:43,338 - INFO -  * Detected change in 'C:\\Users\\hp\\ML-Project\\venv\\Lib\\site-packages\\sklearn\\utils\\validation.py', reloading
+2026-06-10 17:39:43,955 - INFO -  * Restarting with watchdog (windowsapi)
+2026-06-10 17:39:49,384 - INFO - This is an INFO message
+2026-06-10 17:39:49,390 - ERROR - This is an ERROR message
+2026-06-10 17:39:49,390 - WARNING - This is a WARNING message
+2026-06-10 17:39:50,232 - WARNING -  * Debugger is active!
+2026-06-10 17:39:50,247 - INFO -  * Debugger PIN: 293-892-650
+2026-06-10 17:39:50,634 - INFO - 127.0.0.1 - - [10/Jun/2026 17:39:50] "GET /customers HTTP/1.1" 200 -
+2026-06-10 17:40:31,982 - INFO - 127.0.0.1 - - [10/Jun/2026 17:40:31] "[33mGET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1[0m" 404 -
+2026-06-10 17:42:34,518 - INFO -  * Detected change in 'C:\\Users\\hp\\ML-Project\\src\\utils.py', reloading
+2026-06-10 17:42:34,838 - INFO -  * Restarting with watchdog (windowsapi)
+2026-06-10 17:42:37,510 - INFO - This is an INFO message
+2026-06-10 17:42:37,510 - ERROR - This is an ERROR message
+2026-06-10 17:42:37,510 - WARNING - This is a WARNING message
+2026-06-10 17:42:37,756 - WARNING -  * Debugger is active!
+2026-06-10 17:42:37,774 - INFO -  * Debugger PIN: 293-892-650
+2026-06-10 17:43:47,404 - INFO - 127.0.0.1 - - [10/Jun/2026 17:43:47] "GET /customers HTTP/1.1" 200 -
+2026-06-10 17:44:01,885 - INFO - 127.0.0.1 - - [10/Jun/2026 17:44:01] "GET /customer-360/CUST_00100 HTTP/1.1" 200 -
+2026-06-10 17:44:55,725 - INFO - 127.0.0.1 - - [10/Jun/2026 17:44:55] "[33mGET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1[0m" 404 -
+2026-06-10 17:57:42,491 - INFO - This is an INFO message
+2026-06-10 17:57:42,491 - ERROR - This is an ERROR message
+2026-06-10 17:57:42,491 - WARNING - This is a WARNING message
+2026-06-10 17:57:42,793 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2026-06-10 17:57:42,793 - INFO - [33mPress CTRL+C to quit[0m
+2026-06-10 17:57:42,814 - INFO -  * Restarting with watchdog (windowsapi)
+2026-06-10 17:57:44,789 - INFO - This is an INFO message
+2026-06-10 17:57:44,789 - ERROR - This is an ERROR message
+2026-06-10 17:57:44,789 - WARNING - This is a WARNING message
+2026-06-10 17:57:44,993 - WARNING -  * Debugger is active!
+2026-06-10 17:57:44,993 - INFO -  * Debugger PIN: 293-892-650
+2026-06-10 17:58:12,542 - INFO - 127.0.0.1 - - [10/Jun/2026 17:58:12] "GET / HTTP/1.1" 200 -
+2026-06-10 17:58:17,232 - INFO - 127.0.0.1 - - [10/Jun/2026 17:58:17] "GET /customers HTTP/1.1" 200 -
+2026-06-10 17:59:09,738 - INFO - 127.0.0.1 - - [10/Jun/2026 17:59:09] "GET /customers HTTP/1.1" 200 -

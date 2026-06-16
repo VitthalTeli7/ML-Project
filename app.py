@@ -11,13 +11,11 @@ import random
 application = Flask(__name__)
 app = application
 
-# ============= CONTEXT PROCESSOR =============
 @app.context_processor
 def inject_now():
     """Inject current datetime into templates"""
     return {'now': datetime.now}
 
-# ============= LOAD MODEL (IF AVAILABLE) =============
 model = None
 try:
     # Try to load your trained model

@@ -1,177 +1,52 @@
-# End to End Machine Learning Project
-# Requirement : dataset resource: https://www.kaggle.com/datasets
+Product Overview
 
-# ChurnPredict Pro - Advanced Customer Churn Prediction System
+ChurnAi is an enterprise-grade machine learning platform that predicts customer churn for subscription-based businesses. The system delivers real-time predictions and actionable retention insights through an integrated analytics dashboard.
 
-[![Python Version](https://img.shields.io/badge/python-3.9+-blue.svg)](https://python.org)
-[![Flask Version](https://img.shields.io/badge/flask-2.3+-green.svg)](https://flask.palletsprojects.com)
+Core Problem Solved
+Customer churn represents a critical business challenge where acquiring new customers costs significantly more than retaining existing ones. This platform identifies at-risk customers before they leave, enabling proactive retention strategies.
 
-[![License](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE)
+Technical Architecture
+The solution implements a five-layer production architecture:
 
-# Project Overview
+Data Layer manages customer information storage and collection.
+Processing Layer handles cleaning, feature engineering, encoding, and scaling.
+Machine Learning Layer manages model training, evaluation, and optimization.
+Application Layer exposes services through Flask REST APIs.
+Presentation Layer provides interactive dashboards using Chart.js.
 
-ChurnPredict Pro is an enterprise-grade machine learning system that predicts customer churn with 86% accuracy. Built with Flask, MySQL, and SQLAlchemy, it provides real-time predictions, interactive dashboards, and automated retention campaign management.
+Machine Learning Pipeline
+The end-to-end ML workflow includes data ingestion, transformation, model training, and prediction generation. Multiple algorithms were evaluated including Logistic Regression, Decision Tree, Random Forest, Gradient Boosting, and CatBoost.
 
-### Live Demo Features
--  Real-time churn predictions
--  Interactive analytics dashboard
--  Customer 360° view
--  ROI tracking for retention campaigns
--  Model performance monitoring
--  Automated high-risk alerts
+Final Model: Random Forest Classifier
 
-## **Key Features**
+Performance Metrics:
 
-### **Machine Learning Capabilities**
-- **Model**: Random Forest Classifier with 86.5% accuracy
-- **Features**: 20+ customer attributes analyzed
-- **Real-time Predictions**: <200ms response time
-- **Model Versioning**: Track multiple model versions
-- **Explainable AI**: SHAP values for each prediction
+Accuracy: 86.5%
 
-### Web Application
-- Premium UI: Modern, responsive design with dark mode
-- Mobile Friendly: Works on all devices
-- Real-time Updates: Live charts and metrics
-- Interactive Dashboards: Drill down into data
-- Campaign Management: Create and track retention offers
+Precision: 84%
 
-## System Architecture
-┌─────────────────────────────────────────────────────────────┐
-│ Client Browser │
-│ (React.js / HTML5 / Tailwind CSS) │
-└─────────────────┬───────────────────────────────────────────┘
-│
-┌─────────────────▼───────────────────────────────────────────┐
-│ Flask Web Server │
-│ (REST API + Template Rendering) │
-└─────────────────┬───────────────────────────────────────────┘
-│
-┌─────────────────▼───────────────────────────────────────────┐
-│ Business Logic Layer │
-│ - Prediction Pipeline │
-│ - Data Transformation │
-│ - Model Management │
-└─────────────────┬───────────────────────────────────────────┘
+Recall: 81%
 
-## 📁 **Project Structure**
-ML-PROJECT/
-│
-├── 📁 artifacts/ # Saved model outputs
-│ ├── model.pkl # Trained model
-│ ├── preprocessor.pkl # Data preprocessor
-│ ├── train.csv # Training data
-│ └── test.csv # Test data
-│
-├── 📁 data/ # Dataset storage
-│ ├── raw/
-│ │ └── customer_churn_business_dataset.csv
-│ └── processed/ # Processed datasets
-│
-├── 📁 src/ # Source code
-│ ├── 📁 components/ # ML pipeline components
-│ │ ├── data_ingestion.py
-│ │ ├── data_transformation.py
-│ │ └── model_trainer.py
-│ │
-│ │
-│ ├── 📁 pipeline/ # Pipeline orchestration
-│ │ ├── train_pipeline.py
-│ │ └── predict_pipeline.py
-│ │
-│ ├── 📁 utils/ # Utility functions
-│ │ ├── logger.py
-│ │ └── exception.py
-│ │
-│ └── app.py # Flask application
-│
-├── 📁 static/ # Frontend assets
-│ ├── css/
-│ │ └── style.css # 1500+ lines of CSS
-│ ├── js/
-│ │ ├── charts.js # 800+ lines of charts
-│ │ └── model_insights.js # 700+ lines of analytics
-│ └── images/
-│
-├── 📁 templates/ # HTML templates
-│ ├── base.html
-│ ├── dashboard.html
-│ ├── predict.html
-│ ├── customers.html
-│ ├── insights.html
-│ └── retention.html
-││
-├── 📁 logs/ # Application logs
-│ └── app.log
-│
-├── 📁 notebooks/ # Jupyter notebooks
-│ ├── Churn_Prediction_EDA.ipynb
-│ └── Model_Training.ipynb
-│
-├── 📁 scripts/ # Utility scripts
-│ ├── init_db.py # Database initialization
-│ ├── load_data.py # Load CSV to MySQL
-│ └── backup_db.py # Automated backups
-│
-├── 📄 .env # Environment variables
-├── 📄 .gitignore
-├── 📄 requirements.txt # Python dependencies
-├── 📄 config.yaml # Configuration
-├── 📄 Dockerfile # Containerization
-├── 📄 docker-compose.yml # Multi-container setup
-└── 📄 README.md # This file
+F1 Score: 82.5%
 
-## 🚀 uick Start Guide
+Key Platform Features
+Analytics Dashboard displays churn distribution, customer segmentation, contract type analysis, payment method insights, and model performance metrics for business intelligence.
 
-### Prerequisites
+Customer 360° View provides complete customer profiles including demographics, subscription details, payment information, engagement metrics, and churn risk scores for targeted retention actions.
 
-# Required versions
-Python 3.9+
-Git
-Step 1: Clone the Repository
+Real-Time Prediction Module accepts customer attributes and instantly returns risk categorization, confidence scores, and retention recommendations.
 
-git clone https://github.com/VitthalTeli7/ML-Project.git
-cd churn-prediction-pro
-Step 2: Set Up Virtual Environment
+Project Structure
+The codebase follows modular machine learning architecture with dedicated directories for artifacts (serialized models), data storage, components (ingestion, transformation, training), pipelines (training and prediction), utilities (logging and exceptions), templates (HTML pages), and static assets (CSS, JavaScript, images).
 
-# Create virtual environment
-python -m venv venv
+Technical Highlights
+The platform delivers an end-to-end ML pipeline with production-ready structure, modular architecture, real-time predictions, interactive dashboards, model serialization, custom logging and exception handling, responsive UI, and scalable design patterns.
 
-# Activate (Windows)
-venv\Scripts\activate
+Business Value
+By identifying customers at risk of leaving, providing confidence scores, and generating retention recommendations, ChurnPredict Pro enables data-driven retention campaigns that reduce churn rates and maximize customer lifetime value.
 
-# Activate (Mac/Linux)
-source venv/bin/activate
-Step 3: Install Dependencies
+Future Roadmap
+Planned enhancements include deep learning integration, SHAP explainable AI, automated model retraining, role-based authentication, cloud deployment (AWS/Azure), REST API services, real-time streaming predictions, and MLOps pipeline integration.
 
-pip install -r requirements.txt
-Step 4: Configure Database
-
-Step 5: Set Environment Variables
-Create .env file:
-
-env
- 
-# Application Configuration
-FLASK_ENV=production
-FLASK_DEBUG=False
-
-# Model Configuration
-MODEL_PATH=artifacts/model.pkl
-PREPROCESSOR_PATH=artifacts/preprocessor.pkl
-Step 6: Initialize Database & Load Data
-
-# Create tables and load initial data
-python scripts/init_db.py
-python scripts/load_data.py
-Step 7: Train the Model (First Time)
-
-# Train model on your data
-python src/pipeline/train_pipeline.py
-Step 8: Run the Application
-
-# Start Flask server
-python src/app.py
-
-# Access the application
-Open browser: http://localhost:5000
+Conclusion
+ChurnPredict Pro demonstrates the complete machine learning project lifecycle from data ingestion through deployment to business visualization, providing accurate predictions and actionable insights that help organizations improve customer retention and maximize revenue.

@@ -1,0 +1,100 @@
+2026-06-16 17:04:19,590 - INFO - This is an INFO message
+2026-06-16 17:04:19,590 - ERROR - This is an ERROR message
+2026-06-16 17:04:19,590 - WARNING - This is a WARNING message
+2026-06-16 17:04:20,984 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2026-06-16 17:04:20,984 - INFO - [33mPress CTRL+C to quit[0m
+2026-06-16 17:04:21,015 - INFO -  * Restarting with watchdog (windowsapi)
+2026-06-16 17:04:23,213 - INFO - This is an INFO message
+2026-06-16 17:04:23,213 - ERROR - This is an ERROR message
+2026-06-16 17:04:23,213 - WARNING - This is a WARNING message
+2026-06-16 17:04:23,450 - WARNING -  * Debugger is active!
+2026-06-16 17:04:23,460 - INFO -  * Debugger PIN: 293-892-650
+2026-06-16 17:05:02,148 - INFO - 127.0.0.1 - - [16/Jun/2026 17:05:02] "GET / HTTP/1.1" 200 -
+2026-06-16 17:05:02,423 - INFO - 127.0.0.1 - - [16/Jun/2026 17:05:02] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2026-06-16 17:05:06,585 - INFO - 127.0.0.1 - - [16/Jun/2026 17:05:06] "GET /dashboard HTTP/1.1" 200 -
+2026-06-16 17:05:21,563 - INFO - 127.0.0.1 - - [16/Jun/2026 17:05:21] "GET /predict HTTP/1.1" 200 -
+2026-06-16 17:06:20,670 - INFO - 127.0.0.1 - - [16/Jun/2026 17:06:20] "POST /predictdata HTTP/1.1" 200 -
+2026-06-16 17:07:38,614 - INFO - 127.0.0.1 - - [16/Jun/2026 17:07:38] "POST /predictdata HTTP/1.1" 200 -
+2026-06-16 17:08:28,252 - INFO - 127.0.0.1 - - [16/Jun/2026 17:08:28] "POST /predictdata HTTP/1.1" 200 -
+2026-06-16 17:13:24,018 - INFO - 127.0.0.1 - - [16/Jun/2026 17:13:24] "POST /predictdata HTTP/1.1" 200 -
+2026-06-16 23:24:47,377 - INFO - This is an INFO message
+2026-06-16 23:24:47,377 - ERROR - This is an ERROR message
+2026-06-16 23:24:47,377 - WARNING - This is a WARNING message
+2026-06-16 23:24:47,821 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2026-06-16 23:24:47,821 - INFO - [33mPress CTRL+C to quit[0m
+2026-06-16 23:24:47,841 - INFO -  * Restarting with watchdog (windowsapi)
+2026-06-16 23:24:50,328 - INFO - This is an INFO message
+2026-06-16 23:24:50,328 - ERROR - This is an ERROR message
+2026-06-16 23:24:50,328 - WARNING - This is a WARNING message
+2026-06-16 23:24:50,570 - WARNING -  * Debugger is active!
+2026-06-16 23:24:50,583 - INFO -  * Debugger PIN: 293-892-650
+2026-06-16 23:25:00,190 - INFO - 127.0.0.1 - - [16/Jun/2026 23:25:00] "GET / HTTP/1.1" 200 -
+2026-06-16 23:25:00,603 - INFO - 127.0.0.1 - - [16/Jun/2026 23:25:00] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2026-06-16 23:25:05,930 - INFO -  * Detected change in 'C:\\Users\\hp\\ML-Project\\venv\\Lib\\site-packages\\sklearn\\utils\\validation.py', reloading
+2026-06-16 23:25:06,563 - INFO -  * Restarting with watchdog (windowsapi)
+2026-06-16 23:25:10,181 - INFO - This is an INFO message
+2026-06-16 23:25:10,182 - ERROR - This is an ERROR message
+2026-06-16 23:25:10,182 - WARNING - This is a WARNING message
+2026-06-16 23:25:10,731 - WARNING -  * Debugger is active!
+2026-06-16 23:25:10,744 - INFO -  * Debugger PIN: 293-892-650
+2026-06-16 23:25:11,075 - INFO - 127.0.0.1 - - [16/Jun/2026 23:25:11] "GET /customers HTTP/1.1" 200 -
+2026-06-16 23:26:27,250 - INFO - 127.0.0.1 - - [16/Jun/2026 23:26:27] "GET /customer-360/CUST_00009 HTTP/1.1" 200 -
+2026-06-16 23:27:30,838 - INFO - 127.0.0.1 - - [16/Jun/2026 23:27:30] "GET /customers HTTP/1.1" 200 -
+2026-06-16 23:27:35,757 - INFO - 127.0.0.1 - - [16/Jun/2026 23:27:35] "GET /predict HTTP/1.1" 200 -
+2026-06-16 23:27:43,101 - INFO - 127.0.0.1 - - [16/Jun/2026 23:27:43] "GET /customers HTTP/1.1" 200 -
+2026-06-16 23:27:53,329 - INFO - 127.0.0.1 - - [16/Jun/2026 23:27:53] "GET /customer-360/CUST_00009 HTTP/1.1" 200 -
+2026-06-16 23:28:06,418 - INFO - 127.0.0.1 - - [16/Jun/2026 23:28:06] "GET /customers HTTP/1.1" 200 -
+2026-06-16 23:28:10,274 - INFO - 127.0.0.1 - - [16/Jun/2026 23:28:10] "GET /predict HTTP/1.1" 200 -
+2026-06-16 23:28:57,171 - INFO - 127.0.0.1 - - [16/Jun/2026 23:28:57] "POST /predictdata HTTP/1.1" 200 -
+2026-06-16 23:30:04,843 - INFO - 127.0.0.1 - - [16/Jun/2026 23:30:04] "POST /predictdata HTTP/1.1" 200 -
+2026-06-16 23:39:32,059 - INFO - This is an INFO message
+2026-06-16 23:39:32,059 - ERROR - This is an ERROR message
+2026-06-16 23:39:32,059 - WARNING - This is a WARNING message
+2026-06-16 23:39:33,280 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2026-06-16 23:39:33,280 - INFO - [33mPress CTRL+C to quit[0m
+2026-06-16 23:39:33,305 - INFO -  * Restarting with watchdog (windowsapi)
+2026-06-16 23:39:35,260 - INFO - This is an INFO message
+2026-06-16 23:39:35,260 - ERROR - This is an ERROR message
+2026-06-16 23:39:35,260 - WARNING - This is a WARNING message
+2026-06-16 23:39:35,482 - WARNING -  * Debugger is active!
+2026-06-16 23:39:35,482 - INFO -  * Debugger PIN: 293-892-650
+2026-06-16 23:39:59,473 - INFO - 127.0.0.1 - - [16/Jun/2026 23:39:59] "GET / HTTP/1.1" 200 -
+2026-06-16 23:40:03,118 - INFO - 127.0.0.1 - - [16/Jun/2026 23:40:03] "GET /predict HTTP/1.1" 200 -
+2026-06-16 23:40:51,851 - INFO - 127.0.0.1 - - [16/Jun/2026 23:40:51] "POST /predictdata HTTP/1.1" 200 -
+2026-06-16 23:41:52,428 - INFO - 127.0.0.1 - - [16/Jun/2026 23:41:52] "POST /predictdata HTTP/1.1" 200 -
+2026-06-16 23:45:41,496 - INFO - 127.0.0.1 - - [16/Jun/2026 23:45:41] "POST /predictdata HTTP/1.1" 200 -
+2026-06-16 23:48:14,933 - INFO -  * Detected change in 'C:\\Users\\hp\\ML-Project\\src\\pipeline\\predict_pipeline.py', reloading
+2026-06-16 23:48:15,419 - INFO -  * Restarting with watchdog (windowsapi)
+2026-06-16 23:48:18,658 - INFO - This is an INFO message
+2026-06-16 23:48:18,658 - ERROR - This is an ERROR message
+2026-06-16 23:48:18,658 - WARNING - This is a WARNING message
+2026-06-16 23:48:18,994 - WARNING -  * Debugger is active!
+2026-06-16 23:48:18,999 - INFO -  * Debugger PIN: 293-892-650
+2026-06-16 23:49:05,139 - INFO -  * Detected change in 'C:\\Users\\hp\\ML-Project\\venv\\Lib\\site-packages\\numpy\\_typing\\_nested_sequence.py', reloading
+2026-06-16 23:49:05,504 - INFO -  * Restarting with watchdog (windowsapi)
+2026-06-16 23:49:08,273 - INFO - This is an INFO message
+2026-06-16 23:49:08,273 - ERROR - This is an ERROR message
+2026-06-16 23:49:08,273 - WARNING - This is a WARNING message
+2026-06-16 23:49:08,523 - WARNING -  * Debugger is active!
+2026-06-16 23:49:08,535 - INFO -  * Debugger PIN: 293-892-650
+2026-06-16 23:49:26,011 - INFO -  * Detected change in 'C:\\Users\\hp\\ML-Project\\venv\\Lib\\site-packages\\matplotlib\\pyplot.py', reloading
+2026-06-16 23:49:26,765 - INFO -  * Restarting with watchdog (windowsapi)
+2026-06-16 23:49:32,323 - INFO - This is an INFO message
+2026-06-16 23:49:32,323 - ERROR - This is an ERROR message
+2026-06-16 23:49:32,323 - WARNING - This is a WARNING message
+2026-06-16 23:49:32,673 - WARNING -  * Debugger is active!
+2026-06-16 23:49:32,673 - INFO -  * Debugger PIN: 293-892-650
+2026-06-16 23:50:06,025 - INFO -  * Detected change in 'C:\\Users\\hp\\ML-Project\\venv\\Lib\\site-packages\\sklearn\\ensemble\\_forest.py', reloading
+2026-06-16 23:50:06,324 - INFO -  * Restarting with watchdog (windowsapi)
+2026-06-16 23:50:09,004 - INFO - This is an INFO message
+2026-06-16 23:50:09,004 - ERROR - This is an ERROR message
+2026-06-16 23:50:09,004 - WARNING - This is a WARNING message
+2026-06-16 23:50:09,279 - WARNING -  * Debugger is active!
+2026-06-16 23:50:09,285 - INFO -  * Debugger PIN: 293-892-650
+2026-06-17 00:01:41,059 - INFO -  * Detected change in 'C:\\Users\\hp\\ML-Project\\venv\\Lib\\site-packages\\flask\\__init__.py', reloading
+2026-06-17 00:01:41,496 - INFO -  * Restarting with watchdog (windowsapi)
+2026-06-17 00:03:34,165 - INFO -  * Restarting with watchdog (windowsapi)
+2026-06-17 00:03:38,763 - INFO -  * Restarting with watchdog (windowsapi)

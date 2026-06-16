@@ -52,3 +52,65 @@
 2026-05-22 10:15:11,242 - INFO - 127.0.0.1 - - [22/May/2026 10:15:11] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
 2026-05-22 10:15:19,672 - INFO - 127.0.0.1 - - [22/May/2026 10:15:19] "GET /dashboard HTTP/1.1" 200 -
 2026-05-22 10:15:59,784 - INFO - 127.0.0.1 - - [22/May/2026 10:15:59] "GET /dashboard HTTP/1.1" 200 -
+2026-05-22 11:18:36,012 - INFO - This is an INFO message
+2026-05-22 11:18:36,028 - ERROR - This is an ERROR message
+2026-05-22 11:18:36,028 - WARNING - This is a WARNING message
+2026-05-22 11:18:36,499 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2026-05-22 11:18:36,499 - INFO - [33mPress CTRL+C to quit[0m
+2026-05-22 11:18:36,526 - INFO -  * Restarting with watchdog (windowsapi)
+2026-05-22 11:18:39,007 - INFO - This is an INFO message
+2026-05-22 11:18:39,007 - ERROR - This is an ERROR message
+2026-05-22 11:18:39,007 - WARNING - This is a WARNING message
+2026-05-22 11:18:39,268 - WARNING -  * Debugger is active!
+2026-05-22 11:18:39,275 - INFO -  * Debugger PIN: 293-892-650
+2026-05-22 11:19:41,988 - INFO - 127.0.0.1 - - [22/May/2026 11:19:41] "GET / HTTP/1.1" 200 -
+2026-05-22 11:19:42,287 - INFO - 127.0.0.1 - - [22/May/2026 11:19:42] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2026-05-22 11:19:57,498 - INFO - 127.0.0.1 - - [22/May/2026 11:19:57] "GET /dashboard HTTP/1.1" 200 -
+2026-05-22 11:20:32,669 - INFO - 127.0.0.1 - - [22/May/2026 11:20:32] "GET /predict HTTP/1.1" 200 -
+2026-05-22 12:07:13,897 - INFO - 127.0.0.1 - - [22/May/2026 12:07:13] "GET /dashboard HTTP/1.1" 200 -
+2026-05-22 12:32:07,228 - INFO -  * Detected change in 'C:\\Users\\hp\\ML-Project\\app.py', reloading
+2026-05-22 12:32:08,742 - INFO -  * Restarting with watchdog (windowsapi)
+2026-05-22 12:32:13,986 - INFO - This is an INFO message
+2026-05-22 12:32:13,986 - ERROR - This is an ERROR message
+2026-05-22 12:32:13,986 - WARNING - This is a WARNING message
+2026-05-22 12:32:14,381 - WARNING -  * Debugger is active!
+2026-05-22 12:32:14,387 - INFO -  * Debugger PIN: 293-892-650
+2026-05-22 12:37:57,134 - INFO -  * Detected change in 'C:\\Users\\hp\\ML-Project\\venv\\Lib\\site-packages\\matplotlib\\typing.py', reloading
+2026-05-22 12:37:57,557 - INFO -  * Restarting with watchdog (windowsapi)
+2026-05-22 12:38:02,052 - INFO - This is an INFO message
+2026-05-22 12:38:02,052 - ERROR - This is an ERROR message
+2026-05-22 12:38:02,052 - WARNING - This is a WARNING message
+2026-05-22 12:38:02,412 - WARNING -  * Debugger is active!
+2026-05-22 12:38:02,416 - INFO -  * Debugger PIN: 293-892-650
+2026-05-22 12:39:49,061 - INFO -  * Detected change in 'C:\\Users\\hp\\ML-Project\\venv\\Lib\\site-packages\\sklearn\\utils\\validation.py', reloading
+2026-05-22 12:39:49,811 - INFO -  * Restarting with watchdog (windowsapi)
+2026-05-22 12:39:55,179 - INFO - This is an INFO message
+2026-05-22 12:39:55,179 - ERROR - This is an ERROR message
+2026-05-22 12:39:55,179 - WARNING - This is a WARNING message
+2026-05-22 12:39:56,410 - WARNING -  * Debugger is active!
+2026-05-22 12:39:56,438 - INFO -  * Debugger PIN: 293-892-650
+2026-05-22 12:39:56,966 - INFO - 127.0.0.1 - - [22/May/2026 12:39:56] "GET /customers HTTP/1.1" 200 -
+2026-05-22 12:40:11,224 - INFO - 127.0.0.1 - - [22/May/2026 12:40:11] "GET /customer-360/CUST_00032 HTTP/1.1" 200 -
+2026-05-22 12:41:50,361 - INFO - 127.0.0.1 - - [22/May/2026 12:41:50] "GET /customer-360/CUST_00008 HTTP/1.1" 200 -
+2026-05-22 12:43:50,005 - INFO -  * Detected change in 'C:\\Users\\hp\\ML-Project\\venv\\Lib\\site-packages\\sklearn\\__init__.py', reloading
+2026-05-22 12:43:50,397 - INFO -  * Restarting with watchdog (windowsapi)
+2026-05-22 12:43:54,372 - INFO - This is an INFO message
+2026-05-22 12:43:54,372 - ERROR - This is an ERROR message
+2026-05-22 12:43:54,372 - WARNING - This is a WARNING message
+2026-05-22 12:43:54,774 - WARNING -  * Debugger is active!
+2026-05-22 12:43:54,785 - INFO -  * Debugger PIN: 293-892-650
+2026-05-22 14:18:55,969 - INFO -  * Detected change in 'C:\\Users\\hp\\ML-Project\\venv\\Lib\\site-packages\\flask\\__init__.py', reloading
+2026-05-22 14:18:57,144 - INFO -  * Restarting with watchdog (windowsapi)
+2026-05-22 14:19:15,465 - INFO - This is an INFO message
+2026-05-22 14:19:15,465 - ERROR - This is an ERROR message
+2026-05-22 14:19:15,465 - WARNING - This is a WARNING message
+2026-05-22 14:19:17,607 - WARNING -  * Debugger is active!
+2026-05-22 14:19:17,607 - INFO -  * Debugger PIN: 293-892-650
+2026-05-22 16:00:29,162 - INFO -  * Detected change in 'C:\\Users\\hp\\ML-Project\\venv\\Lib\\site-packages\\flask\\__init__.py', reloading
+2026-05-22 16:00:31,493 - INFO -  * Restarting with watchdog (windowsapi)
+2026-05-22 16:00:39,379 - INFO - This is an INFO message
+2026-05-22 16:00:39,379 - ERROR - This is an ERROR message
+2026-05-22 16:00:39,379 - WARNING - This is a WARNING message
+2026-05-22 16:00:40,149 - WARNING -  * Debugger is active!
+2026-05-22 16:00:40,156 - INFO -  * Debugger PIN: 293-892-650

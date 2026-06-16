@@ -1,0 +1,79 @@
+2026-06-17 00:01:44,600 - INFO - This is an INFO message
+2026-06-17 00:01:44,600 - ERROR - This is an ERROR message
+2026-06-17 00:01:44,600 - WARNING - This is a WARNING message
+2026-06-17 00:01:44,983 - WARNING -  * Debugger is active!
+2026-06-17 00:01:44,987 - INFO -  * Debugger PIN: 293-892-650
+2026-06-17 00:03:33,732 - INFO -  * Detected change in 'C:\\Users\\hp\\ML-Project\\venv\\Lib\\site-packages\\werkzeug\\datastructures\\file_storage.py', reloading
+2026-06-17 00:03:37,996 - INFO - This is an INFO message
+2026-06-17 00:03:37,996 - ERROR - This is an ERROR message
+2026-06-17 00:03:37,996 - WARNING - This is a WARNING message
+2026-06-17 00:03:38,349 - WARNING -  * Debugger is active!
+2026-06-17 00:03:38,349 - INFO -  * Debugger PIN: 293-892-650
+2026-06-17 00:03:38,523 - INFO -  * Detected change in 'C:\\Users\\hp\\ML-Project\\app.py', reloading
+2026-06-17 00:03:48,285 - INFO - This is an INFO message
+2026-06-17 00:03:48,285 - ERROR - This is an ERROR message
+2026-06-17 00:03:48,285 - WARNING - This is a WARNING message
+2026-06-17 00:03:48,513 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2026-06-17 00:03:48,513 - INFO - [33mPress CTRL+C to quit[0m
+2026-06-17 00:03:48,522 - INFO -  * Restarting with watchdog (windowsapi)
+2026-06-17 00:03:50,644 - INFO - This is an INFO message
+2026-06-17 00:03:50,644 - ERROR - This is an ERROR message
+2026-06-17 00:03:50,644 - WARNING - This is a WARNING message
+2026-06-17 00:03:50,949 - WARNING -  * Debugger is active!
+2026-06-17 00:03:50,958 - INFO -  * Debugger PIN: 293-892-650
+2026-06-17 00:03:56,965 - INFO - 127.0.0.1 - - [17/Jun/2026 00:03:56] "GET / HTTP/1.1" 200 -
+2026-06-17 00:04:42,049 - INFO - 127.0.0.1 - - [17/Jun/2026 00:04:42] "GET /predict HTTP/1.1" 200 -
+2026-06-17 00:07:30,625 - INFO -  * Detected change in 'C:\\Users\\hp\\ML-Project\\app.py', reloading
+2026-06-17 00:07:30,861 - INFO -  * Restarting with watchdog (windowsapi)
+2026-06-17 00:07:33,117 - INFO - This is an INFO message
+2026-06-17 00:07:33,117 - ERROR - This is an ERROR message
+2026-06-17 00:07:33,117 - WARNING - This is a WARNING message
+2026-06-17 00:07:33,375 - WARNING -  * Debugger is active!
+2026-06-17 00:07:33,375 - INFO -  * Debugger PIN: 293-892-650
+2026-06-17 00:07:39,827 - INFO - This is an INFO message
+2026-06-17 00:07:39,827 - ERROR - This is an ERROR message
+2026-06-17 00:07:39,827 - WARNING - This is a WARNING message
+2026-06-17 00:07:40,052 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2026-06-17 00:07:40,052 - INFO - [33mPress CTRL+C to quit[0m
+2026-06-17 00:07:40,073 - INFO -  * Restarting with watchdog (windowsapi)
+2026-06-17 00:07:42,189 - INFO - This is an INFO message
+2026-06-17 00:07:42,189 - ERROR - This is an ERROR message
+2026-06-17 00:07:42,189 - WARNING - This is a WARNING message
+2026-06-17 00:07:42,487 - WARNING -  * Debugger is active!
+2026-06-17 00:07:42,492 - INFO -  * Debugger PIN: 293-892-650
+2026-06-17 00:07:48,887 - INFO - 127.0.0.1 - - [17/Jun/2026 00:07:48] "GET / HTTP/1.1" 200 -
+2026-06-17 00:07:57,859 - INFO - 127.0.0.1 - - [17/Jun/2026 00:07:57] "GET /predict HTTP/1.1" 200 -
+2026-06-17 00:08:20,893 - INFO - This is an INFO message
+2026-06-17 00:08:20,893 - ERROR - This is an ERROR message
+2026-06-17 00:08:20,893 - WARNING - This is a WARNING message
+2026-06-17 00:08:21,148 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2026-06-17 00:08:21,148 - INFO - [33mPress CTRL+C to quit[0m
+2026-06-17 00:08:21,159 - INFO -  * Restarting with watchdog (windowsapi)
+2026-06-17 00:08:23,124 - INFO - This is an INFO message
+2026-06-17 00:08:23,124 - ERROR - This is an ERROR message
+2026-06-17 00:08:23,124 - WARNING - This is a WARNING message
+2026-06-17 00:08:23,331 - WARNING -  * Debugger is active!
+2026-06-17 00:08:23,335 - INFO -  * Debugger PIN: 293-892-650
+2026-06-17 00:08:31,952 - INFO - 127.0.0.1 - - [17/Jun/2026 00:08:31] "GET / HTTP/1.1" 200 -
+2026-06-17 00:08:39,116 - INFO - 127.0.0.1 - - [17/Jun/2026 00:08:39] "GET /predict HTTP/1.1" 200 -
+2026-06-17 00:09:37,705 - INFO - 127.0.0.1 - - [17/Jun/2026 00:09:37] "POST /predictdata HTTP/1.1" 200 -
+2026-06-17 00:10:12,049 - INFO - This is an INFO message
+2026-06-17 00:10:12,049 - ERROR - This is an ERROR message
+2026-06-17 00:10:12,049 - WARNING - This is a WARNING message
+2026-06-17 00:10:12,271 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2026-06-17 00:10:12,271 - INFO - [33mPress CTRL+C to quit[0m
+2026-06-17 00:10:12,281 - INFO -  * Restarting with watchdog (windowsapi)
+2026-06-17 00:10:14,197 - INFO - This is an INFO message
+2026-06-17 00:10:14,197 - ERROR - This is an ERROR message
+2026-06-17 00:10:14,197 - WARNING - This is a WARNING message
+2026-06-17 00:10:14,421 - WARNING -  * Debugger is active!
+2026-06-17 00:10:14,425 - INFO -  * Debugger PIN: 293-892-650
+2026-06-17 00:12:54,330 - INFO - 127.0.0.1 - - [17/Jun/2026 00:12:54] "GET / HTTP/1.1" 200 -
+2026-06-17 00:12:59,268 - INFO - 127.0.0.1 - - [17/Jun/2026 00:12:59] "GET /predict HTTP/1.1" 200 -
+2026-06-17 00:15:04,042 - INFO - 127.0.0.1 - - [17/Jun/2026 00:15:04] "POST /predictdata HTTP/1.1" 200 -
+2026-06-17 00:15:13,785 - INFO - 127.0.0.1 - - [17/Jun/2026 00:15:13] "GET / HTTP/1.1" 200 -
+2026-06-17 00:15:19,019 - INFO - 127.0.0.1 - - [17/Jun/2026 00:15:19] "GET /dashboard HTTP/1.1" 200 -

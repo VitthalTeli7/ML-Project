@@ -1,0 +1,41 @@
+2026-06-08 11:59:19,364 - INFO - This is an INFO message
+2026-06-08 11:59:19,364 - ERROR - This is an ERROR message
+2026-06-08 11:59:19,364 - WARNING - This is a WARNING message
+2026-06-08 11:59:21,505 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2026-06-08 11:59:21,505 - INFO - [33mPress CTRL+C to quit[0m
+2026-06-08 11:59:21,523 - INFO -  * Restarting with watchdog (windowsapi)
+2026-06-08 11:59:24,000 - INFO - This is an INFO message
+2026-06-08 11:59:24,000 - ERROR - This is an ERROR message
+2026-06-08 11:59:24,000 - WARNING - This is a WARNING message
+2026-06-08 11:59:24,280 - WARNING -  * Debugger is active!
+2026-06-08 11:59:24,286 - INFO -  * Debugger PIN: 293-892-650
+2026-06-08 12:00:04,587 - INFO - 127.0.0.1 - - [08/Jun/2026 12:00:04] "GET / HTTP/1.1" 200 -
+2026-06-08 12:00:05,109 - INFO - 127.0.0.1 - - [08/Jun/2026 12:00:05] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2026-06-08 12:01:04,859 - INFO - 127.0.0.1 - - [08/Jun/2026 12:01:04] "[33mGET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1[0m" 404 -
+2026-06-08 12:02:38,310 - INFO - 127.0.0.1 - - [08/Jun/2026 12:02:38] "GET / HTTP/1.1" 200 -
+2026-06-08 12:02:38,392 - INFO - 127.0.0.1 - - [08/Jun/2026 12:02:38] "[33mGET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1[0m" 404 -
+2026-06-08 12:03:17,063 - INFO - 127.0.0.1 - - [08/Jun/2026 12:03:17] "GET / HTTP/1.1" 200 -
+2026-06-08 12:03:17,112 - INFO - 127.0.0.1 - - [08/Jun/2026 12:03:17] "[33mGET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1[0m" 404 -
+2026-06-08 12:03:53,012 - INFO - 127.0.0.1 - - [08/Jun/2026 12:03:53] "GET / HTTP/1.1" 200 -
+2026-06-08 12:04:12,978 - INFO - 127.0.0.1 - - [08/Jun/2026 12:04:12] "GET / HTTP/1.1" 200 -
+2026-06-08 12:04:37,184 - INFO - 127.0.0.1 - - [08/Jun/2026 12:04:37] "GET / HTTP/1.1" 200 -
+2026-06-08 12:05:00,232 - INFO - 127.0.0.1 - - [08/Jun/2026 12:05:00] "GET / HTTP/1.1" 200 -
+2026-06-08 12:05:01,280 - INFO - 127.0.0.1 - - [08/Jun/2026 12:05:01] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2026-06-08 12:05:28,705 - INFO - 127.0.0.1 - - [08/Jun/2026 12:05:28] "GET / HTTP/1.1" 200 -
+2026-06-08 12:18:22,635 - INFO - 127.0.0.1 - - [08/Jun/2026 12:18:22] "GET / HTTP/1.1" 200 -
+2026-06-08 12:18:34,812 - INFO - 127.0.0.1 - - [08/Jun/2026 12:18:34] "GET / HTTP/1.1" 200 -
+2026-06-08 12:20:51,475 - INFO - 127.0.0.1 - - [08/Jun/2026 12:20:51] "GET / HTTP/1.1" 200 -
+2026-06-08 12:23:53,619 - INFO - 127.0.0.1 - - [08/Jun/2026 12:23:53] "GET / HTTP/1.1" 200 -
+2026-06-08 12:24:03,738 - INFO - 127.0.0.1 - - [08/Jun/2026 12:24:03] "GET / HTTP/1.1" 200 -
+2026-06-08 12:24:07,229 - INFO - 127.0.0.1 - - [08/Jun/2026 12:24:07] "GET /contact HTTP/1.1" 200 -
+2026-06-08 12:25:07,195 - INFO - 127.0.0.1 - - [08/Jun/2026 12:25:07] "GET /about HTTP/1.1" 200 -
+2026-06-08 12:25:07,499 - INFO - 127.0.0.1 - - [08/Jun/2026 12:25:07] "[36mGET /static/images/vitthal-teli.jpg HTTP/1.1[0m" 304 -
+2026-06-08 12:25:29,755 - INFO - 127.0.0.1 - - [08/Jun/2026 12:25:29] "[33mGET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1[0m" 404 -
+2026-06-08 12:27:16,206 - INFO - 127.0.0.1 - - [08/Jun/2026 12:27:16] "GET /about HTTP/1.1" 200 -
+2026-06-08 12:27:16,445 - INFO - 127.0.0.1 - - [08/Jun/2026 12:27:16] "[36mGET /static/images/vitthal-teli.jpg HTTP/1.1[0m" 304 -
+2026-06-08 12:27:29,671 - INFO - 127.0.0.1 - - [08/Jun/2026 12:27:29] "[33mGET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1[0m" 404 -
+2026-06-08 12:34:53,839 - INFO - 127.0.0.1 - - [08/Jun/2026 12:34:53] "[33mGET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1[0m" 404 -
+2026-06-08 12:36:27,615 - INFO - 127.0.0.1 - - [08/Jun/2026 12:36:27] "GET /about HTTP/1.1" 200 -
+2026-06-08 12:36:27,867 - INFO - 127.0.0.1 - - [08/Jun/2026 12:36:27] "[36mGET /static/images/vitthal-teli.jpg HTTP/1.1[0m" 304 -
+2026-06-08 12:38:26,047 - INFO - 127.0.0.1 - - [08/Jun/2026 12:38:26] "[33mGET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1[0m" 404 -
